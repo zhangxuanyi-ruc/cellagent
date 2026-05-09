@@ -1,0 +1,13 @@
+{
+  "h5ad_path": "/data/bgi/data/projects/multimodal/RNA_data/cellagent_database/tabula_sapiens/tabula_sapiens.h5ad",
+  "output_json": "/root/wanghaoran/zxy/project/cellagent/rag/mappers/tabula_cell_type_tissue_mapper.json",
+  "output_parquet": "/root/wanghaoran/zxy/project/cellagent/rag/cache/tabula_celltype_tissue.parquet",
+  "output_csv": "/root/wanghaoran/zxy/project/cellagent/rag/cache/tabula_celltype_tissue.csv",
+  "rows": 1543,
+  "unique_cell_types": 180,
+  "unique_tissues": 75,
+  "mapped_cell_types": 179,
+  "unmapped_cell_types": 1,
+  "unmapped_cell_type_rows": 1,
+  "unmapped_tissue_rows": 0
+}

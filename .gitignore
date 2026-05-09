@@ -1,0 +1,50 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Notebook/runtime caches
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Runtime outputs and local data
+data/raw/
+data/processed/
+output/
+cellagent_output/
+tmp/
+
+# Large model/checkpoint artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+
+# Single-cell data artifacts
+*.h5ad
+*.loom
+*.zarr/
+
+# Logs
+*.log
+*.pid
+
+# External reference repositories are documentation-only locally; avoid broken gitlinks.
+reference/**/code/
+
+# Large local knowledge assets. Keep locally or distribute separately.
+rag/mappers/
+rag/cache/*.parquet
+project_plan/*.docx
+reference/**/*.pdf
+reference/**/*.png
+reference/*.png

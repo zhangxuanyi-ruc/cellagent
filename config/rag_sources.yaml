@@ -1,0 +1,79 @@
+# CellAgent RAG 数据源配置
+# 所有路径使用绝对路径，避免相对路径歧义
+#
+# 数据库角色说明:
+#   组织分布主库: Tabula Sapiens (直接提供 cell_type -> tissue 映射)
+#   组织分布附属: ImmGen (仅 mouse 输入且 metadata.species=mouse 时启用)
+#   Marker 主库: CellMarker 2.0 (最全面的 marker 数据库)
+#   Marker 附属: PanglaoDB (仅 CellMarker 缺失/不足/DE overlap 过低时补充)
+#   功能描述: Cell Ontology
+
+mapper:
+  gene_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/gene_symbol_mapper.json
+  cell_type_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/cell_type_to_cl.json
+  tissue_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/tissue_to_uberon.json
+  go_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/function_to_go.json
+
+tissue_ontology:
+  uberon_path: /data/bgi/data/projects/multimodal/RNA_data/tissue_ontology/uberon-basic.obo
+  bto_path: /data/bgi/data/projects/multimodal/RNA_data/tissue_ontology/bto.obo
+  format: obo
+
+cellmarker:
+  path: /data/bgi/data/projects/multimodal/RNA_data/cellagent_database/cellmarker
+  format: tsv
+  files:
+    - all_cell_markers.txt
+    - Human_cell_markers.txt
+    - Mouse_cell_markers.txt
+    - Single_cell_markers.txt
+  # CellMarker txt 文件列名（制表符分隔）
+  columns:
+    cell_name: "cellName"
+    gene: "geneSymbol"
+    species: "speciesType"
+    tissue: "tissueType"
+    # 部分文件无表头，需根据实际格式调整
+
+panglaodb:
+  path: /data/bgi/data/projects/multimodal/RNA_data/cellagent_database/panglaodb
+  format: csv
+  delimiter: ","
+  has_header: false
+  # PanglaoDB data/ 目录下文件列说明（来自官方 README）
+  # cell_type_annotations_markers.txt: SRA, SRS, cluster, gene_symbol
+  # cell_type_annotations.txt: SRA, SRS, cluster, cell_type, p_value, adj_p_value, activity_score
+  # genes.txt: gene_symbol
+  # metadata.txt: 样本元数据
+  # cell_type_desc.txt: cell_type, description, synonyms
+  # cell_type_abbrev.txt: cell_type, abbreviation
+  files:
+    cell_type_annotations_markers: cell_type_annotations_markers.txt
+    cell_type_annotations: cell_type_annotations.txt
+    genes: genes.txt
+    metadata: metadata.txt
+    cell_type_desc: cell_type_desc.txt
+    cell_type_abbrev: cell_type_abbrev.txt
+
+ontology:
+  cl_path: /data/bgi/data/projects/multimodal/RNA_data/cellagent_database/ontology/cl/cl.obo
+  go_path: /data/bgi/data/projects/multimodal/RNA_data/cellagent_database/ontology/go/go.obo
+  format: obo
+
+immgen:
+  path: /data/bgi/data/projects/multimodal/RNA_data/cellagent_database/immgen/GSE109125_Genes_count_table.tsv
+  format: tsv
+  compressed: gzip
+  # 鼠数据，基因使用 MGI symbol
+  species: mouse
+
+tabula_sapiens:
+  path: /data/bgi/data/projects/multimodal/RNA_data/cellagent_database/tabula_sapiens/tabula_sapiens.h5ad
+  mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/tabula_cell_type_tissue_mapper.json
+  cache_path: /root/wanghaoran/zxy/project/cellagent/rag/cache/tabula_celltype_tissue.parquet
+  format: h5ad
+  # h5ad obs 中细胞类型和组织列名
+  obs_columns:
+    cell_type: "cell_type"
+    tissue: "tissue"
+    tissue_id: "tissue_ontology_term_id"

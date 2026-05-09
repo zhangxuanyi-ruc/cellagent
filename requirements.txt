@@ -1,0 +1,49 @@
+# CellAgent runtime requirements.
+# flash-attn is intentionally excluded; install it manually after the env works.
+
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# Core scientific stack
+numpy
+pandas
+scipy
+h5py
+anndata
+scanpy
+scikit-learn
+scikit-misc
+statsmodels
+umap-learn
+igraph
+leidenalg
+
+# Config, reports, notebooks
+PyYAML
+tqdm
+matplotlib
+seaborn
+ipykernel
+jupyter
+
+# CellAgent schema / agent infrastructure
+pydantic
+requests
+
+# Ontology / mapper builders
+obonet
+openpyxl
+
+# Cell encoder / LLM infrastructure
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+transformers==4.47.0
+tokenizers
+accelerate
+peft
+safetensors
+sentencepiece
+einops
+
+# Optional but used by local scGPT/sc_showo code paths on some installs
+

@@ -1,0 +1,1544 @@
+cell_type,cell_type_cl_id,tissue,tissue_ontology_id,tissue_uberon_id,n_cells
+B cell,CL:0000236,adipose tissue,UBERON:0001013,UBERON:0001013,5184
+B cell,CL:0000236,anterior part of tongue,UBERON:0010032,UBERON:0010032,3
+B cell,CL:0000236,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,52
+B cell,CL:0000236,aorta,UBERON:0000947,UBERON:0000947,27
+B cell,CL:0000236,ascending colon,UBERON:0001156,UBERON:0001156,969
+B cell,CL:0000236,bladder organ,UBERON:0018707,UBERON:0018707,484
+B cell,CL:0000236,blood,UBERON:0000178,UBERON:0000178,3893
+B cell,CL:0000236,bone marrow,UBERON:0002371,UBERON:0002371,1819
+B cell,CL:0000236,brown adipose tissue,UBERON:0001348,UBERON:0001348,9515
+B cell,CL:0000236,cardiac atrium,UBERON:0002081,UBERON:0002081,2
+B cell,CL:0000236,cardiac ventricle,UBERON:0002082,UBERON:0002082,1
+B cell,CL:0000236,coronary artery,UBERON:0001621,UBERON:0001621,102
+B cell,CL:0000236,cortex of kidney,UBERON:0001225,UBERON:0001225,34
+B cell,CL:0000236,crista ampullaris,UBERON:0004721,UBERON:0004721,1
+B cell,CL:0000236,duodenum,UBERON:0002114,UBERON:0002114,210
+B cell,CL:0000236,endocrine pancreas,UBERON:0000016,UBERON:0000016,27
+B cell,CL:0000236,endometrium,UBERON:0001295,UBERON:0001295,42
+B cell,CL:0000236,exocrine pancreas,UBERON:0000017,UBERON:0000017,26
+B cell,CL:0000236,eye,UBERON:0000970,UBERON:0000970,60
+B cell,CL:0000236,eyelid,UBERON:0001711,UBERON:0001711,1236
+B cell,CL:0000236,heart,UBERON:0000948,UBERON:0000948,6
+B cell,CL:0000236,heart right ventricle,UBERON:0002080,UBERON:0002080,2
+B cell,CL:0000236,ileum,UBERON:0002116,UBERON:0002116,129
+B cell,CL:0000236,inferior vena cava,UBERON:0001072,UBERON:0001072,2
+B cell,CL:0000236,inguinal lymph node,UBERON:0001542,UBERON:0001542,12327
+B cell,CL:0000236,jejunum,UBERON:0002115,UBERON:0002115,7
+B cell,CL:0000236,kidney,UBERON:0002113,UBERON:0002113,460
+B cell,CL:0000236,lacrimal gland,UBERON:0001817,UBERON:0001817,2758
+B cell,CL:0000236,large intestine,UBERON:0000059,UBERON:0000059,514
+B cell,CL:0000236,left coronary artery,UBERON:0001626,UBERON:0001626,1
+B cell,CL:0000236,left ovary,UBERON:0002119,UBERON:0002119,1
+B cell,CL:0000236,liver,UBERON:0002107,UBERON:0002107,163
+B cell,CL:0000236,lung,UBERON:0002048,UBERON:0002048,663
+B cell,CL:0000236,lymph node,UBERON:0000029,UBERON:0000029,38776
+B cell,CL:0000236,mammary gland,UBERON:0001911,UBERON:0001911,15
+B cell,CL:0000236,mesenteric lymph node,UBERON:0002509,UBERON:0002509,3643
+B cell,CL:0000236,mucosa of stomach,UBERON:0001199,UBERON:0001199,495
+B cell,CL:0000236,muscle of abdomen,UBERON:0002378,UBERON:0002378,13
+B cell,CL:0000236,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,36
+B cell,CL:0000236,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,147
+B cell,CL:0000236,myometrium,UBERON:0001296,UBERON:0001296,1
+B cell,CL:0000236,ocular surface region,UBERON:0010409,UBERON:0010409,1
+B cell,CL:0000236,ovary,UBERON:0000992,UBERON:0000992,2
+B cell,CL:0000236,parotid gland,UBERON:0001831,UBERON:0001831,4159
+B cell,CL:0000236,posterior part of tongue,UBERON:0010033,UBERON:0010033,1247
+B cell,CL:0000236,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,2
+B cell,CL:0000236,prostate gland,UBERON:0002367,UBERON:0002367,101
+B cell,CL:0000236,right cardiac atrium,UBERON:0002078,UBERON:0002078,5
+B cell,CL:0000236,sclera,UBERON:0001773,UBERON:0001773,44
+B cell,CL:0000236,sigmoid colon,UBERON:0001159,UBERON:0001159,586
+B cell,CL:0000236,skin of abdomen,UBERON:0001416,UBERON:0001416,2
+B cell,CL:0000236,skin of chest,UBERON:0001868,UBERON:0001868,5
+B cell,CL:0000236,small intestine,UBERON:0002108,UBERON:0002108,427
+B cell,CL:0000236,spleen,UBERON:0002106,UBERON:0002106,16557
+B cell,CL:0000236,stomach,UBERON:0000945,UBERON:0000945,29
+B cell,CL:0000236,stomach smooth muscle,UBERON:0004222,UBERON:0004222,1510
+B cell,CL:0000236,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,70
+B cell,CL:0000236,sublingual gland,UBERON:0001832,UBERON:0001832,779
+B cell,CL:0000236,submandibular gland,UBERON:0001736,UBERON:0001736,10
+B cell,CL:0000236,testis,UBERON:0000473,UBERON:0000473,1
+B cell,CL:0000236,thoracic aorta,UBERON:0001515,UBERON:0001515,10
+B cell,CL:0000236,thymus,UBERON:0002370,UBERON:0002370,4462
+B cell,CL:0000236,trachea,UBERON:0003126,UBERON:0003126,627
+B cell,CL:0000236,uterus,UBERON:0000995,UBERON:0000995,7
+B cell,CL:0000236,vasculature,UBERON:0002049,UBERON:0002049,6
+BEST4+ enterocyte,CL:4030026,ascending colon,UBERON:0001156,UBERON:0001156,371
+BEST4+ enterocyte,CL:4030026,duodenum,UBERON:0002114,UBERON:0002114,636
+BEST4+ enterocyte,CL:4030026,ileum,UBERON:0002116,UBERON:0002116,125
+BEST4+ enterocyte,CL:4030026,jejunum,UBERON:0002115,UBERON:0002115,7
+BEST4+ enterocyte,CL:4030026,sigmoid colon,UBERON:0001159,UBERON:0001159,719
+BEST4+ enterocyte,CL:4030026,small intestine,UBERON:0002108,UBERON:0002108,112
+"CD4-positive, alpha-beta T cell",CL:0000624,abdominal aorta,UBERON:0001516,UBERON:0001516,38
+"CD4-positive, alpha-beta T cell",CL:0000624,adipose tissue,UBERON:0001013,UBERON:0001013,4524
+"CD4-positive, alpha-beta T cell",CL:0000624,anterior part of tongue,UBERON:0010032,UBERON:0010032,133
+"CD4-positive, alpha-beta T cell",CL:0000624,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,23
+"CD4-positive, alpha-beta T cell",CL:0000624,aorta,UBERON:0000947,UBERON:0000947,235
+"CD4-positive, alpha-beta T cell",CL:0000624,ascending colon,UBERON:0001156,UBERON:0001156,756
+"CD4-positive, alpha-beta T cell",CL:0000624,bladder organ,UBERON:0018707,UBERON:0018707,2189
+"CD4-positive, alpha-beta T cell",CL:0000624,blood,UBERON:0000178,UBERON:0000178,4900
+"CD4-positive, alpha-beta T cell",CL:0000624,bone marrow,UBERON:0002371,UBERON:0002371,3173
+"CD4-positive, alpha-beta T cell",CL:0000624,brown adipose tissue,UBERON:0001348,UBERON:0001348,6097
+"CD4-positive, alpha-beta T cell",CL:0000624,buccal mucosa,UBERON:0006956,UBERON:0006956,6
+"CD4-positive, alpha-beta T cell",CL:0000624,cardiac atrium,UBERON:0002081,UBERON:0002081,3
+"CD4-positive, alpha-beta T cell",CL:0000624,cardiac ventricle,UBERON:0002082,UBERON:0002082,4
+"CD4-positive, alpha-beta T cell",CL:0000624,chorioretinal region,UBERON:0019207,UBERON:0019207,13
+"CD4-positive, alpha-beta T cell",CL:0000624,cornea,UBERON:0000964,UBERON:0000964,3
+"CD4-positive, alpha-beta T cell",CL:0000624,coronary artery,UBERON:0001621,UBERON:0001621,256
+"CD4-positive, alpha-beta T cell",CL:0000624,cortex of kidney,UBERON:0001225,UBERON:0001225,16
+"CD4-positive, alpha-beta T cell",CL:0000624,crista ampullaris,UBERON:0004721,UBERON:0004721,7
+"CD4-positive, alpha-beta T cell",CL:0000624,duodenum,UBERON:0002114,UBERON:0002114,135
+"CD4-positive, alpha-beta T cell",CL:0000624,endocrine pancreas,UBERON:0000016,UBERON:0000016,2
+"CD4-positive, alpha-beta T cell",CL:0000624,endometrium,UBERON:0001295,UBERON:0001295,383
+"CD4-positive, alpha-beta T cell",CL:0000624,exocrine pancreas,UBERON:0000017,UBERON:0000017,35
+"CD4-positive, alpha-beta T cell",CL:0000624,eye,UBERON:0000970,UBERON:0000970,91
+"CD4-positive, alpha-beta T cell",CL:0000624,eyelid,UBERON:0001711,UBERON:0001711,649
+"CD4-positive, alpha-beta T cell",CL:0000624,heart,UBERON:0000948,UBERON:0000948,24
+"CD4-positive, alpha-beta T cell",CL:0000624,heart right ventricle,UBERON:0002080,UBERON:0002080,16
+"CD4-positive, alpha-beta T cell",CL:0000624,ileum,UBERON:0002116,UBERON:0002116,87
+"CD4-positive, alpha-beta T cell",CL:0000624,inferior vena cava,UBERON:0001072,UBERON:0001072,16
+"CD4-positive, alpha-beta T cell",CL:0000624,inguinal lymph node,UBERON:0001542,UBERON:0001542,4352
+"CD4-positive, alpha-beta T cell",CL:0000624,kidney,UBERON:0002113,UBERON:0002113,283
+"CD4-positive, alpha-beta T cell",CL:0000624,lacrimal gland,UBERON:0001817,UBERON:0001817,772
+"CD4-positive, alpha-beta T cell",CL:0000624,large intestine,UBERON:0000059,UBERON:0000059,2532
+"CD4-positive, alpha-beta T cell",CL:0000624,left coronary artery,UBERON:0001626,UBERON:0001626,13
+"CD4-positive, alpha-beta T cell",CL:0000624,left ovary,UBERON:0002119,UBERON:0002119,15
+"CD4-positive, alpha-beta T cell",CL:0000624,liver,UBERON:0002107,UBERON:0002107,291
+"CD4-positive, alpha-beta T cell",CL:0000624,lung,UBERON:0002048,UBERON:0002048,2124
+"CD4-positive, alpha-beta T cell",CL:0000624,lymph node,UBERON:0000029,UBERON:0000029,31832
+"CD4-positive, alpha-beta T cell",CL:0000624,mammary gland,UBERON:0001911,UBERON:0001911,681
+"CD4-positive, alpha-beta T cell",CL:0000624,mesenteric lymph node,UBERON:0002509,UBERON:0002509,3096
+"CD4-positive, alpha-beta T cell",CL:0000624,mucosa of stomach,UBERON:0001199,UBERON:0001199,133
+"CD4-positive, alpha-beta T cell",CL:0000624,muscle of abdomen,UBERON:0002378,UBERON:0002378,249
+"CD4-positive, alpha-beta T cell",CL:0000624,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,265
+"CD4-positive, alpha-beta T cell",CL:0000624,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,92
+"CD4-positive, alpha-beta T cell",CL:0000624,myometrium,UBERON:0001296,UBERON:0001296,5
+"CD4-positive, alpha-beta T cell",CL:0000624,ocular surface region,UBERON:0010409,UBERON:0010409,8
+"CD4-positive, alpha-beta T cell",CL:0000624,parotid gland,UBERON:0001831,UBERON:0001831,1404
+"CD4-positive, alpha-beta T cell",CL:0000624,posterior part of tongue,UBERON:0010033,UBERON:0010033,1454
+"CD4-positive, alpha-beta T cell",CL:0000624,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,4
+"CD4-positive, alpha-beta T cell",CL:0000624,prostate gland,UBERON:0002367,UBERON:0002367,116
+"CD4-positive, alpha-beta T cell",CL:0000624,retinal neural layer,UBERON:0003902,UBERON:0003902,1
+"CD4-positive, alpha-beta T cell",CL:0000624,right cardiac atrium,UBERON:0002078,UBERON:0002078,22
+"CD4-positive, alpha-beta T cell",CL:0000624,right ovary,UBERON:0002118,UBERON:0002118,8
+"CD4-positive, alpha-beta T cell",CL:0000624,sclera,UBERON:0001773,UBERON:0001773,51
+"CD4-positive, alpha-beta T cell",CL:0000624,sigmoid colon,UBERON:0001159,UBERON:0001159,952
+"CD4-positive, alpha-beta T cell",CL:0000624,skin of abdomen,UBERON:0001416,UBERON:0001416,103
+"CD4-positive, alpha-beta T cell",CL:0000624,skin of body,UBERON:0002097,UBERON:0002097,158
+"CD4-positive, alpha-beta T cell",CL:0000624,skin of chest,UBERON:0001868,UBERON:0001868,98
+"CD4-positive, alpha-beta T cell",CL:0000624,small intestine,UBERON:0002108,UBERON:0002108,4933
+"CD4-positive, alpha-beta T cell",CL:0000624,spleen,UBERON:0002106,UBERON:0002106,2742
+"CD4-positive, alpha-beta T cell",CL:0000624,stomach,UBERON:0000945,UBERON:0000945,239
+"CD4-positive, alpha-beta T cell",CL:0000624,stomach smooth muscle,UBERON:0004222,UBERON:0004222,5320
+"CD4-positive, alpha-beta T cell",CL:0000624,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,860
+"CD4-positive, alpha-beta T cell",CL:0000624,sublingual gland,UBERON:0001832,UBERON:0001832,361
+"CD4-positive, alpha-beta T cell",CL:0000624,submandibular gland,UBERON:0001736,UBERON:0001736,121
+"CD4-positive, alpha-beta T cell",CL:0000624,testis,UBERON:0000473,UBERON:0000473,2
+"CD4-positive, alpha-beta T cell",CL:0000624,thoracic aorta,UBERON:0001515,UBERON:0001515,100
+"CD4-positive, alpha-beta T cell",CL:0000624,thymus,UBERON:0002370,UBERON:0002370,7126
+"CD4-positive, alpha-beta T cell",CL:0000624,trachea,UBERON:0003126,UBERON:0003126,278
+"CD4-positive, alpha-beta T cell",CL:0000624,uterus,UBERON:0000995,UBERON:0000995,50
+"CD4-positive, alpha-beta T cell",CL:0000624,vasculature,UBERON:0002049,UBERON:0002049,70
+"CD4-positive, alpha-beta thymocyte",CL:0000810,inguinal lymph node,UBERON:0001542,UBERON:0001542,43
+"CD4-positive, alpha-beta thymocyte",CL:0000810,lymph node,UBERON:0000029,UBERON:0000029,79
+"CD4-positive, alpha-beta thymocyte",CL:0000810,thymus,UBERON:0002370,UBERON:0002370,4563
+"CD8-positive, alpha-beta T cell",CL:0000625,abdominal aorta,UBERON:0001516,UBERON:0001516,24
+"CD8-positive, alpha-beta T cell",CL:0000625,adipose tissue,UBERON:0001013,UBERON:0001013,2249
+"CD8-positive, alpha-beta T cell",CL:0000625,anterior part of tongue,UBERON:0010032,UBERON:0010032,218
+"CD8-positive, alpha-beta T cell",CL:0000625,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,62
+"CD8-positive, alpha-beta T cell",CL:0000625,aorta,UBERON:0000947,UBERON:0000947,812
+"CD8-positive, alpha-beta T cell",CL:0000625,ascending colon,UBERON:0001156,UBERON:0001156,436
+"CD8-positive, alpha-beta T cell",CL:0000625,bladder organ,UBERON:0018707,UBERON:0018707,4432
+"CD8-positive, alpha-beta T cell",CL:0000625,blood,UBERON:0000178,UBERON:0000178,4572
+"CD8-positive, alpha-beta T cell",CL:0000625,bone marrow,UBERON:0002371,UBERON:0002371,2636
+"CD8-positive, alpha-beta T cell",CL:0000625,brown adipose tissue,UBERON:0001348,UBERON:0001348,1960
+"CD8-positive, alpha-beta T cell",CL:0000625,buccal mucosa,UBERON:0006956,UBERON:0006956,50
+"CD8-positive, alpha-beta T cell",CL:0000625,cardiac atrium,UBERON:0002081,UBERON:0002081,6
+"CD8-positive, alpha-beta T cell",CL:0000625,cardiac ventricle,UBERON:0002082,UBERON:0002082,3
+"CD8-positive, alpha-beta T cell",CL:0000625,chorioretinal region,UBERON:0019207,UBERON:0019207,1
+"CD8-positive, alpha-beta T cell",CL:0000625,cornea,UBERON:0000964,UBERON:0000964,30
+"CD8-positive, alpha-beta T cell",CL:0000625,coronary artery,UBERON:0001621,UBERON:0001621,406
+"CD8-positive, alpha-beta T cell",CL:0000625,cortex of kidney,UBERON:0001225,UBERON:0001225,31
+"CD8-positive, alpha-beta T cell",CL:0000625,crista ampullaris,UBERON:0004721,UBERON:0004721,2
+"CD8-positive, alpha-beta T cell",CL:0000625,duodenum,UBERON:0002114,UBERON:0002114,735
+"CD8-positive, alpha-beta T cell",CL:0000625,endocrine pancreas,UBERON:0000016,UBERON:0000016,15
+"CD8-positive, alpha-beta T cell",CL:0000625,endometrium,UBERON:0001295,UBERON:0001295,1240
+"CD8-positive, alpha-beta T cell",CL:0000625,exocrine pancreas,UBERON:0000017,UBERON:0000017,603
+"CD8-positive, alpha-beta T cell",CL:0000625,eye,UBERON:0000970,UBERON:0000970,122
+"CD8-positive, alpha-beta T cell",CL:0000625,eyelid,UBERON:0001711,UBERON:0001711,266
+"CD8-positive, alpha-beta T cell",CL:0000625,heart,UBERON:0000948,UBERON:0000948,110
+"CD8-positive, alpha-beta T cell",CL:0000625,heart right ventricle,UBERON:0002080,UBERON:0002080,63
+"CD8-positive, alpha-beta T cell",CL:0000625,ileum,UBERON:0002116,UBERON:0002116,741
+"CD8-positive, alpha-beta T cell",CL:0000625,inferior vena cava,UBERON:0001072,UBERON:0001072,5
+"CD8-positive, alpha-beta T cell",CL:0000625,inguinal lymph node,UBERON:0001542,UBERON:0001542,1290
+"CD8-positive, alpha-beta T cell",CL:0000625,kidney,UBERON:0002113,UBERON:0002113,506
+"CD8-positive, alpha-beta T cell",CL:0000625,lacrimal gland,UBERON:0001817,UBERON:0001817,359
+"CD8-positive, alpha-beta T cell",CL:0000625,large intestine,UBERON:0000059,UBERON:0000059,2157
+"CD8-positive, alpha-beta T cell",CL:0000625,left coronary artery,UBERON:0001626,UBERON:0001626,10
+"CD8-positive, alpha-beta T cell",CL:0000625,left ovary,UBERON:0002119,UBERON:0002119,36
+"CD8-positive, alpha-beta T cell",CL:0000625,liver,UBERON:0002107,UBERON:0002107,1290
+"CD8-positive, alpha-beta T cell",CL:0000625,lung,UBERON:0002048,UBERON:0002048,1898
+"CD8-positive, alpha-beta T cell",CL:0000625,lymph node,UBERON:0000029,UBERON:0000029,12956
+"CD8-positive, alpha-beta T cell",CL:0000625,mammary gland,UBERON:0001911,UBERON:0001911,2653
+"CD8-positive, alpha-beta T cell",CL:0000625,mesenteric lymph node,UBERON:0002509,UBERON:0002509,436
+"CD8-positive, alpha-beta T cell",CL:0000625,mucosa of stomach,UBERON:0001199,UBERON:0001199,205
+"CD8-positive, alpha-beta T cell",CL:0000625,muscle of abdomen,UBERON:0002378,UBERON:0002378,692
+"CD8-positive, alpha-beta T cell",CL:0000625,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,725
+"CD8-positive, alpha-beta T cell",CL:0000625,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,3
+"CD8-positive, alpha-beta T cell",CL:0000625,myometrium,UBERON:0001296,UBERON:0001296,57
+"CD8-positive, alpha-beta T cell",CL:0000625,ocular surface region,UBERON:0010409,UBERON:0010409,2
+"CD8-positive, alpha-beta T cell",CL:0000625,parotid gland,UBERON:0001831,UBERON:0001831,3278
+"CD8-positive, alpha-beta T cell",CL:0000625,posterior part of tongue,UBERON:0010033,UBERON:0010033,889
+"CD8-positive, alpha-beta T cell",CL:0000625,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,6
+"CD8-positive, alpha-beta T cell",CL:0000625,prostate gland,UBERON:0002367,UBERON:0002367,2516
+"CD8-positive, alpha-beta T cell",CL:0000625,retinal neural layer,UBERON:0003902,UBERON:0003902,3
+"CD8-positive, alpha-beta T cell",CL:0000625,right cardiac atrium,UBERON:0002078,UBERON:0002078,126
+"CD8-positive, alpha-beta T cell",CL:0000625,right ovary,UBERON:0002118,UBERON:0002118,37
+"CD8-positive, alpha-beta T cell",CL:0000625,sclera,UBERON:0001773,UBERON:0001773,85
+"CD8-positive, alpha-beta T cell",CL:0000625,sigmoid colon,UBERON:0001159,UBERON:0001159,369
+"CD8-positive, alpha-beta T cell",CL:0000625,skin of abdomen,UBERON:0001416,UBERON:0001416,284
+"CD8-positive, alpha-beta T cell",CL:0000625,skin of body,UBERON:0002097,UBERON:0002097,1010
+"CD8-positive, alpha-beta T cell",CL:0000625,skin of chest,UBERON:0001868,UBERON:0001868,187
+"CD8-positive, alpha-beta T cell",CL:0000625,small intestine,UBERON:0002108,UBERON:0002108,1996
+"CD8-positive, alpha-beta T cell",CL:0000625,spleen,UBERON:0002106,UBERON:0002106,10887
+"CD8-positive, alpha-beta T cell",CL:0000625,stomach,UBERON:0000945,UBERON:0000945,741
+"CD8-positive, alpha-beta T cell",CL:0000625,stomach smooth muscle,UBERON:0004222,UBERON:0004222,637
+"CD8-positive, alpha-beta T cell",CL:0000625,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,993
+"CD8-positive, alpha-beta T cell",CL:0000625,sublingual gland,UBERON:0001832,UBERON:0001832,484
+"CD8-positive, alpha-beta T cell",CL:0000625,submandibular gland,UBERON:0001736,UBERON:0001736,303
+"CD8-positive, alpha-beta T cell",CL:0000625,testis,UBERON:0000473,UBERON:0000473,3
+"CD8-positive, alpha-beta T cell",CL:0000625,thoracic aorta,UBERON:0001515,UBERON:0001515,220
+"CD8-positive, alpha-beta T cell",CL:0000625,thymus,UBERON:0002370,UBERON:0002370,2817
+"CD8-positive, alpha-beta T cell",CL:0000625,trachea,UBERON:0003126,UBERON:0003126,1202
+"CD8-positive, alpha-beta T cell",CL:0000625,uterus,UBERON:0000995,UBERON:0000995,44
+"CD8-positive, alpha-beta T cell",CL:0000625,vasculature,UBERON:0002049,UBERON:0002049,55
+"CD8-positive, alpha-beta thymocyte",CL:0000811,inguinal lymph node,UBERON:0001542,UBERON:0001542,22
+"CD8-positive, alpha-beta thymocyte",CL:0000811,lymph node,UBERON:0000029,UBERON:0000029,37
+"CD8-positive, alpha-beta thymocyte",CL:0000811,thymus,UBERON:0002370,UBERON:0002370,672
+Langerhans cell,CL:0000453,skin of abdomen,UBERON:0001416,UBERON:0001416,16
+Langerhans cell,CL:0000453,skin of body,UBERON:0002097,UBERON:0002097,54
+Langerhans cell,CL:0000453,skin of chest,UBERON:0001868,UBERON:0001868,6
+Leydig cell,CL:0000178,testis,UBERON:0000473,UBERON:0000473,10
+Mueller cell,CL:0000636,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,1
+Mueller cell,CL:0000636,eye,UBERON:0000970,UBERON:0000970,65
+Mueller cell,CL:0000636,lacrimal gland,UBERON:0001817,UBERON:0001817,1
+Mueller cell,CL:0000636,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,109
+Mueller cell,CL:0000636,retinal neural layer,UBERON:0003902,UBERON:0003902,330
+Schwann cell,CL:0002573,anterior part of tongue,UBERON:0010032,UBERON:0010032,21
+Schwann cell,CL:0002573,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,32
+Schwann cell,CL:0002573,chorioretinal region,UBERON:0019207,UBERON:0019207,4
+Schwann cell,CL:0002573,conjunctiva,UBERON:0001811,UBERON:0001811,1
+Schwann cell,CL:0002573,cornea,UBERON:0000964,UBERON:0000964,79
+Schwann cell,CL:0002573,eye,UBERON:0000970,UBERON:0000970,50
+Schwann cell,CL:0002573,eyelid,UBERON:0001711,UBERON:0001711,87
+Schwann cell,CL:0002573,lacrimal gland,UBERON:0001817,UBERON:0001817,13
+Schwann cell,CL:0002573,ocular surface region,UBERON:0010409,UBERON:0010409,2
+Schwann cell,CL:0002573,posterior part of tongue,UBERON:0010033,UBERON:0010033,14
+Schwann cell,CL:0002573,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,7
+Schwann cell,CL:0002573,sclera,UBERON:0001773,UBERON:0001773,8
+T cell,CL:0000084,adipose tissue,UBERON:0001013,UBERON:0001013,66
+T cell,CL:0000084,anterior part of tongue,UBERON:0010032,UBERON:0010032,5
+T cell,CL:0000084,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,3
+T cell,CL:0000084,aorta,UBERON:0000947,UBERON:0000947,12
+T cell,CL:0000084,bladder organ,UBERON:0018707,UBERON:0018707,781
+T cell,CL:0000084,bone marrow,UBERON:0002371,UBERON:0002371,98
+T cell,CL:0000084,brown adipose tissue,UBERON:0001348,UBERON:0001348,232
+T cell,CL:0000084,buccal mucosa,UBERON:0006956,UBERON:0006956,1
+T cell,CL:0000084,chorioretinal region,UBERON:0019207,UBERON:0019207,7
+T cell,CL:0000084,coronary artery,UBERON:0001621,UBERON:0001621,4
+T cell,CL:0000084,endometrium,UBERON:0001295,UBERON:0001295,41
+T cell,CL:0000084,exocrine pancreas,UBERON:0000017,UBERON:0000017,1
+T cell,CL:0000084,eye,UBERON:0000970,UBERON:0000970,10
+T cell,CL:0000084,eyelid,UBERON:0001711,UBERON:0001711,20
+T cell,CL:0000084,heart,UBERON:0000948,UBERON:0000948,1
+T cell,CL:0000084,heart right ventricle,UBERON:0002080,UBERON:0002080,3
+T cell,CL:0000084,inguinal lymph node,UBERON:0001542,UBERON:0001542,527
+T cell,CL:0000084,kidney,UBERON:0002113,UBERON:0002113,17
+T cell,CL:0000084,lacrimal gland,UBERON:0001817,UBERON:0001817,15
+T cell,CL:0000084,left ovary,UBERON:0002119,UBERON:0002119,1
+T cell,CL:0000084,liver,UBERON:0002107,UBERON:0002107,32
+T cell,CL:0000084,lymph node,UBERON:0000029,UBERON:0000029,569
+T cell,CL:0000084,mammary gland,UBERON:0001911,UBERON:0001911,223
+T cell,CL:0000084,mesenteric lymph node,UBERON:0002509,UBERON:0002509,185
+T cell,CL:0000084,mucosa of stomach,UBERON:0001199,UBERON:0001199,9
+T cell,CL:0000084,muscle of abdomen,UBERON:0002378,UBERON:0002378,26
+T cell,CL:0000084,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,82
+T cell,CL:0000084,ocular surface region,UBERON:0010409,UBERON:0010409,6
+T cell,CL:0000084,parotid gland,UBERON:0001831,UBERON:0001831,139
+T cell,CL:0000084,posterior part of tongue,UBERON:0010033,UBERON:0010033,189
+T cell,CL:0000084,prostate gland,UBERON:0002367,UBERON:0002367,14
+T cell,CL:0000084,right ovary,UBERON:0002118,UBERON:0002118,1
+T cell,CL:0000084,sclera,UBERON:0001773,UBERON:0001773,5
+T cell,CL:0000084,skin of abdomen,UBERON:0001416,UBERON:0001416,356
+T cell,CL:0000084,skin of body,UBERON:0002097,UBERON:0002097,1954
+T cell,CL:0000084,skin of chest,UBERON:0001868,UBERON:0001868,325
+T cell,CL:0000084,spleen,UBERON:0002106,UBERON:0002106,151
+T cell,CL:0000084,stomach,UBERON:0000945,UBERON:0000945,44
+T cell,CL:0000084,stomach smooth muscle,UBERON:0004222,UBERON:0004222,23
+T cell,CL:0000084,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,33
+T cell,CL:0000084,sublingual gland,UBERON:0001832,UBERON:0001832,39
+T cell,CL:0000084,submandibular gland,UBERON:0001736,UBERON:0001736,15
+T cell,CL:0000084,trachea,UBERON:0003126,UBERON:0003126,19
+T cell,CL:0000084,uterus,UBERON:0000995,UBERON:0000995,6
+T follicular helper cell,CL:0002038,thymus,UBERON:0002370,UBERON:0002370,6
+acinar cell,CL:0000622,conjunctiva,UBERON:0001811,UBERON:0001811,1
+acinar cell,CL:0000622,eye,UBERON:0000970,UBERON:0000970,12
+acinar cell,CL:0000622,eyelid,UBERON:0001711,UBERON:0001711,66
+acinar cell,CL:0000622,lacrimal gland,UBERON:0001817,UBERON:0001817,1159
+acinar cell,CL:0000622,sclera,UBERON:0001773,UBERON:0001773,107
+acinar cell of salivary gland,CL:0002623,parotid gland,UBERON:0001831,UBERON:0001831,7952
+acinar cell of salivary gland,CL:0002623,sublingual gland,UBERON:0001832,UBERON:0001832,2320
+acinar cell of salivary gland,CL:0002623,submandibular gland,UBERON:0001736,UBERON:0001736,1965
+"activated CD4-positive, alpha-beta T cell",CL:0000896,adipose tissue,UBERON:0001013,UBERON:0001013,1
+"activated CD4-positive, alpha-beta T cell",CL:0000896,duodenum,UBERON:0002114,UBERON:0002114,53
+"activated CD4-positive, alpha-beta T cell",CL:0000896,ileum,UBERON:0002116,UBERON:0002116,168
+"activated CD4-positive, alpha-beta T cell",CL:0000896,skin of abdomen,UBERON:0001416,UBERON:0001416,1
+"activated CD4-positive, alpha-beta T cell",CL:0000896,small intestine,UBERON:0002108,UBERON:0002108,349
+"activated CD8-positive, alpha-beta T cell",CL:0000906,duodenum,UBERON:0002114,UBERON:0002114,563
+"activated CD8-positive, alpha-beta T cell",CL:0000906,ileum,UBERON:0002116,UBERON:0002116,542
+"activated CD8-positive, alpha-beta T cell",CL:0000906,jejunum,UBERON:0002115,UBERON:0002115,33
+"activated CD8-positive, alpha-beta T cell",CL:0000906,small intestine,UBERON:0002108,UBERON:0002108,9
+adipocyte,CL:0000136,chorioretinal region,UBERON:0019207,UBERON:0019207,3
+adipocyte,CL:0000136,eye,UBERON:0000970,UBERON:0000970,1
+adipocyte,CL:0000136,lacrimal gland,UBERON:0001817,UBERON:0001817,33
+adipocyte,CL:0000136,ocular surface region,UBERON:0010409,UBERON:0010409,2
+adventitial cell,CL:0002503,lung,UBERON:0002048,UBERON:0002048,581
+adventitial cell,CL:0002503,parotid gland,UBERON:0001831,UBERON:0001831,448
+adventitial cell,CL:0002503,sublingual gland,UBERON:0001832,UBERON:0001832,12
+adventitial cell,CL:0002503,uterus,UBERON:0000995,UBERON:0000995,4
+alveolar adventitial fibroblast,CL:4028006,lung,UBERON:0002048,UBERON:0002048,1113
+basal cell,CL:0000646,anterior part of tongue,UBERON:0010032,UBERON:0010032,6437
+basal cell,CL:0000646,lung,UBERON:0002048,UBERON:0002048,4015
+basal cell,CL:0000646,mammary gland,UBERON:0001911,UBERON:0001911,1819
+basal cell,CL:0000646,parotid gland,UBERON:0001831,UBERON:0001831,120
+basal cell,CL:0000646,posterior part of tongue,UBERON:0010033,UBERON:0010033,9670
+basal cell,CL:0000646,sublingual gland,UBERON:0001832,UBERON:0001832,1003
+basal cell,CL:0000646,submandibular gland,UBERON:0001736,UBERON:0001736,59
+basal cell,CL:0000646,tongue,UBERON:0001723,UBERON:0001723,156
+basal cell,CL:0000646,trachea,UBERON:0003126,UBERON:0003126,10247
+basal cell of prostate epithelium,CL:0002341,prostate gland,UBERON:0002367,UBERON:0002367,3495
+basophil,CL:0000767,aorta,UBERON:0000947,UBERON:0000947,154
+basophil,CL:0000767,blood,UBERON:0000178,UBERON:0000178,41
+basophil,CL:0000767,bone marrow,UBERON:0002371,UBERON:0002371,23
+basophil,CL:0000767,coronary artery,UBERON:0001621,UBERON:0001621,51
+basophil,CL:0000767,eye,UBERON:0000970,UBERON:0000970,3
+basophil,CL:0000767,eyelid,UBERON:0001711,UBERON:0001711,1
+basophil,CL:0000767,lacrimal gland,UBERON:0001817,UBERON:0001817,1
+basophil,CL:0000767,lung,UBERON:0002048,UBERON:0002048,1322
+basophil,CL:0000767,mammary gland,UBERON:0001911,UBERON:0001911,12
+basophil,CL:0000767,muscle of abdomen,UBERON:0002378,UBERON:0002378,10
+basophil,CL:0000767,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,1
+basophil,CL:0000767,sclera,UBERON:0001773,UBERON:0001773,1
+basophil,CL:0000767,skin of abdomen,UBERON:0001416,UBERON:0001416,2
+basophil,CL:0000767,skin of chest,UBERON:0001868,UBERON:0001868,6
+basophil,CL:0000767,spleen,UBERON:0002106,UBERON:0002106,2
+basophil,CL:0000767,thoracic aorta,UBERON:0001515,UBERON:0001515,39
+bladder urothelial cell,CL:1001428,bladder organ,UBERON:0018707,UBERON:0018707,27241
+blood vessel smooth muscle cell,CL:0019018,left ovary,UBERON:0002119,UBERON:0002119,3695
+blood vessel smooth muscle cell,CL:0019018,ovary,UBERON:0000992,UBERON:0000992,2
+blood vessel smooth muscle cell,CL:0019018,right ovary,UBERON:0002118,UBERON:0002118,2945
+bronchial smooth muscle cell,CL:0002598,lung,UBERON:0002048,UBERON:0002048,220
+capillary endothelial cell,CL:0002144,abdominal aorta,UBERON:0001516,UBERON:0001516,4
+capillary endothelial cell,CL:0002144,aorta,UBERON:0000947,UBERON:0000947,649
+capillary endothelial cell,CL:0002144,bladder organ,UBERON:0018707,UBERON:0018707,107
+capillary endothelial cell,CL:0002144,coronary artery,UBERON:0001621,UBERON:0001621,1082
+capillary endothelial cell,CL:0002144,left coronary artery,UBERON:0001626,UBERON:0001626,1
+capillary endothelial cell,CL:0002144,lung,UBERON:0002048,UBERON:0002048,7243
+capillary endothelial cell,CL:0002144,muscle of abdomen,UBERON:0002378,UBERON:0002378,2919
+capillary endothelial cell,CL:0002144,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,373
+capillary endothelial cell,CL:0002144,thoracic aorta,UBERON:0001515,UBERON:0001515,174
+capillary endothelial cell,CL:0002144,thymus,UBERON:0002370,UBERON:0002370,2621
+capillary endothelial cell,CL:0002144,vasculature,UBERON:0002049,UBERON:0002049,125
+cardiac endothelial cell,CL:0010008,cardiac atrium,UBERON:0002081,UBERON:0002081,2376
+cardiac endothelial cell,CL:0010008,cardiac ventricle,UBERON:0002082,UBERON:0002082,1169
+cardiac endothelial cell,CL:0010008,heart,UBERON:0000948,UBERON:0000948,4299
+cardiac endothelial cell,CL:0010008,heart right ventricle,UBERON:0002080,UBERON:0002080,890
+cardiac endothelial cell,CL:0010008,right cardiac atrium,UBERON:0002078,UBERON:0002078,1358
+ciliated epithelial cell,CL:0000067,endometrium,UBERON:0001295,UBERON:0001295,315
+ciliated epithelial cell,CL:0000067,myometrium,UBERON:0001296,UBERON:0001296,2
+ciliated epithelial cell,CL:0000067,uterus,UBERON:0000995,UBERON:0000995,3
+classical monocyte,CL:0000860,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,1
+classical monocyte,CL:0000860,aorta,UBERON:0000947,UBERON:0000947,2
+classical monocyte,CL:0000860,blood,UBERON:0000178,UBERON:0000178,10591
+classical monocyte,CL:0000860,bone marrow,UBERON:0002371,UBERON:0002371,231
+classical monocyte,CL:0000860,brown adipose tissue,UBERON:0001348,UBERON:0001348,2
+classical monocyte,CL:0000860,coronary artery,UBERON:0001621,UBERON:0001621,4
+classical monocyte,CL:0000860,exocrine pancreas,UBERON:0000017,UBERON:0000017,390
+classical monocyte,CL:0000860,eye,UBERON:0000970,UBERON:0000970,5
+classical monocyte,CL:0000860,eyelid,UBERON:0001711,UBERON:0001711,3
+classical monocyte,CL:0000860,inguinal lymph node,UBERON:0001542,UBERON:0001542,51
+classical monocyte,CL:0000860,lacrimal gland,UBERON:0001817,UBERON:0001817,6
+classical monocyte,CL:0000860,left ovary,UBERON:0002119,UBERON:0002119,3
+classical monocyte,CL:0000860,liver,UBERON:0002107,UBERON:0002107,326
+classical monocyte,CL:0000860,lung,UBERON:0002048,UBERON:0002048,1569
+classical monocyte,CL:0000860,lymph node,UBERON:0000029,UBERON:0000029,482
+classical monocyte,CL:0000860,mesenteric lymph node,UBERON:0002509,UBERON:0002509,19
+classical monocyte,CL:0000860,parotid gland,UBERON:0001831,UBERON:0001831,43
+classical monocyte,CL:0000860,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,2
+classical monocyte,CL:0000860,retinal neural layer,UBERON:0003902,UBERON:0003902,1
+classical monocyte,CL:0000860,sclera,UBERON:0001773,UBERON:0001773,1
+classical monocyte,CL:0000860,spleen,UBERON:0002106,UBERON:0002106,4462
+classical monocyte,CL:0000860,thoracic aorta,UBERON:0001515,UBERON:0001515,6
+club cell,CL:0000158,lung,UBERON:0002048,UBERON:0002048,1747
+colon endothelial cell,CL:1001572,ascending colon,UBERON:0001156,UBERON:0001156,140
+colon endothelial cell,CL:1001572,large intestine,UBERON:0000059,UBERON:0000059,147
+colon endothelial cell,CL:1001572,sigmoid colon,UBERON:0001159,UBERON:0001159,61
+colon macrophage,CL:0009038,ascending colon,UBERON:0001156,UBERON:0001156,157
+colon macrophage,CL:0009038,large intestine,UBERON:0000059,UBERON:0000059,22
+colon macrophage,CL:0009038,sigmoid colon,UBERON:0001159,UBERON:0001159,149
+common myeloid progenitor,CL:0000049,blood,UBERON:0000178,UBERON:0000178,3
+common myeloid progenitor,CL:0000049,bone marrow,UBERON:0002371,UBERON:0002371,453
+conjunctival epithelial cell,CL:1000432,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,2408
+conjunctival epithelial cell,CL:1000432,chorioretinal region,UBERON:0019207,UBERON:0019207,5
+conjunctival epithelial cell,CL:1000432,conjunctiva,UBERON:0001811,UBERON:0001811,3613
+conjunctival epithelial cell,CL:1000432,cornea,UBERON:0000964,UBERON:0000964,1545
+conjunctival epithelial cell,CL:1000432,eye,UBERON:0000970,UBERON:0000970,1516
+conjunctival epithelial cell,CL:1000432,eyelid,UBERON:0001711,UBERON:0001711,1377
+conjunctival epithelial cell,CL:1000432,lacrimal gland,UBERON:0001817,UBERON:0001817,404
+conjunctival epithelial cell,CL:1000432,ocular surface region,UBERON:0010409,UBERON:0010409,2
+conjunctival epithelial cell,CL:1000432,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,22
+conjunctival epithelial cell,CL:1000432,sclera,UBERON:0001773,UBERON:0001773,195
+connective tissue cell,CL:0002320,trachea,UBERON:0003126,UBERON:0003126,152
+corneal epithelial cell,CL:0000575,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,2657
+corneal epithelial cell,CL:0000575,chorioretinal region,UBERON:0019207,UBERON:0019207,4
+corneal epithelial cell,CL:0000575,conjunctiva,UBERON:0001811,UBERON:0001811,1
+corneal epithelial cell,CL:0000575,cornea,UBERON:0000964,UBERON:0000964,1474
+corneal epithelial cell,CL:0000575,eye,UBERON:0000970,UBERON:0000970,48
+corneal epithelial cell,CL:0000575,ocular surface region,UBERON:0010409,UBERON:0010409,3
+duct epithelial cell,CL:0000068,parotid gland,UBERON:0001831,UBERON:0001831,1309
+duct epithelial cell,CL:0000068,sublingual gland,UBERON:0001832,UBERON:0001832,1756
+duct epithelial cell,CL:0000068,submandibular gland,UBERON:0001736,UBERON:0001736,824
+endothelial cell,CL:0000115,abdominal aorta,UBERON:0001516,UBERON:0001516,35
+endothelial cell,CL:0000115,adipose tissue,UBERON:0001013,UBERON:0001013,2664
+endothelial cell,CL:0000115,anterior part of tongue,UBERON:0010032,UBERON:0010032,496
+endothelial cell,CL:0000115,aorta,UBERON:0000947,UBERON:0000947,2230
+endothelial cell,CL:0000115,bladder organ,UBERON:0018707,UBERON:0018707,37
+endothelial cell,CL:0000115,bone marrow,UBERON:0002371,UBERON:0002371,3
+endothelial cell,CL:0000115,brown adipose tissue,UBERON:0001348,UBERON:0001348,1712
+endothelial cell,CL:0000115,buccal mucosa,UBERON:0006956,UBERON:0006956,93
+endothelial cell,CL:0000115,chorioretinal region,UBERON:0019207,UBERON:0019207,8
+endothelial cell,CL:0000115,coronary artery,UBERON:0001621,UBERON:0001621,221
+endothelial cell,CL:0000115,endocrine pancreas,UBERON:0000016,UBERON:0000016,165
+endothelial cell,CL:0000115,endometrium,UBERON:0001295,UBERON:0001295,352
+endothelial cell,CL:0000115,exocrine pancreas,UBERON:0000017,UBERON:0000017,2160
+endothelial cell,CL:0000115,inferior vena cava,UBERON:0001072,UBERON:0001072,38
+endothelial cell,CL:0000115,inguinal lymph node,UBERON:0001542,UBERON:0001542,10
+endothelial cell,CL:0000115,kidney,UBERON:0002113,UBERON:0002113,101
+endothelial cell,CL:0000115,lacrimal gland,UBERON:0001817,UBERON:0001817,5
+endothelial cell,CL:0000115,left coronary artery,UBERON:0001626,UBERON:0001626,39
+endothelial cell,CL:0000115,left ovary,UBERON:0002119,UBERON:0002119,579
+endothelial cell,CL:0000115,liver,UBERON:0002107,UBERON:0002107,1774
+endothelial cell,CL:0000115,lymph node,UBERON:0000029,UBERON:0000029,180
+endothelial cell,CL:0000115,mammary gland,UBERON:0001911,UBERON:0001911,1534
+endothelial cell,CL:0000115,mesenteric lymph node,UBERON:0002509,UBERON:0002509,6
+endothelial cell,CL:0000115,muscle of abdomen,UBERON:0002378,UBERON:0002378,1833
+endothelial cell,CL:0000115,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,1693
+endothelial cell,CL:0000115,myometrium,UBERON:0001296,UBERON:0001296,4322
+endothelial cell,CL:0000115,ovary,UBERON:0000992,UBERON:0000992,58
+endothelial cell,CL:0000115,parotid gland,UBERON:0001831,UBERON:0001831,354
+endothelial cell,CL:0000115,posterior part of tongue,UBERON:0010033,UBERON:0010033,725
+endothelial cell,CL:0000115,prostate gland,UBERON:0002367,UBERON:0002367,1205
+endothelial cell,CL:0000115,right ovary,UBERON:0002118,UBERON:0002118,1087
+endothelial cell,CL:0000115,skin of abdomen,UBERON:0001416,UBERON:0001416,246
+endothelial cell,CL:0000115,skin of body,UBERON:0002097,UBERON:0002097,1241
+endothelial cell,CL:0000115,skin of chest,UBERON:0001868,UBERON:0001868,496
+endothelial cell,CL:0000115,spleen,UBERON:0002106,UBERON:0002106,1350
+endothelial cell,CL:0000115,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,2590
+endothelial cell,CL:0000115,sublingual gland,UBERON:0001832,UBERON:0001832,467
+endothelial cell,CL:0000115,submandibular gland,UBERON:0001736,UBERON:0001736,808
+endothelial cell,CL:0000115,testis,UBERON:0000473,UBERON:0000473,53
+endothelial cell,CL:0000115,thoracic aorta,UBERON:0001515,UBERON:0001515,36
+endothelial cell,CL:0000115,thymus,UBERON:0002370,UBERON:0002370,1
+endothelial cell,CL:0000115,trachea,UBERON:0003126,UBERON:0003126,586
+endothelial cell,CL:0000115,uterus,UBERON:0000995,UBERON:0000995,23
+endothelial cell,CL:0000115,vasculature,UBERON:0002049,UBERON:0002049,87
+endothelial cell of arteriole,CL:1000412,duodenum,UBERON:0002114,UBERON:0002114,100
+endothelial cell of arteriole,CL:1000412,ileum,UBERON:0002116,UBERON:0002116,13
+endothelial cell of arteriole,CL:1000412,small intestine,UBERON:0002108,UBERON:0002108,19
+endothelial cell of artery,CL:1000413,abdominal aorta,UBERON:0001516,UBERON:0001516,3
+endothelial cell of artery,CL:1000413,aorta,UBERON:0000947,UBERON:0000947,211
+endothelial cell of artery,CL:1000413,coronary artery,UBERON:0001621,UBERON:0001621,377
+endothelial cell of artery,CL:1000413,inferior vena cava,UBERON:0001072,UBERON:0001072,2
+endothelial cell of artery,CL:1000413,left coronary artery,UBERON:0001626,UBERON:0001626,3
+endothelial cell of artery,CL:1000413,lung,UBERON:0002048,UBERON:0002048,1754
+endothelial cell of artery,CL:1000413,muscle of abdomen,UBERON:0002378,UBERON:0002378,143
+endothelial cell of artery,CL:1000413,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,37
+endothelial cell of artery,CL:1000413,parotid gland,UBERON:0001831,UBERON:0001831,11
+endothelial cell of artery,CL:1000413,sublingual gland,UBERON:0001832,UBERON:0001832,48
+endothelial cell of artery,CL:1000413,submandibular gland,UBERON:0001736,UBERON:0001736,57
+endothelial cell of artery,CL:1000413,thoracic aorta,UBERON:0001515,UBERON:0001515,21
+endothelial cell of artery,CL:1000413,thymus,UBERON:0002370,UBERON:0002370,773
+endothelial cell of artery,CL:1000413,vasculature,UBERON:0002049,UBERON:0002049,31
+endothelial cell of lymphatic vessel,CL:0002138,anterior part of tongue,UBERON:0010032,UBERON:0010032,50
+endothelial cell of lymphatic vessel,CL:0002138,aorta,UBERON:0000947,UBERON:0000947,40
+endothelial cell of lymphatic vessel,CL:0002138,bladder organ,UBERON:0018707,UBERON:0018707,127
+endothelial cell of lymphatic vessel,CL:0002138,coronary artery,UBERON:0001621,UBERON:0001621,130
+endothelial cell of lymphatic vessel,CL:0002138,duodenum,UBERON:0002114,UBERON:0002114,67
+endothelial cell of lymphatic vessel,CL:0002138,jejunum,UBERON:0002115,UBERON:0002115,4
+endothelial cell of lymphatic vessel,CL:0002138,left coronary artery,UBERON:0001626,UBERON:0001626,2
+endothelial cell of lymphatic vessel,CL:0002138,lung,UBERON:0002048,UBERON:0002048,315
+endothelial cell of lymphatic vessel,CL:0002138,mucosa of stomach,UBERON:0001199,UBERON:0001199,8
+endothelial cell of lymphatic vessel,CL:0002138,muscle of abdomen,UBERON:0002378,UBERON:0002378,56
+endothelial cell of lymphatic vessel,CL:0002138,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,99
+endothelial cell of lymphatic vessel,CL:0002138,parotid gland,UBERON:0001831,UBERON:0001831,77
+endothelial cell of lymphatic vessel,CL:0002138,posterior part of tongue,UBERON:0010033,UBERON:0010033,47
+endothelial cell of lymphatic vessel,CL:0002138,small intestine,UBERON:0002108,UBERON:0002108,2
+endothelial cell of lymphatic vessel,CL:0002138,stomach,UBERON:0000945,UBERON:0000945,273
+endothelial cell of lymphatic vessel,CL:0002138,stomach smooth muscle,UBERON:0004222,UBERON:0004222,269
+endothelial cell of lymphatic vessel,CL:0002138,sublingual gland,UBERON:0001832,UBERON:0001832,376
+endothelial cell of lymphatic vessel,CL:0002138,submandibular gland,UBERON:0001736,UBERON:0001736,93
+endothelial cell of lymphatic vessel,CL:0002138,thoracic aorta,UBERON:0001515,UBERON:0001515,20
+endothelial cell of lymphatic vessel,CL:0002138,thymus,UBERON:0002370,UBERON:0002370,371
+endothelial cell of lymphatic vessel,CL:0002138,uterus,UBERON:0000995,UBERON:0000995,6
+endothelial cell of lymphatic vessel,CL:0002138,vasculature,UBERON:0002049,UBERON:0002049,6
+endothelial cell of vascular tree,CL:0002139,crista ampullaris,UBERON:0004721,UBERON:0004721,101
+endothelial cell of vascular tree,CL:0002139,muscle of abdomen,UBERON:0002378,UBERON:0002378,364
+endothelial cell of vascular tree,CL:0002139,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,359
+endothelial cell of vascular tree,CL:0002139,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,51
+endothelial cell of venule,CL:1000414,duodenum,UBERON:0002114,UBERON:0002114,43
+endothelial cell of venule,CL:1000414,ileum,UBERON:0002116,UBERON:0002116,1
+endothelial cell of venule,CL:1000414,jejunum,UBERON:0002115,UBERON:0002115,4
+endothelial cell of venule,CL:1000414,small intestine,UBERON:0002108,UBERON:0002108,4
+enterochromaffin-like cell,CL:0000504,ascending colon,UBERON:0001156,UBERON:0001156,6
+enterochromaffin-like cell,CL:0000504,large intestine,UBERON:0000059,UBERON:0000059,1
+enterochromaffin-like cell,CL:0000504,sigmoid colon,UBERON:0001159,UBERON:0001159,20
+enterocyte of epithelium of large intestine,CL:0002071,ascending colon,UBERON:0001156,UBERON:0001156,1819
+enterocyte of epithelium of large intestine,CL:0002071,large intestine,UBERON:0000059,UBERON:0000059,898
+enterocyte of epithelium of large intestine,CL:0002071,sigmoid colon,UBERON:0001159,UBERON:0001159,1850
+enterocyte of epithelium proper of duodenum,CL:1000340,duodenum,UBERON:0002114,UBERON:0002114,13488
+enterocyte of epithelium proper of duodenum,CL:1000340,small intestine,UBERON:0002108,UBERON:0002108,7
+enterocyte of epithelium proper of ileum,CL:1000342,duodenum,UBERON:0002114,UBERON:0002114,1
+enterocyte of epithelium proper of ileum,CL:1000342,ileum,UBERON:0002116,UBERON:0002116,6474
+enterocyte of epithelium proper of ileum,CL:1000342,small intestine,UBERON:0002108,UBERON:0002108,2
+enterocyte of epithelium proper of jejunum,CL:1000341,jejunum,UBERON:0002115,UBERON:0002115,405
+enterocyte of epithelium proper of small intestine,CL:1000339,small intestine,UBERON:0002108,UBERON:0002108,1415
+enteroendocrine cell,CL:0000164,mucosa of stomach,UBERON:0001199,UBERON:0001199,19
+enteroendocrine cell,CL:0000164,stomach,UBERON:0000945,UBERON:0000945,6
+enteroendocrine cell of small intestine,CL:0009006,duodenum,UBERON:0002114,UBERON:0002114,105
+enteroendocrine cell of small intestine,CL:0009006,ileum,UBERON:0002116,UBERON:0002116,127
+enteroendocrine cell of small intestine,CL:0009006,jejunum,UBERON:0002115,UBERON:0002115,7
+enteroendocrine cell of small intestine,CL:0009006,small intestine,UBERON:0002108,UBERON:0002108,25
+enteroglial cell,CL:4040002,ascending colon,UBERON:0001156,UBERON:0001156,92
+enteroglial cell,CL:4040002,duodenum,UBERON:0002114,UBERON:0002114,57
+enteroglial cell,CL:4040002,ileum,UBERON:0002116,UBERON:0002116,12
+enteroglial cell,CL:4040002,large intestine,UBERON:0000059,UBERON:0000059,726
+enteroglial cell,CL:4040002,sigmoid colon,UBERON:0001159,UBERON:0001159,30
+enteroglial cell,CL:4040002,small intestine,UBERON:0002108,UBERON:0002108,73
+epithelial cell,CL:0000066,buccal mucosa,UBERON:0006956,UBERON:0006956,5
+epithelial cell,CL:0000066,mucosa of stomach,UBERON:0001199,UBERON:0001199,908
+epithelial cell,CL:0000066,muscle of abdomen,UBERON:0002378,UBERON:0002378,18
+epithelial cell,CL:0000066,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,39
+epithelial cell,CL:0000066,ovary,UBERON:0000992,UBERON:0000992,9
+epithelial cell,CL:0000066,skin of abdomen,UBERON:0001416,UBERON:0001416,1
+epithelial cell,CL:0000066,skin of chest,UBERON:0001868,UBERON:0001868,2
+epithelial cell,CL:0000066,stomach,UBERON:0000945,UBERON:0000945,693
+epithelial cell of uterus,CL:0002149,endometrium,UBERON:0001295,UBERON:0001295,1180
+epithelial cell of uterus,CL:0002149,myometrium,UBERON:0001296,UBERON:0001296,139
+epithelial cell of uterus,CL:0002149,uterus,UBERON:0000995,UBERON:0000995,98
+epithelial fate stem cell,CL:0000036,uterus,UBERON:0000995,UBERON:0000995,2
+erythrocyte,CL:0000232,adipose tissue,UBERON:0001013,UBERON:0001013,13
+erythrocyte,CL:0000232,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,4
+erythrocyte,CL:0000232,aorta,UBERON:0000947,UBERON:0000947,65
+erythrocyte,CL:0000232,bladder organ,UBERON:0018707,UBERON:0018707,106
+erythrocyte,CL:0000232,blood,UBERON:0000178,UBERON:0000178,11548
+erythrocyte,CL:0000232,bone marrow,UBERON:0002371,UBERON:0002371,453
+erythrocyte,CL:0000232,brown adipose tissue,UBERON:0001348,UBERON:0001348,206
+erythrocyte,CL:0000232,buccal mucosa,UBERON:0006956,UBERON:0006956,5
+erythrocyte,CL:0000232,cardiac ventricle,UBERON:0002082,UBERON:0002082,1
+erythrocyte,CL:0000232,coronary artery,UBERON:0001621,UBERON:0001621,6
+erythrocyte,CL:0000232,eye,UBERON:0000970,UBERON:0000970,34
+erythrocyte,CL:0000232,eyelid,UBERON:0001711,UBERON:0001711,42
+erythrocyte,CL:0000232,heart,UBERON:0000948,UBERON:0000948,27
+erythrocyte,CL:0000232,heart right ventricle,UBERON:0002080,UBERON:0002080,29
+erythrocyte,CL:0000232,inguinal lymph node,UBERON:0001542,UBERON:0001542,7
+erythrocyte,CL:0000232,lacrimal gland,UBERON:0001817,UBERON:0001817,41
+erythrocyte,CL:0000232,left coronary artery,UBERON:0001626,UBERON:0001626,1
+erythrocyte,CL:0000232,liver,UBERON:0002107,UBERON:0002107,980
+erythrocyte,CL:0000232,lymph node,UBERON:0000029,UBERON:0000029,25
+erythrocyte,CL:0000232,mesenteric lymph node,UBERON:0002509,UBERON:0002509,10
+erythrocyte,CL:0000232,muscle of abdomen,UBERON:0002378,UBERON:0002378,107
+erythrocyte,CL:0000232,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,17
+erythrocyte,CL:0000232,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,4
+erythrocyte,CL:0000232,prostate gland,UBERON:0002367,UBERON:0002367,139
+erythrocyte,CL:0000232,retinal neural layer,UBERON:0003902,UBERON:0003902,8
+erythrocyte,CL:0000232,right cardiac atrium,UBERON:0002078,UBERON:0002078,86
+erythrocyte,CL:0000232,sclera,UBERON:0001773,UBERON:0001773,15
+erythrocyte,CL:0000232,spleen,UBERON:0002106,UBERON:0002106,406
+erythrocyte,CL:0000232,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,63
+erythrocyte,CL:0000232,thymus,UBERON:0002370,UBERON:0002370,152
+erythrocyte,CL:0000232,vasculature,UBERON:0002049,UBERON:0002049,11
+erythroid lineage cell,CL:0000764,lacrimal gland,UBERON:0001817,UBERON:0001817,2
+erythroid progenitor cell,CL:0000038,bone marrow,UBERON:0002371,UBERON:0002371,971
+eye photoreceptor cell,CL:0000287,eye,UBERON:0000970,UBERON:0000970,731
+eye photoreceptor cell,CL:0000287,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,468
+eye photoreceptor cell,CL:0000287,retinal neural layer,UBERON:0003902,UBERON:0003902,337
+fast muscle cell,CL:0000190,muscle of abdomen,UBERON:0002378,UBERON:0002378,410
+fast muscle cell,CL:0000190,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,64
+fast muscle cell,CL:0000190,thymus,UBERON:0002370,UBERON:0002370,21
+fibroblast,CL:0000057,abdominal aorta,UBERON:0001516,UBERON:0001516,65
+fibroblast,CL:0000057,adipose tissue,UBERON:0001013,UBERON:0001013,8620
+fibroblast,CL:0000057,anterior part of tongue,UBERON:0010032,UBERON:0010032,938
+fibroblast,CL:0000057,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,43
+fibroblast,CL:0000057,aorta,UBERON:0000947,UBERON:0000947,7296
+fibroblast,CL:0000057,ascending colon,UBERON:0001156,UBERON:0001156,1220
+fibroblast,CL:0000057,bladder organ,UBERON:0018707,UBERON:0018707,13766
+fibroblast,CL:0000057,bone marrow,UBERON:0002371,UBERON:0002371,11
+fibroblast,CL:0000057,brown adipose tissue,UBERON:0001348,UBERON:0001348,7275
+fibroblast,CL:0000057,buccal mucosa,UBERON:0006956,UBERON:0006956,64
+fibroblast,CL:0000057,chorioretinal region,UBERON:0019207,UBERON:0019207,5
+fibroblast,CL:0000057,conjunctiva,UBERON:0001811,UBERON:0001811,3
+fibroblast,CL:0000057,cornea,UBERON:0000964,UBERON:0000964,86
+fibroblast,CL:0000057,coronary artery,UBERON:0001621,UBERON:0001621,3444
+fibroblast,CL:0000057,duodenum,UBERON:0002114,UBERON:0002114,234
+fibroblast,CL:0000057,endocrine pancreas,UBERON:0000016,UBERON:0000016,1
+fibroblast,CL:0000057,endometrium,UBERON:0001295,UBERON:0001295,5384
+fibroblast,CL:0000057,exocrine pancreas,UBERON:0000017,UBERON:0000017,193
+fibroblast,CL:0000057,eye,UBERON:0000970,UBERON:0000970,317
+fibroblast,CL:0000057,eyelid,UBERON:0001711,UBERON:0001711,711
+fibroblast,CL:0000057,ileum,UBERON:0002116,UBERON:0002116,146
+fibroblast,CL:0000057,inferior vena cava,UBERON:0001072,UBERON:0001072,84
+fibroblast,CL:0000057,jejunum,UBERON:0002115,UBERON:0002115,2
+fibroblast,CL:0000057,lacrimal gland,UBERON:0001817,UBERON:0001817,325
+fibroblast,CL:0000057,large intestine,UBERON:0000059,UBERON:0000059,1069
+fibroblast,CL:0000057,left coronary artery,UBERON:0001626,UBERON:0001626,86
+fibroblast,CL:0000057,liver,UBERON:0002107,UBERON:0002107,161
+fibroblast,CL:0000057,mucosa of stomach,UBERON:0001199,UBERON:0001199,158
+fibroblast,CL:0000057,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,5
+fibroblast,CL:0000057,myometrium,UBERON:0001296,UBERON:0001296,927
+fibroblast,CL:0000057,ocular surface region,UBERON:0010409,UBERON:0010409,9
+fibroblast,CL:0000057,parotid gland,UBERON:0001831,UBERON:0001831,1792
+fibroblast,CL:0000057,posterior part of tongue,UBERON:0010033,UBERON:0010033,592
+fibroblast,CL:0000057,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,53
+fibroblast,CL:0000057,prostate gland,UBERON:0002367,UBERON:0002367,519
+fibroblast,CL:0000057,sclera,UBERON:0001773,UBERON:0001773,36
+fibroblast,CL:0000057,sigmoid colon,UBERON:0001159,UBERON:0001159,308
+fibroblast,CL:0000057,skin of abdomen,UBERON:0001416,UBERON:0001416,710
+fibroblast,CL:0000057,skin of body,UBERON:0002097,UBERON:0002097,2401
+fibroblast,CL:0000057,skin of chest,UBERON:0001868,UBERON:0001868,958
+fibroblast,CL:0000057,small intestine,UBERON:0002108,UBERON:0002108,111
+fibroblast,CL:0000057,spleen,UBERON:0002106,UBERON:0002106,1
+fibroblast,CL:0000057,stomach,UBERON:0000945,UBERON:0000945,1732
+fibroblast,CL:0000057,stomach smooth muscle,UBERON:0004222,UBERON:0004222,4650
+fibroblast,CL:0000057,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,10074
+fibroblast,CL:0000057,sublingual gland,UBERON:0001832,UBERON:0001832,2007
+fibroblast,CL:0000057,submandibular gland,UBERON:0001736,UBERON:0001736,668
+fibroblast,CL:0000057,thoracic aorta,UBERON:0001515,UBERON:0001515,752
+fibroblast,CL:0000057,thymus,UBERON:0002370,UBERON:0002370,272
+fibroblast,CL:0000057,tongue,UBERON:0001723,UBERON:0001723,1
+fibroblast,CL:0000057,trachea,UBERON:0003126,UBERON:0003126,1800
+fibroblast,CL:0000057,uterus,UBERON:0000995,UBERON:0000995,282
+fibroblast,CL:0000057,vasculature,UBERON:0002049,UBERON:0002049,971
+fibroblast of breast,CL:4006000,mammary gland,UBERON:0001911,UBERON:0001911,5270
+fibroblast of cardiac tissue,CL:0002548,cardiac atrium,UBERON:0002081,UBERON:0002081,155
+fibroblast of cardiac tissue,CL:0002548,cardiac ventricle,UBERON:0002082,UBERON:0002082,152
+fibroblast of cardiac tissue,CL:0002548,heart,UBERON:0000948,UBERON:0000948,466
+fibroblast of cardiac tissue,CL:0002548,heart right ventricle,UBERON:0002080,UBERON:0002080,579
+fibroblast of cardiac tissue,CL:0002548,right cardiac atrium,UBERON:0002078,UBERON:0002078,595
+gamma-delta T cell,CL:0000798,ascending colon,UBERON:0001156,UBERON:0001156,875
+gamma-delta T cell,CL:0000798,duodenum,UBERON:0002114,UBERON:0002114,34
+gamma-delta T cell,CL:0000798,ileum,UBERON:0002116,UBERON:0002116,58
+gamma-delta T cell,CL:0000798,jejunum,UBERON:0002115,UBERON:0002115,1
+gamma-delta T cell,CL:0000798,large intestine,UBERON:0000059,UBERON:0000059,584
+gamma-delta T cell,CL:0000798,sigmoid colon,UBERON:0001159,UBERON:0001159,397
+gamma-delta T cell,CL:0000798,small intestine,UBERON:0002108,UBERON:0002108,28
+glandular secretory epithelial cell,CL:0000150,left ovary,UBERON:0002119,UBERON:0002119,75
+glandular secretory epithelial cell,CL:0000150,ovary,UBERON:0000992,UBERON:0000992,3
+glandular secretory epithelial cell,CL:0000150,right ovary,UBERON:0002118,UBERON:0002118,157
+glial cell,CL:0000125,left ovary,UBERON:0002119,UBERON:0002119,14
+glial cell,CL:0000125,ovary,UBERON:0000992,UBERON:0000992,1
+glial cell,CL:0000125,right ovary,UBERON:0002118,UBERON:0002118,5
+granulocyte,CL:0000094,bone marrow,UBERON:0002371,UBERON:0002371,635
+granulocyte,CL:0000094,endometrium,UBERON:0001295,UBERON:0001295,1
+granulocyte,CL:0000094,muscle of abdomen,UBERON:0002378,UBERON:0002378,91
+granulocyte,CL:0000094,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,3
+granulocyte,CL:0000094,trachea,UBERON:0003126,UBERON:0003126,39
+hematopoietic cell,CL:0000988,crista ampullaris,UBERON:0004721,UBERON:0004721,81
+hematopoietic cell,CL:0000988,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,19
+hematopoietic precursor cell,CL:0008001,adipose tissue,UBERON:0001013,UBERON:0001013,1
+hematopoietic precursor cell,CL:0008001,blood,UBERON:0000178,UBERON:0000178,131
+hematopoietic precursor cell,CL:0008001,bone marrow,UBERON:0002371,UBERON:0002371,1720
+hematopoietic precursor cell,CL:0008001,brown adipose tissue,UBERON:0001348,UBERON:0001348,72
+hematopoietic precursor cell,CL:0008001,inguinal lymph node,UBERON:0001542,UBERON:0001542,1
+hematopoietic precursor cell,CL:0008001,left ovary,UBERON:0002119,UBERON:0002119,1
+hematopoietic precursor cell,CL:0008001,liver,UBERON:0002107,UBERON:0002107,41
+hematopoietic precursor cell,CL:0008001,lymph node,UBERON:0000029,UBERON:0000029,11
+hematopoietic precursor cell,CL:0008001,parotid gland,UBERON:0001831,UBERON:0001831,1
+hematopoietic precursor cell,CL:0008001,spleen,UBERON:0002106,UBERON:0002106,68
+hematopoietic precursor cell,CL:0008001,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,1
+hematopoietic precursor cell,CL:0008001,thymus,UBERON:0002370,UBERON:0002370,92
+hematopoietic stem cell,CL:0000037,blood,UBERON:0000178,UBERON:0000178,64
+hematopoietic stem cell,CL:0000037,bone marrow,UBERON:0002371,UBERON:0002371,792
+hematopoietic stem cell,CL:0000037,spleen,UBERON:0002106,UBERON:0002106,2
+hepatic stellate cell,CL:0000632,liver,UBERON:0002107,UBERON:0002107,223
+hepatocyte,CL:0000182,liver,UBERON:0002107,UBERON:0002107,7414
+innate lymphoid cell,CL:0001065,ascending colon,UBERON:0001156,UBERON:0001156,8
+innate lymphoid cell,CL:0001065,duodenum,UBERON:0002114,UBERON:0002114,15
+innate lymphoid cell,CL:0001065,ileum,UBERON:0002116,UBERON:0002116,10
+innate lymphoid cell,CL:0001065,inguinal lymph node,UBERON:0001542,UBERON:0001542,477
+innate lymphoid cell,CL:0001065,large intestine,UBERON:0000059,UBERON:0000059,1
+innate lymphoid cell,CL:0001065,lymph node,UBERON:0000029,UBERON:0000029,184
+innate lymphoid cell,CL:0001065,mesenteric lymph node,UBERON:0002509,UBERON:0002509,84
+innate lymphoid cell,CL:0001065,sigmoid colon,UBERON:0001159,UBERON:0001159,4
+innate lymphoid cell,CL:0001065,small intestine,UBERON:0002108,UBERON:0002108,9
+innate lymphoid cell,CL:0001065,spleen,UBERON:0002106,UBERON:0002106,170
+innate lymphoid cell,CL:0001065,thymus,UBERON:0002370,UBERON:0002370,2
+innate lymphoid cell,CL:0001065,trachea,UBERON:0003126,UBERON:0003126,2
+innate lymphoid cell,CL:0001065,uterus,UBERON:0000995,UBERON:0000995,5
+intermediate monocyte,CL:0002393,adipose tissue,UBERON:0001013,UBERON:0001013,24
+intermediate monocyte,CL:0002393,aorta,UBERON:0000947,UBERON:0000947,8
+intermediate monocyte,CL:0002393,blood,UBERON:0000178,UBERON:0000178,1036
+intermediate monocyte,CL:0002393,bone marrow,UBERON:0002371,UBERON:0002371,224
+intermediate monocyte,CL:0002393,brown adipose tissue,UBERON:0001348,UBERON:0001348,10
+intermediate monocyte,CL:0002393,coronary artery,UBERON:0001621,UBERON:0001621,4
+intermediate monocyte,CL:0002393,crista ampullaris,UBERON:0004721,UBERON:0004721,3
+intermediate monocyte,CL:0002393,endometrium,UBERON:0001295,UBERON:0001295,5
+intermediate monocyte,CL:0002393,exocrine pancreas,UBERON:0000017,UBERON:0000017,42
+intermediate monocyte,CL:0002393,eye,UBERON:0000970,UBERON:0000970,4
+intermediate monocyte,CL:0002393,eyelid,UBERON:0001711,UBERON:0001711,12
+intermediate monocyte,CL:0002393,inguinal lymph node,UBERON:0001542,UBERON:0001542,26
+intermediate monocyte,CL:0002393,kidney,UBERON:0002113,UBERON:0002113,2
+intermediate monocyte,CL:0002393,lacrimal gland,UBERON:0001817,UBERON:0001817,11
+intermediate monocyte,CL:0002393,liver,UBERON:0002107,UBERON:0002107,557
+intermediate monocyte,CL:0002393,lung,UBERON:0002048,UBERON:0002048,2785
+intermediate monocyte,CL:0002393,lymph node,UBERON:0000029,UBERON:0000029,251
+intermediate monocyte,CL:0002393,mesenteric lymph node,UBERON:0002509,UBERON:0002509,4
+intermediate monocyte,CL:0002393,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,3
+intermediate monocyte,CL:0002393,parotid gland,UBERON:0001831,UBERON:0001831,41
+intermediate monocyte,CL:0002393,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,1
+intermediate monocyte,CL:0002393,sclera,UBERON:0001773,UBERON:0001773,2
+intermediate monocyte,CL:0002393,spleen,UBERON:0002106,UBERON:0002106,396
+intermediate monocyte,CL:0002393,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,9
+intermediate monocyte,CL:0002393,submandibular gland,UBERON:0001736,UBERON:0001736,1
+intermediate monocyte,CL:0002393,thoracic aorta,UBERON:0001515,UBERON:0001515,1
+intermediate monocyte,CL:0002393,trachea,UBERON:0003126,UBERON:0003126,16
+interstitial cell of Cajal,CL:0002088,mucosa of stomach,UBERON:0001199,UBERON:0001199,70
+interstitial cell of Cajal,CL:0002088,stomach smooth muscle,UBERON:0004222,UBERON:0004222,1
+intestinal crypt stem cell of colon,CL:0009043,ascending colon,UBERON:0001156,UBERON:0001156,630
+intestinal crypt stem cell of colon,CL:0009043,large intestine,UBERON:0000059,UBERON:0000059,28
+intestinal crypt stem cell of colon,CL:0009043,sigmoid colon,UBERON:0001159,UBERON:0001159,1074
+intestinal crypt stem cell of small intestine,CL:0009017,duodenum,UBERON:0002114,UBERON:0002114,253
+intestinal crypt stem cell of small intestine,CL:0009017,ileum,UBERON:0002116,UBERON:0002116,59
+intestinal crypt stem cell of small intestine,CL:0009017,jejunum,UBERON:0002115,UBERON:0002115,71
+intestinal crypt stem cell of small intestine,CL:0009017,small intestine,UBERON:0002108,UBERON:0002108,204
+intestinal tuft cell,CL:0019032,duodenum,UBERON:0002114,UBERON:0002114,159
+intestinal tuft cell,CL:0019032,ileum,UBERON:0002116,UBERON:0002116,86
+intestinal tuft cell,CL:0019032,jejunum,UBERON:0002115,UBERON:0002115,2
+intestinal tuft cell,CL:0019032,small intestine,UBERON:0002108,UBERON:0002108,201
+intrahepatic cholangiocyte,CL:0002538,liver,UBERON:0002107,UBERON:0002107,665
+ionocyte,CL:0005006,parotid gland,UBERON:0001831,UBERON:0001831,15
+ionocyte,CL:0005006,sublingual gland,UBERON:0001832,UBERON:0001832,126
+ionocyte,CL:0005006,submandibular gland,UBERON:0001736,UBERON:0001736,1
+ionocyte,CL:0005006,trachea,UBERON:0003126,UBERON:0003126,18
+keratocyte,CL:0002363,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,26
+keratocyte,CL:0002363,buccal mucosa,UBERON:0006956,UBERON:0006956,14
+keratocyte,CL:0002363,chorioretinal region,UBERON:0019207,UBERON:0019207,1
+keratocyte,CL:0002363,conjunctiva,UBERON:0001811,UBERON:0001811,4
+keratocyte,CL:0002363,cornea,UBERON:0000964,UBERON:0000964,76
+keratocyte,CL:0002363,eye,UBERON:0000970,UBERON:0000970,338
+keratocyte,CL:0002363,eyelid,UBERON:0001711,UBERON:0001711,39
+keratocyte,CL:0002363,lacrimal gland,UBERON:0001817,UBERON:0001817,110
+keratocyte,CL:0002363,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,15
+keratocyte,CL:0002363,sclera,UBERON:0001773,UBERON:0001773,378
+kidney epithelial cell,CL:0002518,cortex of kidney,UBERON:0001225,UBERON:0001225,43
+kidney epithelial cell,CL:0002518,kidney,UBERON:0002113,UBERON:0002113,9235
+large intestine goblet cell,CL:1000320,ascending colon,UBERON:0001156,UBERON:0001156,620
+large intestine goblet cell,CL:1000320,large intestine,UBERON:0000059,UBERON:0000059,596
+large intestine goblet cell,CL:1000320,sigmoid colon,UBERON:0001159,UBERON:0001159,341
+leukocyte,CL:0000738,adipose tissue,UBERON:0001013,UBERON:0001013,109
+leukocyte,CL:0000738,ovary,UBERON:0000992,UBERON:0000992,27
+leukocyte,CL:0000738,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,59
+leukocyte,CL:0000738,sublingual gland,UBERON:0001832,UBERON:0001832,6
+luminal cell of prostate epithelium,CL:0002340,prostate gland,UBERON:0002367,UBERON:0002367,10652
+luminal epithelial cell of mammary gland,CL:0002326,mammary gland,UBERON:0001911,UBERON:0001911,15432
+lung multiciliated epithelial cell,CL:1000271,lung,UBERON:0002048,UBERON:0002048,1209
+macrophage,CL:0000235,abdominal aorta,UBERON:0001516,UBERON:0001516,32
+macrophage,CL:0000235,adipose tissue,UBERON:0001013,UBERON:0001013,3885
+macrophage,CL:0000235,anterior part of tongue,UBERON:0010032,UBERON:0010032,100
+macrophage,CL:0000235,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,3
+macrophage,CL:0000235,aorta,UBERON:0000947,UBERON:0000947,3700
+macrophage,CL:0000235,bladder organ,UBERON:0018707,UBERON:0018707,3152
+macrophage,CL:0000235,blood,UBERON:0000178,UBERON:0000178,1228
+macrophage,CL:0000235,bone marrow,UBERON:0002371,UBERON:0002371,358
+macrophage,CL:0000235,brown adipose tissue,UBERON:0001348,UBERON:0001348,6633
+macrophage,CL:0000235,buccal mucosa,UBERON:0006956,UBERON:0006956,39
+macrophage,CL:0000235,cardiac atrium,UBERON:0002081,UBERON:0002081,23
+macrophage,CL:0000235,cardiac ventricle,UBERON:0002082,UBERON:0002082,45
+macrophage,CL:0000235,cornea,UBERON:0000964,UBERON:0000964,20
+macrophage,CL:0000235,coronary artery,UBERON:0001621,UBERON:0001621,2539
+macrophage,CL:0000235,cortex of kidney,UBERON:0001225,UBERON:0001225,6
+macrophage,CL:0000235,crista ampullaris,UBERON:0004721,UBERON:0004721,265
+macrophage,CL:0000235,duodenum,UBERON:0002114,UBERON:0002114,192
+macrophage,CL:0000235,endocrine pancreas,UBERON:0000016,UBERON:0000016,3
+macrophage,CL:0000235,endometrium,UBERON:0001295,UBERON:0001295,569
+macrophage,CL:0000235,exocrine pancreas,UBERON:0000017,UBERON:0000017,1587
+macrophage,CL:0000235,eye,UBERON:0000970,UBERON:0000970,38
+macrophage,CL:0000235,eyelid,UBERON:0001711,UBERON:0001711,8
+macrophage,CL:0000235,heart,UBERON:0000948,UBERON:0000948,299
+macrophage,CL:0000235,heart right ventricle,UBERON:0002080,UBERON:0002080,176
+macrophage,CL:0000235,ileum,UBERON:0002116,UBERON:0002116,44
+macrophage,CL:0000235,inferior vena cava,UBERON:0001072,UBERON:0001072,50
+macrophage,CL:0000235,inguinal lymph node,UBERON:0001542,UBERON:0001542,23
+macrophage,CL:0000235,kidney,UBERON:0002113,UBERON:0002113,333
+macrophage,CL:0000235,lacrimal gland,UBERON:0001817,UBERON:0001817,18
+macrophage,CL:0000235,left coronary artery,UBERON:0001626,UBERON:0001626,27
+macrophage,CL:0000235,left ovary,UBERON:0002119,UBERON:0002119,177
+macrophage,CL:0000235,liver,UBERON:0002107,UBERON:0002107,3232
+macrophage,CL:0000235,lung,UBERON:0002048,UBERON:0002048,16486
+macrophage,CL:0000235,lymph node,UBERON:0000029,UBERON:0000029,1747
+macrophage,CL:0000235,mammary gland,UBERON:0001911,UBERON:0001911,685
+macrophage,CL:0000235,mesenteric lymph node,UBERON:0002509,UBERON:0002509,24
+macrophage,CL:0000235,mucosa of stomach,UBERON:0001199,UBERON:0001199,705
+macrophage,CL:0000235,muscle of abdomen,UBERON:0002378,UBERON:0002378,1832
+macrophage,CL:0000235,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,897
+macrophage,CL:0000235,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,3
+macrophage,CL:0000235,myometrium,UBERON:0001296,UBERON:0001296,255
+macrophage,CL:0000235,parotid gland,UBERON:0001831,UBERON:0001831,327
+macrophage,CL:0000235,posterior part of tongue,UBERON:0010033,UBERON:0010033,470
+macrophage,CL:0000235,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,1
+macrophage,CL:0000235,prostate gland,UBERON:0002367,UBERON:0002367,1022
+macrophage,CL:0000235,retinal neural layer,UBERON:0003902,UBERON:0003902,3
+macrophage,CL:0000235,right cardiac atrium,UBERON:0002078,UBERON:0002078,148
+macrophage,CL:0000235,right ovary,UBERON:0002118,UBERON:0002118,227
+macrophage,CL:0000235,sclera,UBERON:0001773,UBERON:0001773,63
+macrophage,CL:0000235,skin of abdomen,UBERON:0001416,UBERON:0001416,370
+macrophage,CL:0000235,skin of body,UBERON:0002097,UBERON:0002097,2651
+macrophage,CL:0000235,skin of chest,UBERON:0001868,UBERON:0001868,261
+macrophage,CL:0000235,small intestine,UBERON:0002108,UBERON:0002108,130
+macrophage,CL:0000235,spleen,UBERON:0002106,UBERON:0002106,2806
+macrophage,CL:0000235,stomach,UBERON:0000945,UBERON:0000945,202
+macrophage,CL:0000235,stomach smooth muscle,UBERON:0004222,UBERON:0004222,153
+macrophage,CL:0000235,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,4735
+macrophage,CL:0000235,sublingual gland,UBERON:0001832,UBERON:0001832,963
+macrophage,CL:0000235,submandibular gland,UBERON:0001736,UBERON:0001736,333
+macrophage,CL:0000235,testis,UBERON:0000473,UBERON:0000473,1
+macrophage,CL:0000235,thoracic aorta,UBERON:0001515,UBERON:0001515,586
+macrophage,CL:0000235,thymus,UBERON:0002370,UBERON:0002370,770
+macrophage,CL:0000235,trachea,UBERON:0003126,UBERON:0003126,712
+macrophage,CL:0000235,uterus,UBERON:0000995,UBERON:0000995,105
+macrophage,CL:0000235,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,11
+macrophage,CL:0000235,vasculature,UBERON:0002049,UBERON:0002049,584
+male germ cell,CL:0000015,testis,UBERON:0000473,UBERON:0000473,116
+mast cell,CL:0000097,abdominal aorta,UBERON:0001516,UBERON:0001516,7
+mast cell,CL:0000097,adipose tissue,UBERON:0001013,UBERON:0001013,16
+mast cell,CL:0000097,anterior part of tongue,UBERON:0010032,UBERON:0010032,7
+mast cell,CL:0000097,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,1
+mast cell,CL:0000097,aorta,UBERON:0000947,UBERON:0000947,85
+mast cell,CL:0000097,ascending colon,UBERON:0001156,UBERON:0001156,255
+mast cell,CL:0000097,bladder organ,UBERON:0018707,UBERON:0018707,1568
+mast cell,CL:0000097,brown adipose tissue,UBERON:0001348,UBERON:0001348,17
+mast cell,CL:0000097,buccal mucosa,UBERON:0006956,UBERON:0006956,1
+mast cell,CL:0000097,coronary artery,UBERON:0001621,UBERON:0001621,25
+mast cell,CL:0000097,crista ampullaris,UBERON:0004721,UBERON:0004721,1
+mast cell,CL:0000097,duodenum,UBERON:0002114,UBERON:0002114,131
+mast cell,CL:0000097,endocrine pancreas,UBERON:0000016,UBERON:0000016,1
+mast cell,CL:0000097,endometrium,UBERON:0001295,UBERON:0001295,46
+mast cell,CL:0000097,exocrine pancreas,UBERON:0000017,UBERON:0000017,1
+mast cell,CL:0000097,eye,UBERON:0000970,UBERON:0000970,5
+mast cell,CL:0000097,eyelid,UBERON:0001711,UBERON:0001711,25
+mast cell,CL:0000097,heart,UBERON:0000948,UBERON:0000948,2
+mast cell,CL:0000097,heart right ventricle,UBERON:0002080,UBERON:0002080,1
+mast cell,CL:0000097,ileum,UBERON:0002116,UBERON:0002116,42
+mast cell,CL:0000097,inferior vena cava,UBERON:0001072,UBERON:0001072,4
+mast cell,CL:0000097,inguinal lymph node,UBERON:0001542,UBERON:0001542,21
+mast cell,CL:0000097,large intestine,UBERON:0000059,UBERON:0000059,51
+mast cell,CL:0000097,left coronary artery,UBERON:0001626,UBERON:0001626,2
+mast cell,CL:0000097,left ovary,UBERON:0002119,UBERON:0002119,1
+mast cell,CL:0000097,liver,UBERON:0002107,UBERON:0002107,28
+mast cell,CL:0000097,lung,UBERON:0002048,UBERON:0002048,3
+mast cell,CL:0000097,lymph node,UBERON:0000029,UBERON:0000029,188
+mast cell,CL:0000097,mammary gland,UBERON:0001911,UBERON:0001911,37
+mast cell,CL:0000097,mesenteric lymph node,UBERON:0002509,UBERON:0002509,3
+mast cell,CL:0000097,mucosa of stomach,UBERON:0001199,UBERON:0001199,36
+mast cell,CL:0000097,muscle of abdomen,UBERON:0002378,UBERON:0002378,56
+mast cell,CL:0000097,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,10
+mast cell,CL:0000097,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,4
+mast cell,CL:0000097,myometrium,UBERON:0001296,UBERON:0001296,19
+mast cell,CL:0000097,parotid gland,UBERON:0001831,UBERON:0001831,17
+mast cell,CL:0000097,posterior part of tongue,UBERON:0010033,UBERON:0010033,69
+mast cell,CL:0000097,prostate gland,UBERON:0002367,UBERON:0002367,26
+mast cell,CL:0000097,right ovary,UBERON:0002118,UBERON:0002118,2
+mast cell,CL:0000097,sclera,UBERON:0001773,UBERON:0001773,5
+mast cell,CL:0000097,sigmoid colon,UBERON:0001159,UBERON:0001159,87
+mast cell,CL:0000097,skin of abdomen,UBERON:0001416,UBERON:0001416,300
+mast cell,CL:0000097,skin of body,UBERON:0002097,UBERON:0002097,1468
+mast cell,CL:0000097,skin of chest,UBERON:0001868,UBERON:0001868,232
+mast cell,CL:0000097,small intestine,UBERON:0002108,UBERON:0002108,77
+mast cell,CL:0000097,stomach,UBERON:0000945,UBERON:0000945,884
+mast cell,CL:0000097,stomach smooth muscle,UBERON:0004222,UBERON:0004222,44
+mast cell,CL:0000097,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,102
+mast cell,CL:0000097,sublingual gland,UBERON:0001832,UBERON:0001832,10
+mast cell,CL:0000097,submandibular gland,UBERON:0001736,UBERON:0001736,18
+mast cell,CL:0000097,testis,UBERON:0000473,UBERON:0000473,1
+mast cell,CL:0000097,thoracic aorta,UBERON:0001515,UBERON:0001515,8
+mast cell,CL:0000097,thymus,UBERON:0002370,UBERON:0002370,24
+mast cell,CL:0000097,trachea,UBERON:0003126,UBERON:0003126,119
+mast cell,CL:0000097,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,1
+mast cell,CL:0000097,vasculature,UBERON:0002049,UBERON:0002049,28
+mature NK T cell,CL:0000814,adipose tissue,UBERON:0001013,UBERON:0001013,98
+mature NK T cell,CL:0000814,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,1
+mature NK T cell,CL:0000814,aorta,UBERON:0000947,UBERON:0000947,299
+mature NK T cell,CL:0000814,ascending colon,UBERON:0001156,UBERON:0001156,10
+mature NK T cell,CL:0000814,bladder organ,UBERON:0018707,UBERON:0018707,95
+mature NK T cell,CL:0000814,blood,UBERON:0000178,UBERON:0000178,202
+mature NK T cell,CL:0000814,bone marrow,UBERON:0002371,UBERON:0002371,64
+mature NK T cell,CL:0000814,brown adipose tissue,UBERON:0001348,UBERON:0001348,151
+mature NK T cell,CL:0000814,buccal mucosa,UBERON:0006956,UBERON:0006956,3
+mature NK T cell,CL:0000814,cornea,UBERON:0000964,UBERON:0000964,1
+mature NK T cell,CL:0000814,coronary artery,UBERON:0001621,UBERON:0001621,92
+mature NK T cell,CL:0000814,endocrine pancreas,UBERON:0000016,UBERON:0000016,2
+mature NK T cell,CL:0000814,endometrium,UBERON:0001295,UBERON:0001295,202
+mature NK T cell,CL:0000814,eye,UBERON:0000970,UBERON:0000970,18
+mature NK T cell,CL:0000814,eyelid,UBERON:0001711,UBERON:0001711,24
+mature NK T cell,CL:0000814,heart,UBERON:0000948,UBERON:0000948,1
+mature NK T cell,CL:0000814,heart right ventricle,UBERON:0002080,UBERON:0002080,3
+mature NK T cell,CL:0000814,inguinal lymph node,UBERON:0001542,UBERON:0001542,99
+mature NK T cell,CL:0000814,lacrimal gland,UBERON:0001817,UBERON:0001817,11
+mature NK T cell,CL:0000814,large intestine,UBERON:0000059,UBERON:0000059,13
+mature NK T cell,CL:0000814,left ovary,UBERON:0002119,UBERON:0002119,1
+mature NK T cell,CL:0000814,liver,UBERON:0002107,UBERON:0002107,808
+mature NK T cell,CL:0000814,lung,UBERON:0002048,UBERON:0002048,163
+mature NK T cell,CL:0000814,lymph node,UBERON:0000029,UBERON:0000029,902
+mature NK T cell,CL:0000814,mammary gland,UBERON:0001911,UBERON:0001911,14
+mature NK T cell,CL:0000814,mesenteric lymph node,UBERON:0002509,UBERON:0002509,23
+mature NK T cell,CL:0000814,mucosa of stomach,UBERON:0001199,UBERON:0001199,1
+mature NK T cell,CL:0000814,muscle of abdomen,UBERON:0002378,UBERON:0002378,83
+mature NK T cell,CL:0000814,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,15
+mature NK T cell,CL:0000814,myometrium,UBERON:0001296,UBERON:0001296,5
+mature NK T cell,CL:0000814,parotid gland,UBERON:0001831,UBERON:0001831,12
+mature NK T cell,CL:0000814,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,1
+mature NK T cell,CL:0000814,prostate gland,UBERON:0002367,UBERON:0002367,487
+mature NK T cell,CL:0000814,right cardiac atrium,UBERON:0002078,UBERON:0002078,3
+mature NK T cell,CL:0000814,right ovary,UBERON:0002118,UBERON:0002118,1
+mature NK T cell,CL:0000814,sclera,UBERON:0001773,UBERON:0001773,16
+mature NK T cell,CL:0000814,sigmoid colon,UBERON:0001159,UBERON:0001159,24
+mature NK T cell,CL:0000814,skin of abdomen,UBERON:0001416,UBERON:0001416,2
+mature NK T cell,CL:0000814,skin of body,UBERON:0002097,UBERON:0002097,23
+mature NK T cell,CL:0000814,skin of chest,UBERON:0001868,UBERON:0001868,5
+mature NK T cell,CL:0000814,spleen,UBERON:0002106,UBERON:0002106,1029
+mature NK T cell,CL:0000814,stomach,UBERON:0000945,UBERON:0000945,77
+mature NK T cell,CL:0000814,stomach smooth muscle,UBERON:0004222,UBERON:0004222,9
+mature NK T cell,CL:0000814,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,129
+mature NK T cell,CL:0000814,sublingual gland,UBERON:0001832,UBERON:0001832,5
+mature NK T cell,CL:0000814,submandibular gland,UBERON:0001736,UBERON:0001736,6
+mature NK T cell,CL:0000814,thoracic aorta,UBERON:0001515,UBERON:0001515,119
+mature NK T cell,CL:0000814,trachea,UBERON:0003126,UBERON:0003126,37
+mature NK T cell,CL:0000814,vasculature,UBERON:0002049,UBERON:0002049,5
+medullary thymic epithelial cell,CL:0002365,thymus,UBERON:0002370,UBERON:0002370,43
+melanocyte,CL:0000148,buccal mucosa,UBERON:0006956,UBERON:0006956,4
+melanocyte,CL:0000148,crista ampullaris,UBERON:0004721,UBERON:0004721,123
+melanocyte,CL:0000148,skin of abdomen,UBERON:0001416,UBERON:0001416,22
+melanocyte,CL:0000148,skin of body,UBERON:0002097,UBERON:0002097,61
+melanocyte,CL:0000148,skin of chest,UBERON:0001868,UBERON:0001868,19
+melanocyte,CL:0000148,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,5
+mesenchymal cell,CL:0008019,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,2
+mesenchymal stem cell,CL:0000134,adipose tissue,UBERON:0001013,UBERON:0001013,17
+mesenchymal stem cell,CL:0000134,muscle of abdomen,UBERON:0002378,UBERON:0002378,18948
+mesenchymal stem cell,CL:0000134,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,4534
+mesenchymal stem cell of adipose tissue,CL:0002570,adipose tissue,UBERON:0001013,UBERON:0001013,827
+mesenchymal stem cell of adipose tissue,CL:0002570,brown adipose tissue,UBERON:0001348,UBERON:0001348,2880
+mesenchymal stem cell of adipose tissue,CL:0002570,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,70
+mesothelial cell,CL:0000077,cardiac atrium,UBERON:0002081,UBERON:0002081,4
+mesothelial cell,CL:0000077,cardiac ventricle,UBERON:0002082,UBERON:0002082,3
+mesothelial cell,CL:0000077,heart,UBERON:0000948,UBERON:0000948,147
+mesothelial cell,CL:0000077,heart right ventricle,UBERON:0002080,UBERON:0002080,2
+mesothelial cell,CL:0000077,lung,UBERON:0002048,UBERON:0002048,18
+mesothelial cell,CL:0000077,muscle of abdomen,UBERON:0002378,UBERON:0002378,1
+mesothelial cell,CL:0000077,thymus,UBERON:0002370,UBERON:0002370,175
+microglial cell,CL:0000129,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,26
+microglial cell,CL:0000129,chorioretinal region,UBERON:0019207,UBERON:0019207,2
+microglial cell,CL:0000129,cornea,UBERON:0000964,UBERON:0000964,24
+microglial cell,CL:0000129,eye,UBERON:0000970,UBERON:0000970,146
+microglial cell,CL:0000129,eyelid,UBERON:0001711,UBERON:0001711,56
+microglial cell,CL:0000129,lacrimal gland,UBERON:0001817,UBERON:0001817,96
+microglial cell,CL:0000129,ocular surface region,UBERON:0010409,UBERON:0010409,2
+microglial cell,CL:0000129,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,20
+microglial cell,CL:0000129,retinal neural layer,UBERON:0003902,UBERON:0003902,22
+microglial cell,CL:0000129,sclera,UBERON:0001773,UBERON:0001773,16
+monocyte,CL:0000576,adipose tissue,UBERON:0001013,UBERON:0001013,508
+monocyte,CL:0000576,anterior part of tongue,UBERON:0010032,UBERON:0010032,38
+monocyte,CL:0000576,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,4
+monocyte,CL:0000576,aorta,UBERON:0000947,UBERON:0000947,82
+monocyte,CL:0000576,ascending colon,UBERON:0001156,UBERON:0001156,29
+monocyte,CL:0000576,bladder organ,UBERON:0018707,UBERON:0018707,4855
+monocyte,CL:0000576,blood,UBERON:0000178,UBERON:0000178,9602
+monocyte,CL:0000576,bone marrow,UBERON:0002371,UBERON:0002371,2040
+monocyte,CL:0000576,brown adipose tissue,UBERON:0001348,UBERON:0001348,133
+monocyte,CL:0000576,cardiac atrium,UBERON:0002081,UBERON:0002081,9
+monocyte,CL:0000576,cardiac ventricle,UBERON:0002082,UBERON:0002082,4
+monocyte,CL:0000576,cornea,UBERON:0000964,UBERON:0000964,2
+monocyte,CL:0000576,coronary artery,UBERON:0001621,UBERON:0001621,210
+monocyte,CL:0000576,crista ampullaris,UBERON:0004721,UBERON:0004721,2
+monocyte,CL:0000576,duodenum,UBERON:0002114,UBERON:0002114,16
+monocyte,CL:0000576,endocrine pancreas,UBERON:0000016,UBERON:0000016,2
+monocyte,CL:0000576,endometrium,UBERON:0001295,UBERON:0001295,20
+monocyte,CL:0000576,exocrine pancreas,UBERON:0000017,UBERON:0000017,11
+monocyte,CL:0000576,eye,UBERON:0000970,UBERON:0000970,20
+monocyte,CL:0000576,eyelid,UBERON:0001711,UBERON:0001711,27
+monocyte,CL:0000576,heart,UBERON:0000948,UBERON:0000948,66
+monocyte,CL:0000576,heart right ventricle,UBERON:0002080,UBERON:0002080,10
+monocyte,CL:0000576,ileum,UBERON:0002116,UBERON:0002116,51
+monocyte,CL:0000576,inguinal lymph node,UBERON:0001542,UBERON:0001542,23
+monocyte,CL:0000576,kidney,UBERON:0002113,UBERON:0002113,54
+monocyte,CL:0000576,lacrimal gland,UBERON:0001817,UBERON:0001817,20
+monocyte,CL:0000576,large intestine,UBERON:0000059,UBERON:0000059,15
+monocyte,CL:0000576,left ovary,UBERON:0002119,UBERON:0002119,2
+monocyte,CL:0000576,liver,UBERON:0002107,UBERON:0002107,1721
+monocyte,CL:0000576,lung,UBERON:0002048,UBERON:0002048,506
+monocyte,CL:0000576,lymph node,UBERON:0000029,UBERON:0000029,708
+monocyte,CL:0000576,mesenteric lymph node,UBERON:0002509,UBERON:0002509,35
+monocyte,CL:0000576,mucosa of stomach,UBERON:0001199,UBERON:0001199,78
+monocyte,CL:0000576,muscle of abdomen,UBERON:0002378,UBERON:0002378,17
+monocyte,CL:0000576,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,15
+monocyte,CL:0000576,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,2
+monocyte,CL:0000576,myometrium,UBERON:0001296,UBERON:0001296,1
+monocyte,CL:0000576,ocular surface region,UBERON:0010409,UBERON:0010409,2
+monocyte,CL:0000576,parotid gland,UBERON:0001831,UBERON:0001831,85
+monocyte,CL:0000576,posterior part of tongue,UBERON:0010033,UBERON:0010033,101
+monocyte,CL:0000576,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,5
+monocyte,CL:0000576,retinal neural layer,UBERON:0003902,UBERON:0003902,1
+monocyte,CL:0000576,right cardiac atrium,UBERON:0002078,UBERON:0002078,35
+monocyte,CL:0000576,right ovary,UBERON:0002118,UBERON:0002118,2
+monocyte,CL:0000576,sclera,UBERON:0001773,UBERON:0001773,6
+monocyte,CL:0000576,sigmoid colon,UBERON:0001159,UBERON:0001159,22
+monocyte,CL:0000576,small intestine,UBERON:0002108,UBERON:0002108,11
+monocyte,CL:0000576,spleen,UBERON:0002106,UBERON:0002106,3114
+monocyte,CL:0000576,stomach,UBERON:0000945,UBERON:0000945,644
+monocyte,CL:0000576,stomach smooth muscle,UBERON:0004222,UBERON:0004222,330
+monocyte,CL:0000576,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,200
+monocyte,CL:0000576,sublingual gland,UBERON:0001832,UBERON:0001832,10
+monocyte,CL:0000576,submandibular gland,UBERON:0001736,UBERON:0001736,4
+monocyte,CL:0000576,testis,UBERON:0000473,UBERON:0000473,1
+monocyte,CL:0000576,thoracic aorta,UBERON:0001515,UBERON:0001515,131
+monocyte,CL:0000576,thymus,UBERON:0002370,UBERON:0002370,26
+monocyte,CL:0000576,trachea,UBERON:0003126,UBERON:0003126,81
+monocyte,CL:0000576,vasculature,UBERON:0002049,UBERON:0002049,4
+mononuclear phagocyte,CL:0000113,mucosa of stomach,UBERON:0001199,UBERON:0001199,81
+mononuclear phagocyte,CL:0000113,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,27
+mononuclear phagocyte,CL:0000113,stomach,UBERON:0000945,UBERON:0000945,3182
+mononuclear phagocyte,CL:0000113,stomach smooth muscle,UBERON:0004222,UBERON:0004222,2046
+mucus secreting cell,CL:0000319,trachea,UBERON:0003126,UBERON:0003126,270
+multiciliated columnar cell of tracheobronchial tree,CL:0002145,trachea,UBERON:0003126,UBERON:0003126,713
+mural cell,CL:0008034,anterior part of tongue,UBERON:0010032,UBERON:0010032,175
+mural cell,CL:0008034,posterior part of tongue,UBERON:0010033,UBERON:0010033,443
+muscle cell,CL:0000187,brown adipose tissue,UBERON:0001348,UBERON:0001348,263
+muscle cell,CL:0000187,buccal mucosa,UBERON:0006956,UBERON:0006956,1
+muscle cell,CL:0000187,eyelid,UBERON:0001711,UBERON:0001711,130
+muscle cell,CL:0000187,lacrimal gland,UBERON:0001817,UBERON:0001817,2
+muscle cell,CL:0000187,retinal neural layer,UBERON:0003902,UBERON:0003902,1
+muscle cell,CL:0000187,sclera,UBERON:0001773,UBERON:0001773,9
+myeloid cell,CL:0000763,liver,UBERON:0002107,UBERON:0002107,81
+myeloid dendritic cell,CL:0000782,adipose tissue,UBERON:0001013,UBERON:0001013,1
+myeloid dendritic cell,CL:0000782,anterior part of tongue,UBERON:0010032,UBERON:0010032,8
+myeloid dendritic cell,CL:0000782,aorta,UBERON:0000947,UBERON:0000947,4
+myeloid dendritic cell,CL:0000782,ascending colon,UBERON:0001156,UBERON:0001156,23
+myeloid dendritic cell,CL:0000782,blood,UBERON:0000178,UBERON:0000178,1
+myeloid dendritic cell,CL:0000782,bone marrow,UBERON:0002371,UBERON:0002371,108
+myeloid dendritic cell,CL:0000782,brown adipose tissue,UBERON:0001348,UBERON:0001348,4
+myeloid dendritic cell,CL:0000782,chorioretinal region,UBERON:0019207,UBERON:0019207,1
+myeloid dendritic cell,CL:0000782,duodenum,UBERON:0002114,UBERON:0002114,9
+myeloid dendritic cell,CL:0000782,eye,UBERON:0000970,UBERON:0000970,9
+myeloid dendritic cell,CL:0000782,ileum,UBERON:0002116,UBERON:0002116,1
+myeloid dendritic cell,CL:0000782,inguinal lymph node,UBERON:0001542,UBERON:0001542,18
+myeloid dendritic cell,CL:0000782,lacrimal gland,UBERON:0001817,UBERON:0001817,18
+myeloid dendritic cell,CL:0000782,large intestine,UBERON:0000059,UBERON:0000059,4
+myeloid dendritic cell,CL:0000782,liver,UBERON:0002107,UBERON:0002107,56
+myeloid dendritic cell,CL:0000782,lung,UBERON:0002048,UBERON:0002048,33
+myeloid dendritic cell,CL:0000782,lymph node,UBERON:0000029,UBERON:0000029,104
+myeloid dendritic cell,CL:0000782,muscle of abdomen,UBERON:0002378,UBERON:0002378,9
+myeloid dendritic cell,CL:0000782,parotid gland,UBERON:0001831,UBERON:0001831,1
+myeloid dendritic cell,CL:0000782,posterior part of tongue,UBERON:0010033,UBERON:0010033,14
+myeloid dendritic cell,CL:0000782,right ovary,UBERON:0002118,UBERON:0002118,1
+myeloid dendritic cell,CL:0000782,sigmoid colon,UBERON:0001159,UBERON:0001159,13
+myeloid dendritic cell,CL:0000782,skin of abdomen,UBERON:0001416,UBERON:0001416,44
+myeloid dendritic cell,CL:0000782,skin of body,UBERON:0002097,UBERON:0002097,1
+myeloid dendritic cell,CL:0000782,skin of chest,UBERON:0001868,UBERON:0001868,63
+myeloid dendritic cell,CL:0000782,small intestine,UBERON:0002108,UBERON:0002108,1
+myeloid dendritic cell,CL:0000782,spleen,UBERON:0002106,UBERON:0002106,17
+myeloid dendritic cell,CL:0000782,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,1
+myeloid dendritic cell,CL:0000782,thoracic aorta,UBERON:0001515,UBERON:0001515,1
+myeloid dendritic cell,CL:0000782,trachea,UBERON:0003126,UBERON:0003126,1
+myeloid dendritic cell,CL:0000782,uterus,UBERON:0000995,UBERON:0000995,2
+myeloid leukocyte,CL:0000766,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,24
+myeloid leukocyte,CL:0000766,ascending colon,UBERON:0001156,UBERON:0001156,243
+myeloid leukocyte,CL:0000766,conjunctiva,UBERON:0001811,UBERON:0001811,3
+myeloid leukocyte,CL:0000766,eye,UBERON:0000970,UBERON:0000970,75
+myeloid leukocyte,CL:0000766,eyelid,UBERON:0001711,UBERON:0001711,339
+myeloid leukocyte,CL:0000766,lacrimal gland,UBERON:0001817,UBERON:0001817,178
+myeloid leukocyte,CL:0000766,large intestine,UBERON:0000059,UBERON:0000059,13
+myeloid leukocyte,CL:0000766,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,29
+myeloid leukocyte,CL:0000766,sigmoid colon,UBERON:0001159,UBERON:0001159,98
+myo-medullary thymic epithelial cell,CL:0009075,thymus,UBERON:0002370,UBERON:0002370,77
+myoepithelial cell,CL:0000185,anterior part of tongue,UBERON:0010032,UBERON:0010032,2
+myoepithelial cell,CL:0000185,parotid gland,UBERON:0001831,UBERON:0001831,109
+myoepithelial cell,CL:0000185,posterior part of tongue,UBERON:0010033,UBERON:0010033,268
+myoepithelial cell,CL:0000185,sublingual gland,UBERON:0001832,UBERON:0001832,105
+myoepithelial cell,CL:0000185,submandibular gland,UBERON:0001736,UBERON:0001736,2
+myofibroblast cell,CL:0000186,adipose tissue,UBERON:0001013,UBERON:0001013,339
+myofibroblast cell,CL:0000186,ascending colon,UBERON:0001156,UBERON:0001156,4
+myofibroblast cell,CL:0000186,bladder organ,UBERON:0018707,UBERON:0018707,3136
+myofibroblast cell,CL:0000186,duodenum,UBERON:0002114,UBERON:0002114,39
+myofibroblast cell,CL:0000186,endometrium,UBERON:0001295,UBERON:0001295,90
+myofibroblast cell,CL:0000186,ileum,UBERON:0002116,UBERON:0002116,7
+myofibroblast cell,CL:0000186,large intestine,UBERON:0000059,UBERON:0000059,71
+myofibroblast cell,CL:0000186,myometrium,UBERON:0001296,UBERON:0001296,11
+myofibroblast cell,CL:0000186,sigmoid colon,UBERON:0001159,UBERON:0001159,7
+myofibroblast cell,CL:0000186,small intestine,UBERON:0002108,UBERON:0002108,5
+myofibroblast cell,CL:0000186,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,727
+myometrial cell,CL:0002366,myometrium,UBERON:0001296,UBERON:0001296,917
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,ascending colon,UBERON:0001156,UBERON:0001156,101
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,blood,UBERON:0000178,UBERON:0000178,490
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,duodenum,UBERON:0002114,UBERON:0002114,6
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,ileum,UBERON:0002116,UBERON:0002116,9
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,inguinal lymph node,UBERON:0001542,UBERON:0001542,578
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,large intestine,UBERON:0000059,UBERON:0000059,9
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,lymph node,UBERON:0000029,UBERON:0000029,3256
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,mesenteric lymph node,UBERON:0002509,UBERON:0002509,320
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,sigmoid colon,UBERON:0001159,UBERON:0001159,118
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,small intestine,UBERON:0002108,UBERON:0002108,100
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,spleen,UBERON:0002106,UBERON:0002106,2317
+"naive thymus-derived CD4-positive, alpha-beta T cell",CL:0000895,thymus,UBERON:0002370,UBERON:0002370,2523
+"naive thymus-derived CD8-positive, alpha-beta T cell",CL:0000900,spleen,UBERON:0002106,UBERON:0002106,622
+"naive thymus-derived CD8-positive, alpha-beta T cell",CL:0000900,thymus,UBERON:0002370,UBERON:0002370,434
+natural killer cell,CL:0000623,abdominal aorta,UBERON:0001516,UBERON:0001516,5
+natural killer cell,CL:0000623,adipose tissue,UBERON:0001013,UBERON:0001013,168
+natural killer cell,CL:0000623,anterior part of tongue,UBERON:0010032,UBERON:0010032,1
+natural killer cell,CL:0000623,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,2
+natural killer cell,CL:0000623,aorta,UBERON:0000947,UBERON:0000947,119
+natural killer cell,CL:0000623,bladder organ,UBERON:0018707,UBERON:0018707,165
+natural killer cell,CL:0000623,blood,UBERON:0000178,UBERON:0000178,3057
+natural killer cell,CL:0000623,bone marrow,UBERON:0002371,UBERON:0002371,1099
+natural killer cell,CL:0000623,brown adipose tissue,UBERON:0001348,UBERON:0001348,349
+natural killer cell,CL:0000623,buccal mucosa,UBERON:0006956,UBERON:0006956,3
+natural killer cell,CL:0000623,cardiac atrium,UBERON:0002081,UBERON:0002081,6
+natural killer cell,CL:0000623,cardiac ventricle,UBERON:0002082,UBERON:0002082,1
+natural killer cell,CL:0000623,coronary artery,UBERON:0001621,UBERON:0001621,49
+natural killer cell,CL:0000623,cortex of kidney,UBERON:0001225,UBERON:0001225,22
+natural killer cell,CL:0000623,duodenum,UBERON:0002114,UBERON:0002114,28
+natural killer cell,CL:0000623,endocrine pancreas,UBERON:0000016,UBERON:0000016,3
+natural killer cell,CL:0000623,endometrium,UBERON:0001295,UBERON:0001295,63
+natural killer cell,CL:0000623,exocrine pancreas,UBERON:0000017,UBERON:0000017,47
+natural killer cell,CL:0000623,eye,UBERON:0000970,UBERON:0000970,11
+natural killer cell,CL:0000623,eyelid,UBERON:0001711,UBERON:0001711,11
+natural killer cell,CL:0000623,heart,UBERON:0000948,UBERON:0000948,25
+natural killer cell,CL:0000623,heart right ventricle,UBERON:0002080,UBERON:0002080,10
+natural killer cell,CL:0000623,ileum,UBERON:0002116,UBERON:0002116,96
+natural killer cell,CL:0000623,inferior vena cava,UBERON:0001072,UBERON:0001072,4
+natural killer cell,CL:0000623,inguinal lymph node,UBERON:0001542,UBERON:0001542,143
+natural killer cell,CL:0000623,kidney,UBERON:0002113,UBERON:0002113,179
+natural killer cell,CL:0000623,lacrimal gland,UBERON:0001817,UBERON:0001817,18
+natural killer cell,CL:0000623,large intestine,UBERON:0000059,UBERON:0000059,5
+natural killer cell,CL:0000623,left coronary artery,UBERON:0001626,UBERON:0001626,2
+natural killer cell,CL:0000623,liver,UBERON:0002107,UBERON:0002107,745
+natural killer cell,CL:0000623,lung,UBERON:0002048,UBERON:0002048,1019
+natural killer cell,CL:0000623,lymph node,UBERON:0000029,UBERON:0000029,1386
+natural killer cell,CL:0000623,mammary gland,UBERON:0001911,UBERON:0001911,6
+natural killer cell,CL:0000623,mesenteric lymph node,UBERON:0002509,UBERON:0002509,50
+natural killer cell,CL:0000623,mucosa of stomach,UBERON:0001199,UBERON:0001199,3
+natural killer cell,CL:0000623,muscle of abdomen,UBERON:0002378,UBERON:0002378,34
+natural killer cell,CL:0000623,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,57
+natural killer cell,CL:0000623,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,2
+natural killer cell,CL:0000623,myometrium,UBERON:0001296,UBERON:0001296,2
+natural killer cell,CL:0000623,parotid gland,UBERON:0001831,UBERON:0001831,19
+natural killer cell,CL:0000623,posterior part of tongue,UBERON:0010033,UBERON:0010033,7
+natural killer cell,CL:0000623,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,1
+natural killer cell,CL:0000623,right cardiac atrium,UBERON:0002078,UBERON:0002078,37
+natural killer cell,CL:0000623,sclera,UBERON:0001773,UBERON:0001773,11
+natural killer cell,CL:0000623,sigmoid colon,UBERON:0001159,UBERON:0001159,9
+natural killer cell,CL:0000623,skin of abdomen,UBERON:0001416,UBERON:0001416,41
+natural killer cell,CL:0000623,skin of body,UBERON:0002097,UBERON:0002097,6
+natural killer cell,CL:0000623,skin of chest,UBERON:0001868,UBERON:0001868,14
+natural killer cell,CL:0000623,small intestine,UBERON:0002108,UBERON:0002108,37
+natural killer cell,CL:0000623,spleen,UBERON:0002106,UBERON:0002106,3944
+natural killer cell,CL:0000623,stomach,UBERON:0000945,UBERON:0000945,43
+natural killer cell,CL:0000623,stomach smooth muscle,UBERON:0004222,UBERON:0004222,75
+natural killer cell,CL:0000623,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,356
+natural killer cell,CL:0000623,sublingual gland,UBERON:0001832,UBERON:0001832,12
+natural killer cell,CL:0000623,submandibular gland,UBERON:0001736,UBERON:0001736,42
+natural killer cell,CL:0000623,thoracic aorta,UBERON:0001515,UBERON:0001515,53
+natural killer cell,CL:0000623,thymus,UBERON:0002370,UBERON:0002370,428
+natural killer cell,CL:0000623,trachea,UBERON:0003126,UBERON:0003126,64
+natural killer cell,CL:0000623,uterus,UBERON:0000995,UBERON:0000995,27
+natural killer cell,CL:0000623,vasculature,UBERON:0002049,UBERON:0002049,10
+neuro-medullary thymic epithelial cell,CL:0009076,thymus,UBERON:0002370,UBERON:0002370,135
+neuron,CL:0000540,heart,UBERON:0000948,UBERON:0000948,7
+neuron,CL:0000540,heart right ventricle,UBERON:0002080,UBERON:0002080,59
+neuron,CL:0000540,right cardiac atrium,UBERON:0002078,UBERON:0002078,16
+neutrophil,CL:0000775,abdominal aorta,UBERON:0001516,UBERON:0001516,2
+neutrophil,CL:0000775,adipose tissue,UBERON:0001013,UBERON:0001013,858
+neutrophil,CL:0000775,anterior part of tongue,UBERON:0010032,UBERON:0010032,13
+neutrophil,CL:0000775,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,1
+neutrophil,CL:0000775,aorta,UBERON:0000947,UBERON:0000947,265
+neutrophil,CL:0000775,bladder organ,UBERON:0018707,UBERON:0018707,241
+neutrophil,CL:0000775,blood,UBERON:0000178,UBERON:0000178,32198
+neutrophil,CL:0000775,bone marrow,UBERON:0002371,UBERON:0002371,8677
+neutrophil,CL:0000775,brown adipose tissue,UBERON:0001348,UBERON:0001348,1427
+neutrophil,CL:0000775,buccal mucosa,UBERON:0006956,UBERON:0006956,12
+neutrophil,CL:0000775,cardiac atrium,UBERON:0002081,UBERON:0002081,6
+neutrophil,CL:0000775,cardiac ventricle,UBERON:0002082,UBERON:0002082,1
+neutrophil,CL:0000775,cornea,UBERON:0000964,UBERON:0000964,19
+neutrophil,CL:0000775,coronary artery,UBERON:0001621,UBERON:0001621,733
+neutrophil,CL:0000775,crista ampullaris,UBERON:0004721,UBERON:0004721,3
+neutrophil,CL:0000775,duodenum,UBERON:0002114,UBERON:0002114,18
+neutrophil,CL:0000775,endometrium,UBERON:0001295,UBERON:0001295,41
+neutrophil,CL:0000775,exocrine pancreas,UBERON:0000017,UBERON:0000017,7
+neutrophil,CL:0000775,eye,UBERON:0000970,UBERON:0000970,17
+neutrophil,CL:0000775,heart,UBERON:0000948,UBERON:0000948,86
+neutrophil,CL:0000775,heart right ventricle,UBERON:0002080,UBERON:0002080,42
+neutrophil,CL:0000775,ileum,UBERON:0002116,UBERON:0002116,35
+neutrophil,CL:0000775,inferior vena cava,UBERON:0001072,UBERON:0001072,3
+neutrophil,CL:0000775,inguinal lymph node,UBERON:0001542,UBERON:0001542,30
+neutrophil,CL:0000775,jejunum,UBERON:0002115,UBERON:0002115,1
+neutrophil,CL:0000775,kidney,UBERON:0002113,UBERON:0002113,22
+neutrophil,CL:0000775,lacrimal gland,UBERON:0001817,UBERON:0001817,4
+neutrophil,CL:0000775,large intestine,UBERON:0000059,UBERON:0000059,9
+neutrophil,CL:0000775,left ovary,UBERON:0002119,UBERON:0002119,7
+neutrophil,CL:0000775,liver,UBERON:0002107,UBERON:0002107,739
+neutrophil,CL:0000775,lung,UBERON:0002048,UBERON:0002048,371
+neutrophil,CL:0000775,lymph node,UBERON:0000029,UBERON:0000029,263
+neutrophil,CL:0000775,mesenteric lymph node,UBERON:0002509,UBERON:0002509,10
+neutrophil,CL:0000775,muscle of abdomen,UBERON:0002378,UBERON:0002378,149
+neutrophil,CL:0000775,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,25
+neutrophil,CL:0000775,myometrium,UBERON:0001296,UBERON:0001296,62
+neutrophil,CL:0000775,parotid gland,UBERON:0001831,UBERON:0001831,209
+neutrophil,CL:0000775,posterior part of tongue,UBERON:0010033,UBERON:0010033,141
+neutrophil,CL:0000775,prostate gland,UBERON:0002367,UBERON:0002367,261
+neutrophil,CL:0000775,retinal neural layer,UBERON:0003902,UBERON:0003902,1
+neutrophil,CL:0000775,right cardiac atrium,UBERON:0002078,UBERON:0002078,5
+neutrophil,CL:0000775,right ovary,UBERON:0002118,UBERON:0002118,10
+neutrophil,CL:0000775,sclera,UBERON:0001773,UBERON:0001773,9
+neutrophil,CL:0000775,skin of abdomen,UBERON:0001416,UBERON:0001416,26
+neutrophil,CL:0000775,skin of body,UBERON:0002097,UBERON:0002097,237
+neutrophil,CL:0000775,skin of chest,UBERON:0001868,UBERON:0001868,15
+neutrophil,CL:0000775,small intestine,UBERON:0002108,UBERON:0002108,23
+neutrophil,CL:0000775,spleen,UBERON:0002106,UBERON:0002106,14901
+neutrophil,CL:0000775,stomach,UBERON:0000945,UBERON:0000945,367
+neutrophil,CL:0000775,stomach smooth muscle,UBERON:0004222,UBERON:0004222,561
+neutrophil,CL:0000775,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,1094
+neutrophil,CL:0000775,sublingual gland,UBERON:0001832,UBERON:0001832,34
+neutrophil,CL:0000775,thoracic aorta,UBERON:0001515,UBERON:0001515,403
+neutrophil,CL:0000775,thymus,UBERON:0002370,UBERON:0002370,121
+neutrophil,CL:0000775,trachea,UBERON:0003126,UBERON:0003126,4684
+neutrophil,CL:0000775,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,6
+neutrophil,CL:0000775,vasculature,UBERON:0002049,UBERON:0002049,34
+non-classical monocyte,CL:0000875,blood,UBERON:0000178,UBERON:0000178,353
+non-classical monocyte,CL:0000875,bone marrow,UBERON:0002371,UBERON:0002371,53
+non-classical monocyte,CL:0000875,coronary artery,UBERON:0001621,UBERON:0001621,1
+non-classical monocyte,CL:0000875,exocrine pancreas,UBERON:0000017,UBERON:0000017,1
+non-classical monocyte,CL:0000875,inguinal lymph node,UBERON:0001542,UBERON:0001542,5
+non-classical monocyte,CL:0000875,kidney,UBERON:0002113,UBERON:0002113,27
+non-classical monocyte,CL:0000875,liver,UBERON:0002107,UBERON:0002107,113
+non-classical monocyte,CL:0000875,lung,UBERON:0002048,UBERON:0002048,527
+non-classical monocyte,CL:0000875,lymph node,UBERON:0000029,UBERON:0000029,65
+non-classical monocyte,CL:0000875,mesenteric lymph node,UBERON:0002509,UBERON:0002509,1
+non-classical monocyte,CL:0000875,muscle of abdomen,UBERON:0002378,UBERON:0002378,3
+non-classical monocyte,CL:0000875,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,1
+non-classical monocyte,CL:0000875,sclera,UBERON:0001773,UBERON:0001773,1
+non-classical monocyte,CL:0000875,spleen,UBERON:0002106,UBERON:0002106,126
+non-classical monocyte,CL:0000875,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,1
+non-classical monocyte,CL:0000875,submandibular gland,UBERON:0001736,UBERON:0001736,1
+non-classical monocyte,CL:0000875,trachea,UBERON:0003126,UBERON:0003126,5
+oocyte,CL:0000023,left ovary,UBERON:0002119,UBERON:0002119,2
+oocyte,CL:0000023,ovary,UBERON:0000992,UBERON:0000992,12
+oocyte,CL:0000023,right ovary,UBERON:0002118,UBERON:0002118,4
+ovarian surface epithelial cell,CL:2000064,left ovary,UBERON:0002119,UBERON:0002119,151
+ovarian surface epithelial cell,CL:2000064,right ovary,UBERON:0002118,UBERON:0002118,90
+pancreatic A cell,CL:0000171,exocrine pancreas,UBERON:0000017,UBERON:0000017,48
+pancreatic D cell,CL:0000173,exocrine pancreas,UBERON:0000017,UBERON:0000017,9
+pancreatic PP cell,CL:0002275,endocrine pancreas,UBERON:0000016,UBERON:0000016,1
+pancreatic PP cell,CL:0002275,exocrine pancreas,UBERON:0000017,UBERON:0000017,1
+pancreatic acinar cell,CL:0002064,endocrine pancreas,UBERON:0000016,UBERON:0000016,367
+pancreatic acinar cell,CL:0002064,exocrine pancreas,UBERON:0000017,UBERON:0000017,5115
+pancreatic ductal cell,CL:0002079,endocrine pancreas,UBERON:0000016,UBERON:0000016,631
+pancreatic ductal cell,CL:0002079,exocrine pancreas,UBERON:0000017,UBERON:0000017,2090
+pancreatic stellate cell,CL:0002410,endocrine pancreas,UBERON:0000016,UBERON:0000016,1
+pancreatic stellate cell,CL:0002410,exocrine pancreas,UBERON:0000017,UBERON:0000017,437
+paneth cell of colon,CL:0009009,ascending colon,UBERON:0001156,UBERON:0001156,8
+paneth cell of colon,CL:0009009,large intestine,UBERON:0000059,UBERON:0000059,173
+paneth cell of colon,CL:0009009,sigmoid colon,UBERON:0001159,UBERON:0001159,36
+paneth cell of epithelium of small intestine,CL:1000343,duodenum,UBERON:0002114,UBERON:0002114,1490
+paneth cell of epithelium of small intestine,CL:1000343,ileum,UBERON:0002116,UBERON:0002116,22
+paneth cell of epithelium of small intestine,CL:1000343,jejunum,UBERON:0002115,UBERON:0002115,69
+paneth cell of epithelium of small intestine,CL:1000343,small intestine,UBERON:0002108,UBERON:0002108,272
+pericyte,CL:0000669,abdominal aorta,UBERON:0001516,UBERON:0001516,39
+pericyte,CL:0000669,adipose tissue,UBERON:0001013,UBERON:0001013,60
+pericyte,CL:0000669,aorta,UBERON:0000947,UBERON:0000947,737
+pericyte,CL:0000669,bladder organ,UBERON:0018707,UBERON:0018707,1184
+pericyte,CL:0000669,brown adipose tissue,UBERON:0001348,UBERON:0001348,795
+pericyte,CL:0000669,cardiac atrium,UBERON:0002081,UBERON:0002081,12
+pericyte,CL:0000669,cardiac ventricle,UBERON:0002082,UBERON:0002082,38
+pericyte,CL:0000669,coronary artery,UBERON:0001621,UBERON:0001621,600
+pericyte,CL:0000669,crista ampullaris,UBERON:0004721,UBERON:0004721,776
+pericyte,CL:0000669,duodenum,UBERON:0002114,UBERON:0002114,13
+pericyte,CL:0000669,endometrium,UBERON:0001295,UBERON:0001295,15
+pericyte,CL:0000669,heart,UBERON:0000948,UBERON:0000948,1393
+pericyte,CL:0000669,heart right ventricle,UBERON:0002080,UBERON:0002080,108
+pericyte,CL:0000669,ileum,UBERON:0002116,UBERON:0002116,2
+pericyte,CL:0000669,inferior vena cava,UBERON:0001072,UBERON:0001072,22
+pericyte,CL:0000669,left coronary artery,UBERON:0001626,UBERON:0001626,16
+pericyte,CL:0000669,lung,UBERON:0002048,UBERON:0002048,739
+pericyte,CL:0000669,muscle of abdomen,UBERON:0002378,UBERON:0002378,2145
+pericyte,CL:0000669,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,245
+pericyte,CL:0000669,myometrium,UBERON:0001296,UBERON:0001296,1015
+pericyte,CL:0000669,parotid gland,UBERON:0001831,UBERON:0001831,1
+pericyte,CL:0000669,right cardiac atrium,UBERON:0002078,UBERON:0002078,478
+pericyte,CL:0000669,small intestine,UBERON:0002108,UBERON:0002108,9
+pericyte,CL:0000669,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,9
+pericyte,CL:0000669,sublingual gland,UBERON:0001832,UBERON:0001832,2
+pericyte,CL:0000669,thoracic aorta,UBERON:0001515,UBERON:0001515,39
+pericyte,CL:0000669,uterus,UBERON:0000995,UBERON:0000995,3
+pericyte,CL:0000669,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,75
+pericyte,CL:0000669,vasculature,UBERON:0002049,UBERON:0002049,318
+peritubular myoid cell,CL:0002481,testis,UBERON:0000473,UBERON:0000473,67
+plasma cell,CL:0000786,adipose tissue,UBERON:0001013,UBERON:0001013,114
+plasma cell,CL:0000786,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,5
+plasma cell,CL:0000786,aorta,UBERON:0000947,UBERON:0000947,46
+plasma cell,CL:0000786,ascending colon,UBERON:0001156,UBERON:0001156,1519
+plasma cell,CL:0000786,bladder organ,UBERON:0018707,UBERON:0018707,1205
+plasma cell,CL:0000786,blood,UBERON:0000178,UBERON:0000178,816
+plasma cell,CL:0000786,bone marrow,UBERON:0002371,UBERON:0002371,1448
+plasma cell,CL:0000786,brown adipose tissue,UBERON:0001348,UBERON:0001348,177
+plasma cell,CL:0000786,buccal mucosa,UBERON:0006956,UBERON:0006956,1
+plasma cell,CL:0000786,coronary artery,UBERON:0001621,UBERON:0001621,14
+plasma cell,CL:0000786,duodenum,UBERON:0002114,UBERON:0002114,235
+plasma cell,CL:0000786,endometrium,UBERON:0001295,UBERON:0001295,16
+plasma cell,CL:0000786,exocrine pancreas,UBERON:0000017,UBERON:0000017,13
+plasma cell,CL:0000786,eye,UBERON:0000970,UBERON:0000970,3
+plasma cell,CL:0000786,eyelid,UBERON:0001711,UBERON:0001711,1123
+plasma cell,CL:0000786,heart,UBERON:0000948,UBERON:0000948,2
+plasma cell,CL:0000786,ileum,UBERON:0002116,UBERON:0002116,98
+plasma cell,CL:0000786,inguinal lymph node,UBERON:0001542,UBERON:0001542,194
+plasma cell,CL:0000786,kidney,UBERON:0002113,UBERON:0002113,5
+plasma cell,CL:0000786,lacrimal gland,UBERON:0001817,UBERON:0001817,175
+plasma cell,CL:0000786,large intestine,UBERON:0000059,UBERON:0000059,468
+plasma cell,CL:0000786,left ovary,UBERON:0002119,UBERON:0002119,6
+plasma cell,CL:0000786,liver,UBERON:0002107,UBERON:0002107,766
+plasma cell,CL:0000786,lung,UBERON:0002048,UBERON:0002048,148
+plasma cell,CL:0000786,lymph node,UBERON:0000029,UBERON:0000029,5720
+plasma cell,CL:0000786,mammary gland,UBERON:0001911,UBERON:0001911,293
+plasma cell,CL:0000786,mesenteric lymph node,UBERON:0002509,UBERON:0002509,30
+plasma cell,CL:0000786,mucosa of stomach,UBERON:0001199,UBERON:0001199,4123
+plasma cell,CL:0000786,muscle of abdomen,UBERON:0002378,UBERON:0002378,2
+plasma cell,CL:0000786,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,2
+plasma cell,CL:0000786,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,3
+plasma cell,CL:0000786,ovary,UBERON:0000992,UBERON:0000992,2
+plasma cell,CL:0000786,parotid gland,UBERON:0001831,UBERON:0001831,104
+plasma cell,CL:0000786,posterior part of tongue,UBERON:0010033,UBERON:0010033,115
+plasma cell,CL:0000786,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,1
+plasma cell,CL:0000786,right cardiac atrium,UBERON:0002078,UBERON:0002078,1
+plasma cell,CL:0000786,right ovary,UBERON:0002118,UBERON:0002118,6
+plasma cell,CL:0000786,sclera,UBERON:0001773,UBERON:0001773,40
+plasma cell,CL:0000786,sigmoid colon,UBERON:0001159,UBERON:0001159,1321
+plasma cell,CL:0000786,skin of abdomen,UBERON:0001416,UBERON:0001416,10
+plasma cell,CL:0000786,skin of body,UBERON:0002097,UBERON:0002097,67
+plasma cell,CL:0000786,skin of chest,UBERON:0001868,UBERON:0001868,8
+plasma cell,CL:0000786,small intestine,UBERON:0002108,UBERON:0002108,489
+plasma cell,CL:0000786,spleen,UBERON:0002106,UBERON:0002106,3976
+plasma cell,CL:0000786,stomach,UBERON:0000945,UBERON:0000945,22
+plasma cell,CL:0000786,stomach smooth muscle,UBERON:0004222,UBERON:0004222,35
+plasma cell,CL:0000786,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,22
+plasma cell,CL:0000786,sublingual gland,UBERON:0001832,UBERON:0001832,476
+plasma cell,CL:0000786,submandibular gland,UBERON:0001736,UBERON:0001736,3
+plasma cell,CL:0000786,thoracic aorta,UBERON:0001515,UBERON:0001515,5
+plasma cell,CL:0000786,thymus,UBERON:0002370,UBERON:0002370,1578
+plasma cell,CL:0000786,trachea,UBERON:0003126,UBERON:0003126,292
+plasma cell,CL:0000786,uterus,UBERON:0000995,UBERON:0000995,3
+plasma cell,CL:0000786,vasculature,UBERON:0002049,UBERON:0002049,3
+plasmacytoid dendritic cell,CL:0000784,blood,UBERON:0000178,UBERON:0000178,29
+plasmacytoid dendritic cell,CL:0000784,bone marrow,UBERON:0002371,UBERON:0002371,9
+plasmacytoid dendritic cell,CL:0000784,cardiac ventricle,UBERON:0002082,UBERON:0002082,5
+plasmacytoid dendritic cell,CL:0000784,heart,UBERON:0000948,UBERON:0000948,1
+plasmacytoid dendritic cell,CL:0000784,inguinal lymph node,UBERON:0001542,UBERON:0001542,1
+plasmacytoid dendritic cell,CL:0000784,liver,UBERON:0002107,UBERON:0002107,8
+plasmacytoid dendritic cell,CL:0000784,lung,UBERON:0002048,UBERON:0002048,19
+plasmacytoid dendritic cell,CL:0000784,lymph node,UBERON:0000029,UBERON:0000029,13
+plasmacytoid dendritic cell,CL:0000784,mesenteric lymph node,UBERON:0002509,UBERON:0002509,2
+plasmacytoid dendritic cell,CL:0000784,right ovary,UBERON:0002118,UBERON:0002118,5
+plasmacytoid dendritic cell,CL:0000784,spleen,UBERON:0002106,UBERON:0002106,6
+plasmacytoid dendritic cell,CL:0000784,trachea,UBERON:0003126,UBERON:0003126,1
+platelet,CL:0000233,blood,UBERON:0000178,UBERON:0000178,438
+platelet,CL:0000233,brown adipose tissue,UBERON:0001348,UBERON:0001348,1
+platelet,CL:0000233,right cardiac atrium,UBERON:0002078,UBERON:0002078,1
+platelet,CL:0000233,spleen,UBERON:0002106,UBERON:0002106,54
+progenitor cell of mammary luminal epithelium,CL:0009116,mammary gland,UBERON:0001911,UBERON:0001911,1694
+pulmonary alveolar type 1 cell,CL:0002062,lung,UBERON:0002048,UBERON:0002048,3116
+pulmonary alveolar type 2 cell,CL:0002063,lung,UBERON:0002048,UBERON:0002048,11594
+pulmonary ionocyte,CL:0017000,lung,UBERON:0002048,UBERON:0002048,25
+radial glial cell,CL:0000681,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,2
+radial glial cell,CL:0000681,cornea,UBERON:0000964,UBERON:0000964,10
+radial glial cell,CL:0000681,eye,UBERON:0000970,UBERON:0000970,1
+regular atrial cardiac myocyte,CL:0002129,cardiac atrium,UBERON:0002081,UBERON:0002081,5704
+regular atrial cardiac myocyte,CL:0002129,heart,UBERON:0000948,UBERON:0000948,76
+regular atrial cardiac myocyte,CL:0002129,right cardiac atrium,UBERON:0002078,UBERON:0002078,36
+regulatory T cell,CL:0000815,anterior part of tongue,UBERON:0010032,UBERON:0010032,3
+regulatory T cell,CL:0000815,ascending colon,UBERON:0001156,UBERON:0001156,176
+regulatory T cell,CL:0000815,bladder organ,UBERON:0018707,UBERON:0018707,23
+regulatory T cell,CL:0000815,blood,UBERON:0000178,UBERON:0000178,40
+regulatory T cell,CL:0000815,bone marrow,UBERON:0002371,UBERON:0002371,14
+regulatory T cell,CL:0000815,duodenum,UBERON:0002114,UBERON:0002114,3
+regulatory T cell,CL:0000815,ileum,UBERON:0002116,UBERON:0002116,1
+regulatory T cell,CL:0000815,inguinal lymph node,UBERON:0001542,UBERON:0001542,56
+regulatory T cell,CL:0000815,large intestine,UBERON:0000059,UBERON:0000059,189
+regulatory T cell,CL:0000815,lymph node,UBERON:0000029,UBERON:0000029,912
+regulatory T cell,CL:0000815,mammary gland,UBERON:0001911,UBERON:0001911,2
+regulatory T cell,CL:0000815,mucosa of stomach,UBERON:0001199,UBERON:0001199,7
+regulatory T cell,CL:0000815,muscularis mucosae of stomach,UBERON:0001203,UBERON:0001203,4
+regulatory T cell,CL:0000815,posterior part of tongue,UBERON:0010033,UBERON:0010033,89
+regulatory T cell,CL:0000815,sigmoid colon,UBERON:0001159,UBERON:0001159,268
+regulatory T cell,CL:0000815,skin of abdomen,UBERON:0001416,UBERON:0001416,73
+regulatory T cell,CL:0000815,skin of body,UBERON:0002097,UBERON:0002097,150
+regulatory T cell,CL:0000815,skin of chest,UBERON:0001868,UBERON:0001868,50
+regulatory T cell,CL:0000815,small intestine,UBERON:0002108,UBERON:0002108,11
+regulatory T cell,CL:0000815,spleen,UBERON:0002106,UBERON:0002106,342
+regulatory T cell,CL:0000815,stomach,UBERON:0000945,UBERON:0000945,5
+regulatory T cell,CL:0000815,stomach smooth muscle,UBERON:0004222,UBERON:0004222,213
+regulatory T cell,CL:0000815,trachea,UBERON:0003126,UBERON:0003126,17
+regulatory T cell,CL:0000815,uterus,UBERON:0000995,UBERON:0000995,1
+respiratory tract goblet cell,CL:0002370,lung,UBERON:0002048,UBERON:0002048,1040
+retina horizontal cell,CL:0000745,eye,UBERON:0000970,UBERON:0000970,2
+retina horizontal cell,CL:0000745,retinal neural layer,UBERON:0003902,UBERON:0003902,3
+retinal bipolar neuron,CL:0000748,eye,UBERON:0000970,UBERON:0000970,26
+retinal bipolar neuron,CL:0000748,lacrimal gland,UBERON:0001817,UBERON:0001817,4
+retinal bipolar neuron,CL:0000748,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,21
+retinal bipolar neuron,CL:0000748,retinal neural layer,UBERON:0003902,UBERON:0003902,10
+retinal blood vessel endothelial cell,CL:0002585,anterior segment of eyeball,UBERON:0001801,UBERON:0001801,38
+retinal blood vessel endothelial cell,CL:0002585,chorioretinal region,UBERON:0019207,UBERON:0019207,32
+retinal blood vessel endothelial cell,CL:0002585,conjunctiva,UBERON:0001811,UBERON:0001811,15
+retinal blood vessel endothelial cell,CL:0002585,cornea,UBERON:0000964,UBERON:0000964,209
+retinal blood vessel endothelial cell,CL:0002585,eye,UBERON:0000970,UBERON:0000970,74
+retinal blood vessel endothelial cell,CL:0002585,eyelid,UBERON:0001711,UBERON:0001711,1258
+retinal blood vessel endothelial cell,CL:0002585,lacrimal gland,UBERON:0001817,UBERON:0001817,86
+retinal blood vessel endothelial cell,CL:0002585,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,4
+retinal blood vessel endothelial cell,CL:0002585,sclera,UBERON:0001773,UBERON:0001773,375
+retinal ganglion cell,CL:0000740,sclera,UBERON:0001773,UBERON:0001773,1
+retinal pigment epithelial cell,CL:0002586,eye,UBERON:0000970,UBERON:0000970,52
+retinal pigment epithelial cell,CL:0002586,posterior segment of eyeball,UBERON:0001802,UBERON:0001802,15
+salivary gland cell,CL:0009005,anterior part of tongue,UBERON:0010032,UBERON:0010032,84
+salivary gland cell,CL:0009005,posterior part of tongue,UBERON:0010033,UBERON:0010033,762
+salivary gland cell,CL:0009005,sublingual gland,UBERON:0001832,UBERON:0001832,2
+salivary gland cell,CL:0009005,tongue,UBERON:0001723,UBERON:0001723,2
+sebocyte,CL:0000317,skin of abdomen,UBERON:0001416,UBERON:0001416,17
+sebocyte,CL:0000317,skin of body,UBERON:0002097,UBERON:0002097,65
+sebocyte,CL:0000317,skin of chest,UBERON:0001868,UBERON:0001868,53
+serous cell of epithelium of bronchus,CL:1000331,lung,UBERON:0002048,UBERON:0002048,15
+serous cell of epithelium of trachea,CL:1000330,trachea,UBERON:0003126,UBERON:0003126,326
+skeletal muscle satellite stem cell,CL:0008011,muscle of abdomen,UBERON:0002378,UBERON:0002378,4491
+skeletal muscle satellite stem cell,CL:0008011,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,1661
+skeletal muscle satellite stem cell,CL:0008011,myometrium,UBERON:0001296,UBERON:0001296,18
+slow muscle cell,CL:0000189,muscle of abdomen,UBERON:0002378,UBERON:0002378,158
+slow muscle cell,CL:0000189,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,16
+small intestine goblet cell,CL:1000495,duodenum,UBERON:0002114,UBERON:0002114,307
+small intestine goblet cell,CL:1000495,ileum,UBERON:0002116,UBERON:0002116,1299
+small intestine goblet cell,CL:1000495,jejunum,UBERON:0002115,UBERON:0002115,7
+small intestine goblet cell,CL:1000495,small intestine,UBERON:0002108,UBERON:0002108,431
+smooth muscle cell,CL:0000192,abdominal aorta,UBERON:0001516,UBERON:0001516,20
+smooth muscle cell,CL:0000192,adipose tissue,UBERON:0001013,UBERON:0001013,232
+smooth muscle cell,CL:0000192,aorta,UBERON:0000947,UBERON:0000947,5050
+smooth muscle cell,CL:0000192,bladder organ,UBERON:0018707,UBERON:0018707,1053
+smooth muscle cell,CL:0000192,brown adipose tissue,UBERON:0001348,UBERON:0001348,1369
+smooth muscle cell,CL:0000192,cardiac atrium,UBERON:0002081,UBERON:0002081,233
+smooth muscle cell,CL:0000192,cardiac ventricle,UBERON:0002082,UBERON:0002082,199
+smooth muscle cell,CL:0000192,cornea,UBERON:0000964,UBERON:0000964,15
+smooth muscle cell,CL:0000192,coronary artery,UBERON:0001621,UBERON:0001621,2857
+smooth muscle cell,CL:0000192,eye,UBERON:0000970,UBERON:0000970,5
+smooth muscle cell,CL:0000192,eyelid,UBERON:0001711,UBERON:0001711,304
+smooth muscle cell,CL:0000192,heart,UBERON:0000948,UBERON:0000948,658
+smooth muscle cell,CL:0000192,heart right ventricle,UBERON:0002080,UBERON:0002080,201
+smooth muscle cell,CL:0000192,inferior vena cava,UBERON:0001072,UBERON:0001072,25
+smooth muscle cell,CL:0000192,lacrimal gland,UBERON:0001817,UBERON:0001817,50
+smooth muscle cell,CL:0000192,left coronary artery,UBERON:0001626,UBERON:0001626,31
+smooth muscle cell,CL:0000192,mucosa of stomach,UBERON:0001199,UBERON:0001199,1
+smooth muscle cell,CL:0000192,muscle of abdomen,UBERON:0002378,UBERON:0002378,181
+smooth muscle cell,CL:0000192,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,37
+smooth muscle cell,CL:0000192,ovary,UBERON:0000992,UBERON:0000992,1271
+smooth muscle cell,CL:0000192,prostate gland,UBERON:0002367,UBERON:0002367,477
+smooth muscle cell,CL:0000192,right cardiac atrium,UBERON:0002078,UBERON:0002078,226
+smooth muscle cell,CL:0000192,sclera,UBERON:0001773,UBERON:0001773,81
+smooth muscle cell,CL:0000192,skin of abdomen,UBERON:0001416,UBERON:0001416,117
+smooth muscle cell,CL:0000192,skin of body,UBERON:0002097,UBERON:0002097,182
+smooth muscle cell,CL:0000192,skin of chest,UBERON:0001868,UBERON:0001868,205
+smooth muscle cell,CL:0000192,stomach,UBERON:0000945,UBERON:0000945,12
+smooth muscle cell,CL:0000192,stomach smooth muscle,UBERON:0004222,UBERON:0004222,14
+smooth muscle cell,CL:0000192,subcutaneous adipose tissue,UBERON:0002190,UBERON:0002190,359
+smooth muscle cell,CL:0000192,thoracic aorta,UBERON:0001515,UBERON:0001515,54
+smooth muscle cell,CL:0000192,thymus,UBERON:0002370,UBERON:0002370,2225
+smooth muscle cell,CL:0000192,trachea,UBERON:0003126,UBERON:0003126,131
+smooth muscle cell,CL:0000192,vasculature,UBERON:0002049,UBERON:0002049,550
+spermatid,CL:0000018,testis,UBERON:0000473,UBERON:0000473,4009
+spermatocyte,CL:0000017,testis,UBERON:0000473,UBERON:0000473,3070
+spermatogonium,CL:0000020,testis,UBERON:0000473,UBERON:0000473,64
+stratified squamous epithelial cell,CL:0000240,anterior part of tongue,UBERON:0010032,UBERON:0010032,5825
+stratified squamous epithelial cell,CL:0000240,posterior part of tongue,UBERON:0010033,UBERON:0010033,6495
+stratified squamous epithelial cell,CL:0000240,tongue,UBERON:0001723,UBERON:0001723,3
+stromal cell,CL:0000499,chorioretinal region,UBERON:0019207,UBERON:0019207,1
+stromal cell,CL:0000499,crista ampullaris,UBERON:0004721,UBERON:0004721,933
+stromal cell,CL:0000499,eye,UBERON:0000970,UBERON:0000970,2
+stromal cell,CL:0000499,inguinal lymph node,UBERON:0001542,UBERON:0001542,1
+stromal cell,CL:0000499,lymph node,UBERON:0000029,UBERON:0000029,108
+stromal cell,CL:0000499,mesenteric lymph node,UBERON:0002509,UBERON:0002509,2
+stromal cell,CL:0000499,ovary,UBERON:0000992,UBERON:0000992,2159
+stromal cell,CL:0000499,skin of abdomen,UBERON:0001416,UBERON:0001416,4
+stromal cell,CL:0000499,testis,UBERON:0000473,UBERON:0000473,61
+stromal cell,CL:0000499,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,187
+stromal cell of ovary,CL:0002132,left ovary,UBERON:0002119,UBERON:0002119,21571
+stromal cell of ovary,CL:0002132,right ovary,UBERON:0002118,UBERON:0002118,13432
+supporting cell of vestibular epithelium,CL:0002316,crista ampullaris,UBERON:0004721,UBERON:0004721,9
+supporting cell of vestibular epithelium,CL:0002316,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,261
+taste receptor cell,CL:0000209,anterior part of tongue,UBERON:0010032,UBERON:0010032,2
+taste receptor cell,CL:0000209,posterior part of tongue,UBERON:0010033,UBERON:0010033,29
+taste receptor cell,CL:0000209,tongue,UBERON:0001723,UBERON:0001723,1
+tendon cell,CL:0000388,muscle of abdomen,UBERON:0002378,UBERON:0002378,331
+tendon cell,CL:0000388,muscle of pelvic diaphragm,UBERON:0008612,UBERON:0008612,89
+theca cell,CL:0000503,left ovary,UBERON:0002119,UBERON:0002119,444
+theca cell,CL:0000503,ovary,UBERON:0000992,UBERON:0000992,12
+theca cell,CL:0000503,right ovary,UBERON:0002118,UBERON:0002118,582
+thymic fibroblast type 1,CL:0009078,thymus,UBERON:0002370,UBERON:0002370,3270
+thymic fibroblast type 2,CL:0009079,thymus,UBERON:0002370,UBERON:0002370,4205
+thymocyte,CL:0000893,thymus,UBERON:0002370,UBERON:0002370,455
+tissue-resident macrophage,CL:0000864,mucosa of stomach,UBERON:0001199,UBERON:0001199,23
+tissue-resident macrophage,CL:0000864,parotid gland,UBERON:0001831,UBERON:0001831,652
+tissue-resident macrophage,CL:0000864,stomach,UBERON:0000945,UBERON:0000945,17
+tissue-resident macrophage,CL:0000864,stomach smooth muscle,UBERON:0004222,UBERON:0004222,607
+tissue-resident macrophage,CL:0000864,sublingual gland,UBERON:0001832,UBERON:0001832,2
+tissue-resident macrophage,CL:0000864,testis,UBERON:0000473,UBERON:0000473,54
+tongue muscle cell,CL:0002673,anterior part of tongue,UBERON:0010032,UBERON:0010032,97
+tongue muscle cell,CL:0002673,posterior part of tongue,UBERON:0010033,UBERON:0010033,105
+tracheal goblet cell,CL:1000329,trachea,UBERON:0003126,UBERON:0003126,232
+transit amplifying cell of colon,CL:0009011,ascending colon,UBERON:0001156,UBERON:0001156,112
+transit amplifying cell of colon,CL:0009011,large intestine,UBERON:0000059,UBERON:0000059,1
+transit amplifying cell of colon,CL:0009011,sigmoid colon,UBERON:0001159,UBERON:0001159,124
+transit amplifying cell of small intestine,CL:0009012,duodenum,UBERON:0002114,UBERON:0002114,2
+transit amplifying cell of small intestine,CL:0009012,small intestine,UBERON:0002108,UBERON:0002108,32
+tuft cell of colon,CL:0009041,ascending colon,UBERON:0001156,UBERON:0001156,62
+tuft cell of colon,CL:0009041,large intestine,UBERON:0000059,UBERON:0000059,90
+tuft cell of colon,CL:0009041,sigmoid colon,UBERON:0001159,UBERON:0001159,26
+type B pancreatic cell,CL:0000169,exocrine pancreas,UBERON:0000017,UBERON:0000017,102
+type L enteroendocrine cell,CL:0002279,ascending colon,UBERON:0001156,UBERON:0001156,23
+type L enteroendocrine cell,CL:0002279,large intestine,UBERON:0000059,UBERON:0000059,1
+type L enteroendocrine cell,CL:0002279,sigmoid colon,UBERON:0001159,UBERON:0001159,20
+unknown,,ovary,UBERON:0000992,UBERON:0000992,9
+vascular associated smooth muscle cell,CL:0000359,crista ampullaris,UBERON:0004721,UBERON:0004721,78
+vascular associated smooth muscle cell,CL:0000359,endometrium,UBERON:0001295,UBERON:0001295,6
+vascular associated smooth muscle cell,CL:0000359,lung,UBERON:0002048,UBERON:0002048,131
+vascular associated smooth muscle cell,CL:0000359,mammary gland,UBERON:0001911,UBERON:0001911,566
+vascular associated smooth muscle cell,CL:0000359,myometrium,UBERON:0001296,UBERON:0001296,3588
+vascular associated smooth muscle cell,CL:0000359,parotid gland,UBERON:0001831,UBERON:0001831,47
+vascular associated smooth muscle cell,CL:0000359,sublingual gland,UBERON:0001832,UBERON:0001832,144
+vascular associated smooth muscle cell,CL:0000359,submandibular gland,UBERON:0001736,UBERON:0001736,212
+vascular associated smooth muscle cell,CL:0000359,thymus,UBERON:0002370,UBERON:0002370,241
+vascular associated smooth muscle cell,CL:0000359,uterus,UBERON:0000995,UBERON:0000995,1
+vascular associated smooth muscle cell,CL:0000359,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,5
+vein endothelial cell,CL:0002543,abdominal aorta,UBERON:0001516,UBERON:0001516,2
+vein endothelial cell,CL:0002543,aorta,UBERON:0000947,UBERON:0000947,100
+vein endothelial cell,CL:0002543,bladder organ,UBERON:0018707,UBERON:0018707,438
+vein endothelial cell,CL:0002543,coronary artery,UBERON:0001621,UBERON:0001621,730
+vein endothelial cell,CL:0002543,left coronary artery,UBERON:0001626,UBERON:0001626,3
+vein endothelial cell,CL:0002543,lung,UBERON:0002048,UBERON:0002048,1336
+vein endothelial cell,CL:0002543,thoracic aorta,UBERON:0001515,UBERON:0001515,24
+vein endothelial cell,CL:0002543,thymus,UBERON:0002370,UBERON:0002370,2048
+vein endothelial cell,CL:0002543,vasculature,UBERON:0002049,UBERON:0002049,17
+ventricular cardiac muscle cell,CL:2000046,cardiac ventricle,UBERON:0002082,UBERON:0002082,2185
+ventricular cardiac muscle cell,CL:2000046,heart,UBERON:0000948,UBERON:0000948,353
+ventricular cardiac muscle cell,CL:2000046,heart right ventricle,UBERON:0002080,UBERON:0002080,61
+vestibular dark cell,CL:0000846,crista ampullaris,UBERON:0004721,UBERON:0004721,12
+vestibular dark cell,CL:0000846,utricle of membranous labyrinth,UBERON:0001853,UBERON:0001853,37

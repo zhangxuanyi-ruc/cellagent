@@ -1,0 +1,208 @@
+# CellAgent 全局配置
+# 所有可调参数集中在此，避免硬编码分散在各模块中
+
+# ============================================================================
+# SCA pipeline 统一入口参数
+# ============================================================================
+pipeline:
+  input_path: /data/bgi/data/projects/multimodal/RNA_data/cellxgene_disease/Autoimmune_and_systemic_inflammation/type1_diabetes/111d6e7d-d3d2-48fd-907a-4d3f8c77ee93.h5ad
+  output_root: /home/qijinyin/wanghaoran/zxy/cellagent_output
+
+# ============================================================================
+# 预处理参数 (Phase 4: preprocessor.py)
+# ============================================================================
+preprocessing:
+  qc_report:
+    enabled: true
+
+  # Gene ID / species 标准化。必须在 filter/HVG/binning 之前执行。
+  gene_standardization:
+    enabled: true
+    mapper:
+      gene_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/gene_symbol_mapper.json
+    input_species: "auto"
+    target_species: "human"
+    symbol_columns:
+      - gene_name
+      - gene_symbol
+      - symbol
+      - hgnc
+      - mgi
+      - gene
+      - external_gene_name
+      - feature_name
+    aggregate_duplicates: "sum"
+    min_mapping_rate: 0.2
+
+  # Encoder 词表交集过滤。scgpt_id 仅作为 cell encoder 输入辅助列保存。
+  encoder_vocab:
+    vocab_path: /root/wanghaoran/zxy/project/sc_showo/save/okrcell_ckpt/vocab.json
+    id_column: "scgpt_id"
+    require_exact_n_genes: true
+
+  # QC / filter
+  filter:
+    # 与当前 scGPT/sc_showo 预处理配置保持一致
+    filter_gene_by_counts: 3
+    filter_cell_by_counts: false
+    min_genes: null
+    max_counts: null
+    max_pct_mt: 5.0
+    mt_gene_prefixes: ["MT-", "mt-", "Mt-"]
+
+  # 归一化与 HVG
+  target_sum: 10000.0
+  save_counts_layer: "counts"
+  log1p: true
+  make_var_names_unique: true
+  hvg:
+    n_top_genes: 1200
+    flavor: "seurat_v3"
+    fallback_flavor: "seurat"
+    preferred_batch_key: donor_id
+    subset: true
+    batch_key_candidates:
+      - batch
+      - batch_key
+      - batch_id
+      - sample
+      - sample_id
+      - sample_name
+      - donor
+      - donor_id
+      - patient
+      - patient_id
+      - library
+      - library_id
+      - orig.ident
+      - dataset
+      - study
+      - chemistry
+      - platform
+
+  # scGPT-compatible per-cell quantile binning.
+  # 特征提取必须读取保存后的 X_binned layer，不能直接使用连续表达矩阵。
+  binning:
+    enabled: true
+    n_bins: 51
+    source_layer: null
+    target_layer: "X_binned"
+    dtype: "int16"
+
+# ============================================================================
+# Cell encoder 特征提取参数
+# ============================================================================
+cell_encoder:
+  scgpt_root: /root/wanghaoran/zxy/project/sc_showo/scgpt
+  model_path: /root/wanghaoran/zxy/project/sc_showo/save/okrcell_ckpt/model-241492.pt
+  vocab_path: /root/wanghaoran/zxy/project/sc_showo/save/okrcell_ckpt/vocab.json
+  device: "cuda"
+  gpu_id: 7
+  feature_layer: "X_binned"
+  gene_id_column: "scgpt_id"
+  n_genes: 1200
+  batch_size: 128
+  output_format: "npz"
+
+# ============================================================================
+# scGPT feature extraction service
+# ============================================================================
+feature_service:
+  enabled: true
+  url: http://127.0.0.1:18080
+  host: 0.0.0.0
+  port: 18080
+  gpu_id: 7
+  max_workers: 1
+
+# ============================================================================
+# 基于 cell encoder 特征的 Leiden 聚类参数
+# ============================================================================
+clustering:
+  feature_key: "features"
+  resolutions: [0.25, 0.5, 0.75, 1.0]
+  choose_by: "modularity"
+  n_pcs: 30
+  n_neighbors: 30
+  metric: "cosine"
+  random_state: 0
+  min_clusters: 5
+  max_clusters: 15
+
+# ============================================================================
+# 基于聚类簇索引的差异表达分析参数
+# ============================================================================
+de_analysis:
+  cluster_key: "leiden"
+  method: "wilcoxon"
+  top_k: 30
+  adj_pval_threshold: 0.05
+  logfc_threshold: 0.25
+  expression_layer: null
+
+# ============================================================================
+# REACT 引擎参数 (Phase 5: engine.py)
+# ============================================================================
+engine:
+  # 迭代控制
+  max_iterations: 3                       # 最大 REACT 轮数
+  pass_threshold: 80                     # 通过验证的最低总分
+
+  # 打分权重 (总和 100)
+  scoring:
+    marker_match: 40                     # marker 匹配度 (0-40)
+    conflict_penalty: 30                 # 反向 marker 冲突 (0-30)
+    function_consistency: 20             # 功能一致性 (0-20)
+    tissue_consistency: 10               # 组织分布 (0-10)
+
+  # 一票否决条件
+  veto:
+    strong_conflict_threshold: 3         # >=3 个排他性冲突则否决
+    min_matched_markers: 1               # 至少匹配 1 个 marker，否则否决
+
+# ============================================================================
+# RAG 查询参数 (Phase 2: rag/*.py)
+# ============================================================================
+rag:
+  # Marker 查询
+  markers:
+    top_k: 10                            # 每个数据库最多返回 marker 数
+    species_priority: "human"            # 优先物种
+
+  # Tissue 查询
+  tissues:
+    max_records: 50                      # 最多返回组织记录数
+
+  # 预聚合缓存
+  cache:
+    enabled: true
+    dir: "rag/cache"
+
+# ============================================================================
+# GO 注释查询参数 (go_annotation.py)
+# ============================================================================
+go_annotation:
+  api: "mygene.info"
+  species: "human"
+  aspect: "BP"                           # 默认查询 GO aspect: BP / MF / CC / all
+  top_k_per_gene: 3                     # 每个基因取前 k 个 GO term
+  use_batch: true                       # 优先使用批量 POST API
+
+# ============================================================================
+# LLM 参数 (Phase 3: llm/*.py) — 待接入
+# ============================================================================
+llm:
+  provider: "mock"                      # mock / openai / claude / local
+  model: "mock"
+  temperature: 0.3
+  timeout: 60
+  max_retries: 3
+  json_mode: true                       # 强制 JSON 输出
+
+# ============================================================================
+# 输出参数 (Phase 6)
+# ============================================================================
+output:
+  reports_dir: "output/reports"         # 最终注释报告
+  traces_dir: "output/traces"           # REACT 轨迹日志
+  formats: ["json"]                     # 输出格式
