@@ -21,6 +21,8 @@ from __future__ import annotations
 import uuid
 from typing import TYPE_CHECKING, Callable, Literal
 
+from src.llm.prompts import reflection_prompt
+
 from .schemas import (
     AgentState,
     DEGenes,
@@ -99,18 +101,13 @@ class CellAnnotationEngine:
     def _initial_guess_node(self, state: AgentState) -> AgentState:
         """Node A: 初始推断.
 
-        读取 DE 基因 + metadata，调用多模态 LLM 生成初步推断。
-        TODO: 接入真实多模态 LLM。当前用 Mock 返回占位。
+        多模态 LLM 输出（LLaVA-Mistral + encoder feature + 困惑度置信度）。
+        当前用 Mock 占位，真实接入由 src/llm/multimodal_prior.py 完成。
         """
-        # 读取 DE 基因（从 CSV 或内存）
         de_genes = state.de_genes.top_genes
         metadata = state.metadata
 
-        # TODO: 接入真实 LLM 调用
-        # prompt = Prompts.initial_inference(de_genes, metadata)
-        # response = self.llm.chat(prompt, json_mode=True)
-
-        # Mock: 基于 DE 基因做简单推断（实际应由 LLM 完成）
+        # 初始推断走多模态先验，此处保留 mock 作为占位
         prediction = self._mock_initial_guess(de_genes, metadata)
 
         state.current_prediction = prediction
@@ -192,27 +189,67 @@ class CellAnnotationEngine:
         """Node D: 反思修正.
 
         LLM 读取 evidence_report，分析失败原因，生成修正后的推断。
-        TODO: 接入真实 LLM 调用。
         """
         report = state.evidence_report
         prediction = state.current_prediction
 
-        # 记录反思历史
+        failure_reason = (
+            report.veto_reason
+            if report and report.veto_triggered
+            else f"总分 {report.total if report else 0} 不足 80"
+        )
+
+        # 记录反思历史（先创建记录，再调用 LLM 填充 revised）
         record = ReflectionRecord(
             round_num=state.iteration_count + 1,
             failed_prediction=prediction.cell_type,
-            failure_reason=report.veto_reason if report and report.veto_triggered else f"总分 {report.total if report else 0} 不足 80",
-            revised_prediction="",  # 由 LLM 生成
+            failure_reason=failure_reason,
+            revised_prediction="",
         )
 
-        # TODO: 接入真实 LLM 调用
-        # prompt = Prompts.reflection(...)
-        # response = self.llm.chat(prompt, json_mode=True)
+        # 构建 evidence summary
+        evidence_summary = ""
+        if report:
+            evidence_summary = (
+                f"marker_match_score={report.marker_match_score}, "
+                f"conflict_penalty={report.conflict_penalty}, "
+                f"function_consistency={report.function_consistency_score}, "
+                f"tissue_consistency={report.tissue_consistency_score}"
+            )
 
-        # Mock: 简单修正策略
-        revised = self._mock_reflection(prediction, report, state.reflection_history)
-        record.revised_prediction = revised.cell_type
-        record.focus = revised.cell_type
+        # 调用 LLM 生成修正后的推断
+        prompt = reflection_prompt(
+            failed_prediction=prediction.cell_type,
+            failure_reason=failure_reason,
+            de_genes=state.de_genes.top_genes,
+            evidence_summary=evidence_summary,
+            history=[f"R{r.round_num}: {r.failed_prediction} -> {r.revised_prediction} ({r.failure_reason})" for r in state.reflection_history],
+        )
+
+        try:
+            response = self.llm.chat(
+                messages=[{"role": "user", "content": prompt}],
+                json_mode=True,
+            )
+            if isinstance(response, dict) and "cell_type" in response:
+                revised = Prediction(
+                    cell_type=str(response.get("cell_type", "unknown")),
+                    function=str(response.get("function", "unknown")),
+                    confidence=float(response.get("confidence", 0.5)),
+                )
+                record.revised_prediction = revised.cell_type
+                record.focus = revised.cell_type
+            else:
+                # LLM 返回格式异常，fallback 到 mock
+                revised = self._mock_reflection(prediction, report, state.reflection_history)
+                record.revised_prediction = revised.cell_type
+                record.focus = revised.cell_type
+        except Exception as exc:
+            # LLM 调用失败，fallback 到 mock
+            revised = self._mock_reflection(prediction, report, state.reflection_history)
+            record.revised_prediction = revised.cell_type
+            record.focus = revised.cell_type
+            record.failure_reason += f" [LLM error: {exc}]"
 
         state.reflection_history.append(record)
         state.current_prediction = revised

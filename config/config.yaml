@@ -189,15 +189,32 @@ go_annotation:
   use_batch: true                       # 优先使用批量 POST API
 
 # ============================================================================
-# LLM 参数 (Phase 3: llm/*.py) — 待接入
+# LLM 参数 (Phase 3: llm/*.py)
 # ============================================================================
 llm:
-  provider: "mock"                      # mock / openai / claude / local
-  model: "mock"
-  temperature: 0.3
-  timeout: 60
-  max_retries: 3
-  json_mode: true                       # 强制 JSON 输出
+  # provider: mock | openai_compatible
+  provider: "openai_compatible"
+
+  # OpenAI-compatible endpoint (local vLLM / TGI / Tailscale proxy)
+  openai_compatible:
+    base_url: "https://localagent.tail053d0c.ts.net/v1"
+    model: null                           # null = auto-detect from /models
+    api_key: "unused"
+    temperature: 0.3
+    timeout: 120
+    max_retries: 3
+    # Tailscale DNS patch (optional): resolve hostname to Tailscale IP
+    tailscale_host: "localagent.tail053d0c.ts.net"
+    tailscale_ip: "100.105.94.49"
+    enable_thinking: false
+    # Tailscale userspace-networking SOCKS5 proxy
+    socks5_proxy: "socks5://localhost:1080"
+    # LLM server uses self-signed certificate
+    verify_ssl: false
+
+  # Mock client for testing (no API calls)
+  mock:
+    fixture_dir: "tests/fixtures/llm"
 
 # ============================================================================
 # 输出参数 (Phase 6)

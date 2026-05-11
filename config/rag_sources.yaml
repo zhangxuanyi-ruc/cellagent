@@ -5,7 +5,7 @@
 #   组织分布主库: Tabula Sapiens (直接提供 cell_type -> tissue 映射)
 #   组织分布附属: ImmGen (仅 mouse 输入且 metadata.species=mouse 时启用)
 #   Marker 主库: CellMarker 2.0 (最全面的 marker 数据库)
-#   Marker 附属: PanglaoDB (仅 CellMarker 缺失/不足/DE overlap 过低时补充)
+#   Marker 附属: PanglaoDB (仅 CellMarker 缺失或 marker 数量不足时补充)
 #   功能描述: Cell Ontology
 
 mapper:

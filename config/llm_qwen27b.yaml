@@ -1,0 +1,21 @@
+# Qwen-27B 本地部署配置 (OpenAI-compatible)
+# 通过 Tailscale 连接本地 GPU 节点
+
+llm:
+  provider: "openai_compatible"
+
+  openai_compatible:
+    base_url: "https://localagent.tail053d0c.ts.net/v1"
+    model: null
+    api_key: "unused"
+    temperature: 0.3
+    timeout: 120
+    max_retries: 3
+    tailscale_host: "localagent.tail053d0c.ts.net"
+    tailscale_ip: "100.105.94.49"
+    enable_thinking: false
+
+  # Qwen-27B 特定参数（传递给 API 的 extra_body）
+  model_params:
+    max_tokens: 4096
+    top_p: 0.8

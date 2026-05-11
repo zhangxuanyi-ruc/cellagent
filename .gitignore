@@ -14,6 +14,20 @@ __pycache__/
 .venv/
 venv/
 env/
+.build-venv/
+
+# Build / packaging artifacts (PyInstaller / wheels)
+build/
+dist/
+release/
+*.egg-info/
+*.spec
+
+# macOS metadata
+.DS_Store
+
+# Nested git repos inside vendored subprojects
+src/llm/llm_client/.git/
 
 # Runtime outputs and local data
 data/raw/
@@ -48,3 +62,4 @@ project_plan/*.docx
 reference/**/*.pdf
 reference/**/*.png
 reference/*.png
+# Auto-ignore large files (>5MB) added as individual entries

@@ -1,19 +1,23 @@
-"""LLM API 客户端抽象接口与 Mock 实现.
+"""LLM API 客户端抽象接口与具体实现.
 
 设计原则:
   - 抽象基类 LLMClient 定义统一接口，不依赖具体提供商
   - MockLLMClient 用于状态机开发和测试（无需真实 API key）
-  - 后续接入 OpenAI/Claude/本地模型时，只需实现子类
+  - OpenAICompatibleClient 对接任何 OpenAI-compatible API（本地 vLLM、Tailscale 等）
 
 使用方式:
-  from src.llm.clients import LLMClient, MockLLMClient
+  from src.llm.clients import LLMClient, MockLLMClient, OpenAICompatibleClient
 
   # 开发测试期
   llm = MockLLMClient(fixture_dir="tests/fixtures/llm")
 
-  # 生产环境（后续接入）
-  # llm = OpenAIClient(model="gpt-4o", api_key=...)
-  # llm = ClaudeClient(model="claude-3-5-sonnet", api_key=...)
+  # 本地部署（OpenAI-compatible）
+  llm = OpenAICompatibleClient(
+      base_url="https://localagent.tail053d0c.ts.net/v1",
+      model="default",
+      tailscale_host="localagent.tail053d0c.ts.net",
+      tailscale_ip="100.105.94.49",
+  )
 """
 from __future__ import annotations
 
@@ -136,3 +140,127 @@ class MockLLMClient(LLMClient):
                 "veto_triggered": False,
             }
         return "Mock response: this is a placeholder from MockLLMClient."
+
+
+class OpenAICompatibleClient(LLMClient):
+    """OpenAI-compatible API 客户端.
+
+    支持本地 vLLM、TGI、Tailscale 代理等任何 OpenAI-compatible endpoint。
+    可选的 Tailscale hostname resolution patch，用于通过内网 IP 连接 Tailscale 节点。
+
+    Args:
+        base_url: API base URL, e.g. "https://host/v1" or "http://localhost:8000/v1"
+        model: 模型名称，若为 None 则自动调用 /models 获取第一个可用模型
+        api_key: API key，本地部署通常传 "unused" 或任意字符串
+        temperature: 采样温度
+        timeout: 请求超时秒数
+        max_retries: 重试次数
+        tailscale_host: Tailscale hostname（如需 patch DNS）
+        tailscale_ip: Tailscale 内网 IP（如需 patch DNS）
+        enable_thinking: 是否启用模型的思考过程（传给 extra_body）
+    """
+
+    def __init__(
+        self,
+        base_url: str,
+        model: str | None = None,
+        api_key: str = "unused",
+        temperature: float = 0.3,
+        timeout: int = 120,
+        max_retries: int = 3,
+        tailscale_host: str | None = None,
+        tailscale_ip: str | None = None,
+        enable_thinking: bool = False,
+        socks5_proxy: str | None = None,
+        verify_ssl: bool = True,
+    ):
+        super().__init__(model=model or "auto", temperature=temperature, timeout=timeout)
+        self.base_url = base_url.rstrip("/")
+        self.api_key = api_key
+        self.max_retries = max_retries
+        self.tailscale_host = tailscale_host
+        self.tailscale_ip = tailscale_ip
+        self.enable_thinking = enable_thinking
+        self.socks5_proxy = socks5_proxy
+        self.verify_ssl = verify_ssl
+        self._client = self._create_client()
+        self._model: str | None = model
+
+    def _create_client(self):
+        import socket
+
+        import httpx
+        from openai import OpenAI
+
+        if self.tailscale_host and self.tailscale_ip:
+            orig_getaddrinfo = socket.getaddrinfo
+            host, ip = self.tailscale_host, self.tailscale_ip
+
+            def _patched_getaddrinfo(hostname, port, *args, **kwargs):
+                if hostname == host:
+                    return orig_getaddrinfo(ip, port, *args, **kwargs)
+                return orig_getaddrinfo(hostname, port, *args, **kwargs)
+
+            socket.getaddrinfo = _patched_getaddrinfo
+
+        if self.socks5_proxy:
+            http_client = httpx.Client(
+                proxy=self.socks5_proxy,
+                trust_env=False,
+                timeout=self.timeout,
+                verify=self.verify_ssl,
+            )
+        else:
+            http_client = httpx.Client(
+                trust_env=False,
+                timeout=self.timeout,
+                verify=self.verify_ssl,
+            )
+
+        return OpenAI(
+            base_url=self.base_url,
+            api_key=self.api_key,
+            http_client=http_client,
+            max_retries=self.max_retries,
+        )
+
+    @property
+    def model(self) -> str:
+        if self._model is None:
+            models = self._client.models.list()
+            self._model = models.data[0].id if models.data else "default"
+        return self._model
+
+    @model.setter
+    def model(self, value: str) -> None:
+        self._model = value
+
+    def chat(self, messages: list[dict[str, str]], json_mode: bool = False) -> str | dict:
+        kwargs: dict[str, Any] = {
+            "model": self.model,
+            "messages": messages,
+            "temperature": self.temperature,
+        }
+        extra_body: dict[str, Any] = {}
+        if not self.enable_thinking:
+            extra_body["enable_thinking"] = False
+        if extra_body:
+            kwargs["extra_body"] = extra_body
+
+        if json_mode:
+            kwargs["response_format"] = {"type": "json_object"}
+
+        response = self._client.chat.completions.create(**kwargs)
+        msg = response.choices[0].message
+
+        # Qwen3 模型输出在 reasoning 字段，不在 content
+        content = msg.content or ""
+        reasoning = getattr(msg, "reasoning", None) or getattr(msg, "reasoning_content", None) or ""
+        text = content or reasoning
+
+        if json_mode:
+            try:
+                return json.loads(text)
+            except json.JSONDecodeError:
+                return {"error": "invalid json", "raw": text}
+        return text

@@ -45,5 +45,9 @@ safetensors
 sentencepiece
 einops
 
+# LLM API client (OpenAI-compatible)
+openai>=1.0
+httpx
+
 # Optional but used by local scGPT/sc_showo code paths on some installs
 

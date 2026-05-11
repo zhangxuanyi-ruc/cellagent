@@ -25,6 +25,39 @@ class DEGenes(BaseModel):
     de_csv_path: str | None = None                       # DE 结果 CSV 文件路径
 
 
+class StandardizedReasoningInput(BaseModel):
+    """Reasoning 阶段的标准化输入.
+
+    该结构只记录规则标准化结果，不包含任何 LLM 推断。
+    """
+    cell_type_raw: str = ""
+    cell_type_cl_id: str | None = None
+    function_raw: str = ""
+    species: str | None = None
+    tissue_raw: str | None = None
+    tissue_uberon_id: str | None = None
+    de_genes_raw: list[str] = Field(default_factory=list)
+    de_genes_normalized: list[str] = Field(default_factory=list)
+    unmapped_de_genes: list[str] = Field(default_factory=list)
+
+
+class ReasoningResult(BaseModel):
+    """确定性 Reasoning 输出.
+
+    Reasoning 只负责拆包、标准化、检索和结构化证据落盘；不做 LLM judge，
+    不生成新细胞类型假说。
+    """
+    cluster_id: str
+    prediction: Prediction
+    standardized: StandardizedReasoningInput
+    marker_records: list[dict[str, Any]] = Field(default_factory=list)
+    function_records: list[dict[str, Any]] = Field(default_factory=list)
+    tissue_records: list[dict[str, Any]] = Field(default_factory=list)
+    kg_records: list[dict[str, Any]] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+    provenance: dict[str, Any] = Field(default_factory=dict)
+
+
 # ---- Evidence 模型 ----
 
 class MarkerEvidence(BaseModel):
@@ -88,6 +121,7 @@ class AgentState(BaseModel):
     current_prediction: Prediction = Field(default_factory=lambda: Prediction(cell_type="", function=""))
 
     # 证据与评估 (由 RAG_and_Evaluate_Node 填写)
+    reasoning_result: ReasoningResult | None = None
     evidence_report: EvaluatorReport | None = None
     de_gene_go_evidence: list[str] = Field(default_factory=list)
 
@@ -124,6 +158,8 @@ class FinalResult(BaseModel):
 __all__ = [
     "Prediction",
     "DEGenes",
+    "StandardizedReasoningInput",
+    "ReasoningResult",
     "MarkerEvidence",
     "FunctionEvidence",
     "TissueEvidence",

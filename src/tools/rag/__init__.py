@@ -126,6 +126,7 @@ class RAGFacade:
         return results
 
     def _should_query_panglao(
+        self,
         cellmarker_rows: list[dict],
         min_markers: int,
     ) -> bool:
