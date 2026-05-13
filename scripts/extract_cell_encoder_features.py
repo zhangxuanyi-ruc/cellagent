@@ -206,7 +206,8 @@ def extract_features(
     gene_ids_batch_base = torch.from_numpy(gene_ids).long()
     n_batches = int(np.ceil(adata.n_obs / batch_size))
 
-    for batch_idx in tqdm(range(n_batches), desc="cell encoder inference"):
+    disable_progress = os.environ.get("TQDM_DISABLE", "").lower() in {"1", "true", "yes"} or not sys.stderr.isatty()
+    for batch_idx in tqdm(range(n_batches), desc="cell encoder inference", disable=disable_progress):
         start = batch_idx * batch_size
         end = min(start + batch_size, adata.n_obs)
         batch_values = values[start:end]

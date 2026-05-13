@@ -21,6 +21,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 import pandas as pd
+import re
 
 if TYPE_CHECKING:
     from .mapper import Mapper
@@ -126,7 +127,13 @@ class CellMarkerLoader:
 
         return self._df
 
-    def query(self, names_lower: set[str], species: str = "human", top_k: int = 10) -> list[dict]:
+    def query(
+        self,
+        names_lower: set[str],
+        species: str = "human",
+        top_k: int | None = 10,
+        tissue_terms: set[str] | None = None,
+    ) -> list[dict]:
         """查询指定细胞类型的 marker."""
         df = self._load()
         if df.empty or self.CELL_NAME_COL not in df.columns:
@@ -138,8 +145,16 @@ class CellMarkerLoader:
                 species.lower(), na=False
             )
             mask = mask & species_mask
+        if tissue_terms and self.TISSUE_COL in df.columns:
+            tissue_norm = df[self.TISSUE_COL].astype(str).str.lower()
+            tissue_mask = False
+            for term in tissue_terms:
+                tissue_mask = tissue_mask | tissue_norm.str.contains(re.escape(term.lower()), na=False)
+            mask = mask & tissue_mask
 
-        sub = df.loc[mask].head(top_k)
+        sub = df.loc[mask]
+        if top_k is not None and int(top_k) > 0:
+            sub = sub.head(int(top_k))
         return [
             {
                 "gene": str(r[self.GENE_COL]) if self.GENE_COL in df.columns and pd.notnull(r[self.GENE_COL]) else "",

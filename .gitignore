@@ -27,7 +27,14 @@ release/
 .DS_Store
 
 # Nested git repos inside vendored subprojects
+src/llm/llm_client/
 src/llm/llm_client/.git/
+src/llm/llm_client/.build-venv/
+src/llm/llm_client/__pycache__/
+src/llm/llm_client/build/
+src/llm/llm_client/dist/
+src/llm/llm_client/release/
+src/llm/llm_client/logs/
 
 # Runtime outputs and local data
 data/raw/

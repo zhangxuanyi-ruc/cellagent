@@ -5,7 +5,7 @@
 # SCA pipeline 统一入口参数
 # ============================================================================
 pipeline:
-  input_path: /data/bgi/data/projects/multimodal/RNA_data/cellxgene_disease/Autoimmune_and_systemic_inflammation/type1_diabetes/111d6e7d-d3d2-48fd-907a-4d3f8c77ee93.h5ad
+  input_path: /data/bgi/data/projects/multimodal/RNA_data/cellxgene_disease/neural_disease/als/c48ec35b-a4e3-48a8-8407-87fe3f59caa2.h5ad
   output_root: /home/qijinyin/wanghaoran/zxy/cellagent_output
 
 # ============================================================================
@@ -119,6 +119,11 @@ feature_service:
 # 基于 cell encoder 特征的 Leiden 聚类参数
 # ============================================================================
 clustering:
+  # cellagent: always use extracted cell encoder features for Leiden clustering.
+  # obs: reuse user-provided clusters from preprocessed AnnData.obs[obs_key].
+  # Cell encoder features are still extracted either way for multimodal prior.
+  source: "cellagent"
+  obs_key: null
   feature_key: "features"
   resolutions: [0.25, 0.5, 0.75, 1.0]
   choose_by: "modularity"
@@ -159,6 +164,7 @@ engine:
   veto:
     strong_conflict_threshold: 3         # >=3 个排他性冲突则否决
     min_matched_markers: 1               # 至少匹配 1 个 marker，否则否决
+    marker_full_match_threshold: 5       # top10 DE 中 >=5 个命中 marker list 得满分
 
 # ============================================================================
 # RAG 查询参数 (Phase 2: rag/*.py)
@@ -166,7 +172,7 @@ engine:
 rag:
   # Marker 查询
   markers:
-    top_k: 10                            # 每个数据库最多返回 marker 数
+    top_k: null                          # null 表示保存该 cell type 可检索到的全量 marker
     species_priority: "human"            # 优先物种
 
   # Tissue 查询

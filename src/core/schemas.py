@@ -58,6 +58,22 @@ class ReasoningResult(BaseModel):
     provenance: dict[str, Any] = Field(default_factory=dict)
 
 
+class JudgeResult(BaseModel):
+    """Judge / Scoring 阶段输出.
+
+    输入必须是 ReasoningResult；本阶段不重新生成多模态假说。
+    """
+    cluster_id: str
+    reasoning_path: str | None = None
+    report: EvaluatorReport
+    marker_matches: list[str] = Field(default_factory=list)
+    marker_misses: list[str] = Field(default_factory=list)
+    conflict_candidates: list[dict[str, Any]] = Field(default_factory=list)
+    component_reasoning: dict[str, str] = Field(default_factory=dict)
+    warnings: list[str] = Field(default_factory=list)
+    provenance: dict[str, Any] = Field(default_factory=dict)
+
+
 # ---- Evidence 模型 ----
 
 class MarkerEvidence(BaseModel):
@@ -122,6 +138,7 @@ class AgentState(BaseModel):
 
     # 证据与评估 (由 RAG_and_Evaluate_Node 填写)
     reasoning_result: ReasoningResult | None = None
+    judge_result: JudgeResult | None = None
     evidence_report: EvaluatorReport | None = None
     de_gene_go_evidence: list[str] = Field(default_factory=list)
 
@@ -160,6 +177,7 @@ __all__ = [
     "DEGenes",
     "StandardizedReasoningInput",
     "ReasoningResult",
+    "JudgeResult",
     "MarkerEvidence",
     "FunctionEvidence",
     "TissueEvidence",

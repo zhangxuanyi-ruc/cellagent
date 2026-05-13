@@ -79,7 +79,7 @@ class PanglaoLoader:
         self._annot_df = df
         return df
 
-    def query(self, names_lower: set[str], species: str = "human", top_k: int = 10) -> list[dict]:
+    def query(self, names_lower: set[str], species: str = "human", top_k: int | None = 10) -> list[dict]:
         """查询细胞类型的 marker 基因.
 
         通过 annotations 文件匹配细胞类型名，再通过 markers 文件获取基因。
@@ -101,7 +101,8 @@ class PanglaoLoader:
 
         # 在 marker 文件中找对应基因
         results: list[dict] = []
-        for _, key in keys.head(top_k).iterrows():
+        iter_keys = keys if top_k is None or int(top_k) <= 0 else keys.head(int(top_k))
+        for _, key in iter_keys.iterrows():
             mm = (
                 (marker_df["sra"] == key["sra"])
                 & (marker_df["srs"] == key["srs"])
@@ -121,10 +122,12 @@ class PanglaoLoader:
                     "evidence": f"PanglaoDB cluster {key['cluster']}",
                     "source": "panglao",
                 })
-            if len(results) >= top_k:
+            if top_k is not None and int(top_k) > 0 and len(results) >= int(top_k):
                 break
 
-        return results[:top_k]
+        if top_k is not None and int(top_k) > 0:
+            return results[: int(top_k)]
+        return results
 
     def query_cell_types(self, gene: str, species: str = "human") -> set[str]:
         """反向查询：某基因出现在哪些细胞类型中."""

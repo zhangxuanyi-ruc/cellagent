@@ -19,6 +19,8 @@ from scipy import sparse
 
 @dataclass
 class ClusteringConfig:
+    source: str = "cellagent"
+    obs_key: str | None = None
     resolutions: list[float] = field(default_factory=lambda: [0.25, 0.5, 0.75, 1.0])
     n_pcs: int = 30
     n_neighbors: int = 30
@@ -34,6 +36,8 @@ class ClusteringConfig:
 def config_from_dict(raw: dict[str, Any] | None) -> ClusteringConfig:
     raw = raw or {}
     return ClusteringConfig(
+        source=str(raw.get("source", "cellagent")),
+        obs_key=raw.get("obs_key"),
         resolutions=[float(x) for x in raw.get("resolutions", [0.25, 0.5, 0.75, 1.0])],
         n_pcs=int(raw.get("n_pcs", 30)),
         n_neighbors=int(raw.get("n_neighbors", 30)),
@@ -45,6 +49,50 @@ def config_from_dict(raw: dict[str, Any] | None) -> ClusteringConfig:
         min_clusters=int(raw.get("min_clusters", 5)),
         max_clusters=int(raw.get("max_clusters", 15)),
     )
+
+
+def write_obs_cluster_assignments(
+    preprocessed_h5ad: str | Path,
+    cfg: ClusteringConfig,
+    output_dir: str | Path | None = None,
+    stem: str | None = None,
+) -> dict[str, Path]:
+    if not cfg.obs_key:
+        raise ValueError("clustering.obs_key is required when clustering.source='obs'.")
+    adata = ad.read_h5ad(preprocessed_h5ad)
+    if cfg.obs_key not in adata.obs:
+        raise ValueError(f"obs_key '{cfg.obs_key}' not found in {preprocessed_h5ad}. Columns: {list(adata.obs.columns)}")
+
+    labels = adata.obs[cfg.obs_key].astype(str)
+    if labels.isna().any() or (labels.str.strip() == "").any():
+        raise ValueError(f"obs_key '{cfg.obs_key}' contains empty cluster labels.")
+    n_clusters = int(labels.nunique())
+    if n_clusters < 2:
+        raise ValueError(f"obs_key '{cfg.obs_key}' must contain at least two clusters, got {n_clusters}.")
+
+    adata.obs["leiden"] = labels.values
+    summary = {
+        "source": "obs",
+        "obs_key": cfg.obs_key,
+        "preprocessed_h5ad": str(preprocessed_h5ad),
+        "n_cells": int(adata.n_obs),
+        "n_clusters": n_clusters,
+        "cluster_key": "leiden",
+    }
+    adata.uns["cellagent_clustering"] = summary
+
+    out_dir = Path(output_dir or cfg.output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_stem = stem or Path(preprocessed_h5ad).name.replace(".h5ad", "")
+    h5ad_path = out_dir / f"{out_stem}_obs_clustered.h5ad"
+    csv_path = out_dir / f"{out_stem}_obs_cell_clusters.csv"
+    metrics_path = out_dir / f"{out_stem}_obs_clustering_metrics.json"
+
+    adata.write_h5ad(h5ad_path, compression="gzip")
+    obs_out = pd.DataFrame({"cell_id": adata.obs_names.astype(str), "leiden": labels.values})
+    obs_out.to_csv(csv_path, index=False)
+    metrics_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    return {"h5ad": h5ad_path, "clusters_csv": csv_path, "metrics_json": metrics_path}
 
 
 def load_feature_matrix(feature_path: str | Path, feature_key: str = "features") -> tuple[np.ndarray, pd.Index, dict[str, Any]]:

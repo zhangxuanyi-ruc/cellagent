@@ -1,4 +1,9 @@
-"""CellAgent REACT 状态机核心.
+"""Deprecated legacy CellAgent REACT engine.
+
+This module is kept for historical compatibility only. New code should use
+`src.agent.pipeline.AgentPipeline` plus `src.agent.tools.*`.
+
+Legacy notes:
 
 基于 State Graph 设计：
   - AgentState 在节点间流转（"黑板"模式）

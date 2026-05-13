@@ -5,6 +5,7 @@ loader 返回 list[dict], RAGFacade 在边界统一转 pydantic 类型.
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -53,6 +54,7 @@ class RAGFacade:
     def __init__(self, config_path: str | Path):
         cfg: dict[str, Any] = yaml.safe_load(Path(config_path).read_text())
         self.mapper = Mapper(cfg.get("mapper", {}))
+        self.marker_mapper = self._load_marker_mapper(cfg.get("mapper", {}).get("marker_mapper_json"))
 
         # Marker 数据库
         self.cellmarker = CellMarkerLoader(cfg["cellmarker"], self.mapper) if "cellmarker" in cfg else None
@@ -67,12 +69,22 @@ class RAGFacade:
         tabula_cfg = cfg.get("tabula_sapiens") or cfg.get("tabula")
         self.tabula = TabulaLoader(tabula_cfg, self.mapper) if tabula_cfg else None
 
+    @staticmethod
+    def _load_marker_mapper(path: str | Path | None) -> dict[str, dict[str, Any]]:
+        if not path:
+            return {}
+        mapper_path = Path(path)
+        if not mapper_path.exists():
+            return {}
+        return json.loads(mapper_path.read_text(encoding="utf-8"))
+
     def query_markers(
         self,
         cell_type: str,
         species: str = "human",
-        top_k: int = 10,
+        top_k: int | None = 10,
         min_markers: int = 5,
+        metadata: dict[str, Any] | None = None,
     ) -> list[Marker]:
         """查询某细胞类型的 marker 基因.
 
@@ -83,56 +95,45 @@ class RAGFacade:
         Args:
             cell_type: 细胞类型名或 CL ID
             species: "human" 或 "mouse"
-            top_k: 每个被启用数据源最多返回条数
+            top_k: 最多返回条数；None 或 <=0 表示不截断
             min_markers: CellMarker 少于该数量时启用 PanglaoDB
         """
         cl_id = self.mapper.normalize_cell_type(cell_type)
-        names = self.mapper.cell_type_synonyms(cl_id) if cl_id else [cell_type]
-        names_lower = {n.lower() for n in names}
+        if not cl_id:
+            return []
 
-        cellmarker_rows: list[dict] = []
-        if self.cellmarker:
-            cellmarker_rows.extend(self.cellmarker.query(names_lower, species=species, top_k=top_k))
+        record = self.marker_mapper.get(cl_id)
+        if not record:
+            return []
 
-        rows: list[dict] = list(cellmarker_rows)
-        if self.panglao and self._should_query_panglao(
-            cellmarker_rows=cellmarker_rows,
-            min_markers=min_markers,
-        ):
-            rows.extend(self.panglao.query(names_lower, species=species, top_k=top_k))
+        cellmarker_genes = list(record.get("cellmarker_genes") or [])
+        panglao_genes = list(record.get("panglaodb_genes") or [])
+        selected: list[tuple[str, str]] = []
+        selected.extend(("cellmarker", gene) for gene in cellmarker_genes)
+        if len(cellmarker_genes) < int(min_markers):
+            selected.extend(("panglao", gene) for gene in panglao_genes)
 
-        # 去重。若启用附属库，top_k 按每个来源控制，不在合并后截断，避免补充证据被主库占满。
-        seen: set[str] = set()
-        unique_rows: list[dict] = []
-        for r in rows:
-            key = (r.get("cell_type_name", ""), r.get("gene", ""))
-            if key not in seen:
-                seen.add(key)
-                unique_rows.append(r)
-
+        seen: set[tuple[str, str]] = set()
         results: list[Marker] = []
-        for r in unique_rows:
-            # 避免 **r 和显式参数重复
-            r_copy = dict(r)
-            r_copy.pop("cell_type_cl_id", None)
-            r_copy.pop("gene_normalized", None)
+        for source, gene in selected:
+            gene_norm = self.mapper.normalize_gene(gene, species=species) or gene
+            key = (source, gene_norm)
+            if key in seen:
+                continue
+            seen.add(key)
             results.append(
                 Marker(
+                    gene=gene,
+                    gene_normalized=gene_norm,
                     cell_type_cl_id=cl_id,
-                    gene_normalized=self.mapper.normalize_gene(r.get("gene", "")),
-                    **r_copy,
+                    cell_type_name=str(record.get("cell_type_name") or cell_type),
+                    evidence=f"{source};marker_celltype_to_genes",
+                    source=source,
                 )
             )
+            if top_k is not None and int(top_k) > 0 and len(results) >= int(top_k):
+                break
         return results
-
-    def _should_query_panglao(
-        self,
-        cellmarker_rows: list[dict],
-        min_markers: int,
-    ) -> bool:
-        if not cellmarker_rows:
-            return True
-        return len(cellmarker_rows) < min_markers
 
     def query_functions(self, cell_type: str) -> list[FunctionRecord]:
         """查询细胞类型的功能描述 (GO terms)."""

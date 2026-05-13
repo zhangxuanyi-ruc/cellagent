@@ -23,6 +23,8 @@ class PipelineManifest(BaseModel):
     feature_npz: str | None = None
     clusters_csv: str | None = None
     clustering_metrics_json: str | None = None
+    cluster_source: str | None = None
+    cluster_obs_key: str | None = None
     de_summary_csv: str | None = None
     de_dir: str | None = None
     multimodal_prior_json: str | None = None

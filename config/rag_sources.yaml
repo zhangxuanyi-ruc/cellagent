@@ -13,6 +13,7 @@ mapper:
   cell_type_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/cell_type_to_cl.json
   tissue_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/tissue_to_uberon.json
   go_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/function_to_go.json
+  marker_mapper_json: /root/wanghaoran/zxy/project/cellagent/rag/mappers/marker_celltype_to_genes.json
 
 tissue_ontology:
   uberon_path: /data/bgi/data/projects/multimodal/RNA_data/tissue_ontology/uberon-basic.obo

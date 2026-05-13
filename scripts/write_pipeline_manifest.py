@@ -27,6 +27,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--feature-npz", default=None)
     parser.add_argument("--clusters-csv", default=None)
     parser.add_argument("--clustering-metrics-json", default=None)
+    parser.add_argument("--cluster-source", default=None)
+    parser.add_argument("--cluster-obs-key", default=None)
     parser.add_argument("--de-summary-csv", default=None)
     parser.add_argument("--de-dir", default=None)
     parser.add_argument("--multimodal-prior-json", default=None)
@@ -56,6 +58,8 @@ def main() -> None:
         feature_npz=args.feature_npz,
         clusters_csv=args.clusters_csv,
         clustering_metrics_json=args.clustering_metrics_json,
+        cluster_source=args.cluster_source or cfg.get("clustering", {}).get("source"),
+        cluster_obs_key=args.cluster_obs_key or cfg.get("clustering", {}).get("obs_key"),
         de_summary_csv=args.de_summary_csv,
         de_dir=args.de_dir,
         multimodal_prior_json=args.multimodal_prior_json,

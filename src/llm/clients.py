@@ -264,3 +264,40 @@ class OpenAICompatibleClient(LLMClient):
             except json.JSONDecodeError:
                 return {"error": "invalid json", "raw": text}
         return text
+
+
+def build_llm_client_from_config(config: dict[str, Any]) -> LLMClient | None:
+    """Build the configured LLM client for judge/reflection stages.
+
+    Returns None when llm.enabled is explicitly false. The default provider is
+    openai_compatible because local Qwen/vLLM endpoints expose that interface.
+    """
+    llm_cfg = config.get("llm", {}) or {}
+    if llm_cfg.get("enabled") is False:
+        return None
+    provider = llm_cfg.get("provider", "openai_compatible")
+    if provider == "mock":
+        mock_cfg = llm_cfg.get("mock", {}) or {}
+        return MockLLMClient(
+            fixture_dir=mock_cfg.get("fixture_dir", "tests/fixtures/llm"),
+            model=mock_cfg.get("model", "mock"),
+            temperature=float(mock_cfg.get("temperature", 0.0)),
+        )
+    if provider != "openai_compatible":
+        raise ValueError(f"Unsupported llm.provider: {provider!r}")
+    raw = llm_cfg.get("openai_compatible", {}) or {}
+    if not raw.get("base_url"):
+        raise ValueError("llm.openai_compatible.base_url is required when LLM judge is enabled.")
+    return OpenAICompatibleClient(
+        base_url=raw["base_url"],
+        model=raw.get("model"),
+        api_key=raw.get("api_key", "unused"),
+        temperature=float(raw.get("temperature", 0.3)),
+        timeout=int(raw.get("timeout", 120)),
+        max_retries=int(raw.get("max_retries", 3)),
+        tailscale_host=raw.get("tailscale_host"),
+        tailscale_ip=raw.get("tailscale_ip"),
+        enable_thinking=bool(raw.get("enable_thinking", False)),
+        socks5_proxy=raw.get("socks5_proxy"),
+        verify_ssl=bool(raw.get("verify_ssl", True)),
+    )

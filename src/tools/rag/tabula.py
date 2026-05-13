@@ -50,8 +50,13 @@ class TabulaLoader:
         if self._agg is not None:
             return self._agg
         if self.cache_path.exists():
-            self._agg = pd.read_parquet(self.cache_path)
-            return self._agg
+            try:
+                self._agg = pd.read_parquet(self.cache_path)
+                return self._agg
+            except ImportError as exc:
+                print(f"[WARN] 读取 Tabula parquet cache 失败，缺少 parquet engine，将尝试 fallback: {exc}")
+            except Exception as exc:
+                print(f"[WARN] 读取 Tabula parquet cache 失败，将尝试 fallback: {exc}")
         if not self.h5ad_path or not self.h5ad_path.exists():
             self._agg = pd.DataFrame()
             return self._agg
@@ -85,7 +90,12 @@ class TabulaLoader:
                 )
 
             self.cache_path.parent.mkdir(parents=True, exist_ok=True)
-            agg.to_parquet(self.cache_path)
+            try:
+                agg.to_parquet(self.cache_path)
+            except ImportError as exc:
+                print(f"[WARN] 写入 Tabula parquet cache 失败，缺少 parquet engine，跳过 cache: {exc}")
+            except Exception as exc:
+                print(f"[WARN] 写入 Tabula parquet cache 失败，跳过 cache: {exc}")
             self._agg = agg
         except Exception as e:
             print(f"[WARN] 读取 Tabula Sapiens 失败: {e}")
@@ -100,6 +110,10 @@ class TabulaLoader:
             rows = self._query_mapper_json(names_lower, mapper_json)
             if rows:
                 return rows
+            # A prebuilt mapper is the production path. Do not silently scan the
+            # full Tabula h5ad on cache miss, because agent inference should stay
+            # bounded and predictable.
+            return []
 
         agg = self._aggregate()
         if agg.empty or self.cell_type_col not in agg.columns:
