@@ -159,29 +159,34 @@ class EvidenceJudge:
     def _score_conflicts(self, reasoning: ReasoningResult) -> tuple[int, list[dict[str, Any]], bool, str]:
         max_score = int(self.scoring["conflict_penalty"])
         candidates = self._reverse_marker_candidates(reasoning)
-        if self.llm is not None and candidates:
+        exclusive_screen_candidates = self._exclusive_veto_screen_candidates(reasoning)
+        all_candidates = self._merge_conflict_candidates(candidates, exclusive_screen_candidates)
+        if self.llm is not None and all_candidates:
             prompt = conflict_arbitration_prompt(
                 predicted_cell_type=reasoning.prediction.cell_type,
                 predicted_cl_id=reasoning.standardized.cell_type_cl_id,
                 conflict_candidates=candidates,
+                exclusive_veto_screen_candidates=exclusive_screen_candidates,
                 top10_de_genes=reasoning.standardized.de_genes_normalized[:10],
                 top30_de_genes=reasoning.standardized.de_genes_normalized[:30],
-                positive_marker_hits=[
-                    self._normalize_gene(r.get("gene_normalized") or r.get("gene"))
-                    for r in reasoning.marker_records
-                    if self._normalize_gene(r.get("gene_normalized") or r.get("gene")) in reasoning.standardized.de_genes_normalized[:30]
-                ],
+                positive_marker_hits=self._positive_marker_hits(reasoning, top_n=30),
             )
-            return self._judge_with_llm(prompt, max_score, default_score=max_score, candidates=candidates)
-        if not candidates:
+            score, judged_candidates, veto, reason = self._judge_with_llm(
+                prompt,
+                max_score,
+                default_score=max_score,
+                candidates=all_candidates,
+            )
+            return self._normalize_conflict_score(score, veto), judged_candidates, veto, reason
+        if not all_candidates:
             return max_score, candidates, False, "未发现反向 marker 冲突候选"
-        candidate_genes = sorted({str(c.get("gene")) for c in candidates if c.get("gene")})
+        candidate_genes = sorted({str(c.get("gene")) for c in all_candidates if c.get("gene")})
         return (
             max_score,
-            candidates,
+            all_candidates,
             False,
-            f"基于未命中的 top10 DE genes 发现反向 marker 候选基因 {len(candidate_genes)} 个、"
-            f"候选记录 {len(candidates)} 条；LLM judge 未启用，按规划不做规则 veto",
+            f"基于未命中的 top10/top30 DE genes 发现反向 marker 候选基因 {len(candidate_genes)} 个、"
+            f"候选记录 {len(all_candidates)} 条；LLM judge 未启用，按规划不做规则 veto",
         )
 
     def _score_function(self, reasoning: ReasoningResult) -> tuple[int, bool, str]:
@@ -238,23 +243,94 @@ class EvidenceJudge:
             reason = str(response["veto_reason"])
         return score, candidates or [], veto, reason
 
-    def _reverse_marker_candidates(self, reasoning: ReasoningResult) -> list[dict[str, Any]]:
-        if self.rag is None:
-            return []
-        predicted_cl = reasoning.standardized.cell_type_cl_id
+    def _positive_marker_hits(self, reasoning: ReasoningResult, top_n: int = 30) -> list[str]:
+        marker_genes = self._predicted_marker_genes(reasoning)
+        de_genes = reasoning.standardized.de_genes_normalized[:top_n]
+        return [gene for gene in de_genes if gene in marker_genes]
+
+    def _predicted_marker_genes(self, reasoning: ReasoningResult) -> set[str]:
         marker_genes = {
             self._normalize_gene(r.get("gene_normalized") or r.get("gene"))
             for r in reasoning.marker_records
             if r.get("gene_normalized") or r.get("gene")
         }
-        marker_genes = {g for g in marker_genes if g}
-        unmatched = [g for g in reasoning.standardized.de_genes_normalized[:10] if g not in marker_genes]
+        return {g for g in marker_genes if g}
+
+    def _reverse_marker_candidates(self, reasoning: ReasoningResult) -> list[dict[str, Any]]:
+        """Primary reverse-marker candidates from top10 unmatched DE genes."""
+        return self._reverse_marker_candidates_for_top_n(reasoning, top_n=10, evidence_scope="top10_primary")
+
+    def _exclusive_veto_screen_candidates(self, reasoning: ReasoningResult) -> list[dict[str, Any]]:
+        """Auxiliary top30 screen, used only by the LLM for high-specificity veto context."""
+        return self._reverse_marker_candidates_for_top_n(reasoning, top_n=30, evidence_scope="top30_exclusive_veto_screen")
+
+    def _reverse_marker_candidates_for_top_n(
+        self,
+        reasoning: ReasoningResult,
+        top_n: int,
+        evidence_scope: str,
+    ) -> list[dict[str, Any]]:
+        if self.rag is None:
+            return []
+        predicted_cl = reasoning.standardized.cell_type_cl_id
+        marker_genes = self._predicted_marker_genes(reasoning)
+        unmatched = [g for g in reasoning.standardized.de_genes_normalized[:top_n] if g not in marker_genes]
         candidates: list[dict[str, Any]] = []
+        seen: set[tuple[str, str]] = set()
         for gene in unmatched:
             for cl_id in self.rag.query_cell_types_for_gene(gene, species=reasoning.standardized.species or "human"):
                 if cl_id and cl_id != predicted_cl:
-                    candidates.append({"gene": gene, "candidate_cl_id": cl_id})
+                    key = (gene, cl_id)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    candidates.append(
+                        {
+                            "gene": gene,
+                            "candidate_cl_id": cl_id,
+                            "candidate_cell_type_name": self._candidate_cell_type_name(cl_id),
+                            "evidence_scope": evidence_scope,
+                        }
+                    )
         return candidates
+
+    def _candidate_cell_type_name(self, cl_id: str) -> str | None:
+        if self.rag is None or not hasattr(self.rag, "get_cell_type_name"):
+            return None
+        try:
+            return self.rag.get_cell_type_name(cl_id)
+        except Exception:
+            return None
+
+    @staticmethod
+    def _merge_conflict_candidates(
+        primary: list[dict[str, Any]],
+        screen: list[dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        merged: list[dict[str, Any]] = []
+        seen: set[tuple[str, str, str]] = set()
+        for candidate in [*primary, *screen]:
+            key = (
+                str(candidate.get("gene") or ""),
+                str(candidate.get("candidate_cl_id") or ""),
+                str(candidate.get("evidence_scope") or ""),
+            )
+            if key in seen:
+                continue
+            seen.add(key)
+            merged.append(candidate)
+        return merged
+
+    @staticmethod
+    def _normalize_conflict_score(score: int, veto: bool) -> int:
+        """Keep reverse-marker scores on the planned 30/15/0 scale."""
+        if veto:
+            return 0
+        if score <= 7:
+            return 0
+        if score < 23:
+            return 15
+        return 30
 
     def _normalize_gene(self, gene: Any) -> str | None:
         if gene is None:

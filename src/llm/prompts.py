@@ -91,32 +91,57 @@ def conflict_arbitration_prompt(
     predicted_cell_type: str,
     predicted_cl_id: str | None,
     conflict_candidates: list[dict],
+    exclusive_veto_screen_candidates: list[dict] | None = None,
     top10_de_genes: list[str] | None = None,
     top30_de_genes: list[str] | None = None,
     positive_marker_hits: list[str] | None = None,
 ) -> str:
     """Prompt for reverse-marker conflict arbitration."""
-    candidates = "\n".join(f"- {c}" for c in conflict_candidates[:30]) or "(none)"
+    candidates = "\n".join(f"- {c}" for c in conflict_candidates[:50]) or "(none)"
+    screen_candidates = "\n".join(f"- {c}" for c in (exclusive_veto_screen_candidates or [])[:80]) or "(none)"
     top10 = ", ".join(top10_de_genes or []) or "(none)"
     top30 = ", ".join(top30_de_genes or []) or "(none)"
     positives = ", ".join(positive_marker_hits or []) or "(none)"
     return (
-        "You are a strict marker-gene conflict judge. Determine whether reverse marker "
-        "candidates strongly contradict the predicted cell type.\n"
-        "Use only the provided evidence. Do not introduce new genes, new markers, or "
-        "new cell types. A veto requires strong cross-lineage or mutually exclusive "
-        "core-marker evidence.\n\n"
+        "You are a strict marker-gene conflict judge. Your job is not to re-annotate "
+        "the cell. Your job is only to decide whether the provided reverse-marker "
+        "evidence strongly contradicts the predicted cell type.\n\n"
+        "Evidence boundary:\n"
+        "- Use only the provided genes and reverse-marker candidate cell types.\n"
+        "- Do not introduce new marker genes, new marker relationships, or new candidate cell types.\n"
+        "- You may use basic cell-biology reasoning only to decide whether the PROVIDED "
+        "candidate cell types are biologically compatible or mutually exclusive with "
+        "the predicted cell type.\n"
+        "- If the provided evidence is insufficient, output WEAK_NOISE or NO_CONFLICT; do not veto.\n\n"
         f"Predicted cell type: {predicted_cell_type}\n"
         f"Predicted CL ID: {predicted_cl_id}\n\n"
         f"Cluster top10 DE genes:\n{top10}\n\n"
         f"Cluster top30 DE genes:\n{top30}\n\n"
         f"Positive marker hits for predicted cell type:\n{positives}\n\n"
-        f"Reverse marker candidates:\n{candidates}\n\n"
-        "Score conflict consistency from 0 to 30. Use 30 if there is no meaningful conflict, "
-        "15 for weak/non-exclusive conflicts, and 0 with veto=true for strong cross-lineage "
-        "or mutually exclusive core marker conflicts.\n"
-        "Return ONLY valid JSON with keys: "
-        '{"score": <int>, "veto": <bool>, "veto_reason": "<str>", "reasoning": "<str>", "conflicting_genes": ["<gene>"]}'
+        "Primary reverse-marker candidates from top10 DE genes that did NOT match the "
+        "predicted cell type marker list:\n"
+        f"{candidates}\n\n"
+        "Auxiliary exclusive-veto screen from top30 DE genes that did NOT match the "
+        "predicted cell type marker list. These records are context only. They must NOT "
+        "be used for ordinary penalty scoring. Use them only if they reveal a clear, "
+        "high-specificity, biologically mutually exclusive conflict pattern:\n"
+        f"{screen_candidates}\n\n"
+        "Decision rules:\n"
+        "A. STRONG_CONFLICT: score=0 and veto=true only when there is strong cross-lineage "
+        "or mutually exclusive core-marker evidence. A single ordinary marker is not enough. "
+        "A single-gene veto is allowed only for a high-specificity core marker whose provided "
+        "candidate cell type is clearly incompatible with the prediction. Two or more top10 "
+        "unmatched genes consistently pointing to the same incompatible cell type can also veto.\n"
+        "B. WEAK_NOISE: score=15 and veto=false when reverse candidates exist but are scattered, "
+        "shared, state-related, same-lineage-compatible, or plausibly caused by mixed clusters, "
+        "ambient RNA, doublets, or imperfect clustering.\n"
+        "C. NO_CONFLICT: score=30 and veto=false when no meaningful conflict is supported by "
+        "the provided candidates.\n\n"
+        "Return ONLY valid JSON with exactly these keys:\n"
+        '{"decision": "NO_CONFLICT|WEAK_NOISE|STRONG_CONFLICT", '
+        '"score": <0|15|30>, "veto": <bool>, "rule_triggered": "A|B|C", '
+        '"veto_reason": "<str>", "reasoning": "<str>", '
+        '"conflicting_genes": ["<gene>"], "conflicting_cell_types": ["<cell type or CL ID>"]}'
     )
 
 
