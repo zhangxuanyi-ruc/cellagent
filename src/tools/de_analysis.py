@@ -57,9 +57,9 @@ def attach_clusters(adata: ad.AnnData, clusters: pd.Series, cluster_key: str) ->
     obs_names = adata.obs_names.astype(str)
     missing = obs_names.difference(clusters.index)
     if len(missing) > 0:
-        raise ValueError(f"Missing cluster assignments for {len(missing)} cells. Example: {missing[:5].tolist()}")
-    adata = adata.copy()
-    adata.obs[cluster_key] = clusters.reindex(obs_names).astype(str).values
+        # Cells dropped during clustering (e.g. NaN encoder features) are filtered out here.
+        adata = adata[~obs_names.isin(missing)].copy()
+    adata.obs[cluster_key] = clusters.reindex(adata.obs_names.astype(str)).astype(str).values
     return adata
 
 

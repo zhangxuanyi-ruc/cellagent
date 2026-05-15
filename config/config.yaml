@@ -5,8 +5,8 @@
 # SCA pipeline 统一入口参数
 # ============================================================================
 pipeline:
-  input_path: /data/bgi/data/projects/multimodal/RNA_data/cellxgene_disease/neural_disease/als/c48ec35b-a4e3-48a8-8407-87fe3f59caa2.h5ad
-  output_root: /home/qijinyin/wanghaoran/zxy/cellagent_output
+  input_path: /data/bgi/data/projects/multimodal/RNA_data/cellxgene_disease/Autoimmune_and_systemic_inflammation/psoriasis/5b293ff5-baa6-465e-b03b-043d9b892850.h5ad
+  output_root: /home/qijinyin/wanghaoran/zxy/cellagent_output/psoriasis_5b293ff5
 
 # ============================================================================
 # 预处理参数 (Phase 4: preprocessor.py)
@@ -97,7 +97,7 @@ cell_encoder:
   model_path: /root/wanghaoran/zxy/project/sc_showo/save/okrcell_ckpt/model-241492.pt
   vocab_path: /root/wanghaoran/zxy/project/sc_showo/save/okrcell_ckpt/vocab.json
   device: "cuda"
-  gpu_id: 7
+  gpu_id: 0
   feature_layer: "X_binned"
   gene_id_column: "scgpt_id"
   n_genes: 1200
@@ -112,7 +112,7 @@ feature_service:
   url: http://127.0.0.1:18080
   host: 0.0.0.0
   port: 18080
-  gpu_id: 7
+  gpu_id: 0
   max_workers: 1
 
 # ============================================================================
@@ -156,15 +156,59 @@ engine:
   # 打分权重 (总和 100)
   scoring:
     marker_match: 40                     # marker 匹配度 (0-40)
-    conflict_penalty: 30                 # 反向 marker 冲突 (0-30)
+    target_cluster_consistency: 30       # 目标细胞-所属簇一致性 (0-30)
     function_consistency: 20             # 功能一致性 (0-20)
     tissue_consistency: 10               # 组织分布 (0-10)
 
   # 一票否决条件
   veto:
-    strong_conflict_threshold: 3         # >=3 个排他性冲突则否决
-    min_matched_markers: 1               # 至少匹配 1 个 marker，否则否决
+    marker_zero_veto: true               # top10/top30 marker 均 0 命中时进入反思
+    target_cluster_low_score_veto: true  # target-cluster 总分过低时进入反思
+    target_cluster_veto_score_threshold: 10
     marker_full_match_threshold: 5       # top10 DE 中 >=5 个命中 marker list 得满分
+
+# ============================================================================
+# 目标细胞-所属簇一致性参数
+# ============================================================================
+target_cluster_consistency:
+  expression_layer: null                 # null 使用 h5ad.X；也可指定 counts/log normalized layer
+  top_n_de_genes: 10
+
+# ============================================================================
+# 正向 marker 打分参数
+# ============================================================================
+marker_scoring:
+  max_marker_genes: 200                  # marker list 超过该数量时只取前 200 个标准化 marker 用于打分
+  sample_seed: cellagent_marker_v1       # RAG fallback 超大 marker list 使用固定 hash seed 做可复现抽样
+
+# ============================================================================
+# ScType compact marker registry
+# ============================================================================
+marker_registry:
+  enabled: true
+  path: resources/marker_registry/sctype_markers.json
+
+# ============================================================================
+# Offline LLM-curated marker registry
+# ============================================================================
+offline_llm_marker_registry:
+  enabled: true
+  path: resources/marker_registry/offline_llm_curated_markers.json
+  min_authoritative_markers: 5
+  enable_for_low_quality_sampled_evidence: true
+  used_for_veto: false
+  score_cap: 30
+
+# ============================================================================
+# 反向 marker 监控参数
+# ============================================================================
+reverse_marker_monitor:
+  enabled: true
+  used_for_score: false
+  used_for_veto: false
+  top_n_primary: 10
+  top_n_screen: 30
+  enable_llm_judge: false
 
 # ============================================================================
 # RAG 查询参数 (Phase 2: rag/*.py)
@@ -207,7 +251,7 @@ llm:
     model: null                           # null = auto-detect from /models
     api_key: "unused"
     temperature: 0.3
-    timeout: 120
+    timeout: 500
     max_retries: 3
     # Tailscale DNS patch (optional): resolve hostname to Tailscale IP
     tailscale_host: "localagent.tail053d0c.ts.net"

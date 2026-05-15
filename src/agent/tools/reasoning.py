@@ -150,6 +150,8 @@ class DeterministicReasoner:
         prediction: Prediction,
         metadata: dict[str, Any],
         de_genes: DEGenes,
+        target_cell_id: str | None = None,
+        case_id: str | None = None,
         provenance: dict[str, Any] | None = None,
     ) -> ReasoningResult:
         warnings: list[str] = []
@@ -206,6 +208,8 @@ class DeterministicReasoner:
         )
         return ReasoningResult(
             cluster_id=str(cluster_id),
+            target_cell_id=target_cell_id,
+            case_id=case_id,
             prediction=prediction,
             standardized=standardized,
             marker_records=marker_records,

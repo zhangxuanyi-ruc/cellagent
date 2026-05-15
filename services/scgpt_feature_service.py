@@ -3,12 +3,18 @@
 
 Run this file in the scGPT-compatible environment. The CellAgent environment can
 then request features without importing torch/scGPT dependencies directly.
+
+CUDA isolation: each job is executed in an independent Python subprocess via
+`scripts/extract_cell_encoder_features.py`. This way a CUDA error in one job
+(illegal memory access, OOM, etc.) cannot poison the service's CUDA context
+because the subprocess owns its own context and dies with the process.
 """
 from __future__ import annotations
 
 import argparse
 import json
 import os
+import subprocess
 import sys
 import time
 import traceback
@@ -25,7 +31,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.extract_cell_encoder_features import DEFAULT_LOCAL_SCGPT_ROOT, extract_features
+from scripts.extract_cell_encoder_features import DEFAULT_LOCAL_SCGPT_ROOT
+
+EXTRACT_SCRIPT = PROJECT_ROOT / "scripts" / "extract_cell_encoder_features.py"
 
 
 class ExtractRequest(BaseModel):
@@ -77,6 +85,80 @@ def resolve_extract_kwargs(request: ExtractRequest, cfg: dict[str, Any]) -> dict
     }
 
 
+def run_feature_extraction_subprocess(
+    kwargs: dict[str, Any],
+    config_path: str | Path,
+    gpu_id: Any = None,
+) -> Path:
+    """Run feature extraction in an isolated Python subprocess.
+
+    Each job gets its own Python process with its own CUDA context, so a CUDA
+    error in one job cannot corrupt the service's main process state.
+    """
+    cmd = [
+        sys.executable,
+        str(EXTRACT_SCRIPT),
+        "--input", str(kwargs["preprocessed_h5ad"]),
+        "--config", str(config_path),
+        "--feature-dir", str(kwargs["output_dir"]),
+        "--model-path", str(kwargs["model_path"]),
+        "--vocab-path", str(kwargs["vocab_path"]),
+        "--batch-size", str(kwargs["batch_size"]),
+        "--output-format", str(kwargs["output_format"]),
+        "--scgpt-root", str(kwargs["scgpt_root"]),
+    ]
+    if kwargs.get("device"):
+        cmd.extend(["--device", str(kwargs["device"])])
+
+    env = os.environ.copy()
+    if gpu_id is not None and str(gpu_id).lower() not in {"", "none", "null"}:
+        env["CUDA_VISIBLE_DEVICES"] = str(gpu_id)
+
+    proc = subprocess.run(
+        cmd,
+        cwd=str(PROJECT_ROOT),
+        env=env,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            "Feature extraction subprocess failed.\n"
+            f"cmd: {' '.join(cmd)}\n"
+            f"stdout: {proc.stdout}\n"
+            f"stderr: {proc.stderr}"
+        )
+
+    # extract_cell_encoder_features.py prints {"feature_path": "..."} as the
+    # last JSON object on stdout.
+    feature_path: Path | None = None
+    for token in proc.stdout.splitlines():
+        token = token.strip()
+        if not token:
+            continue
+    # Try to find the JSON object containing feature_path in stdout.
+    decoder = json.JSONDecoder()
+    text = proc.stdout
+    idx = 0
+    while idx < len(text):
+        try:
+            obj, end = decoder.raw_decode(text, idx)
+        except json.JSONDecodeError:
+            idx += 1
+            continue
+        if isinstance(obj, dict) and obj.get("feature_path"):
+            feature_path = Path(obj["feature_path"])
+        idx = end
+    if feature_path is None:
+        raise RuntimeError(
+            "Feature extraction subprocess returned no feature_path.\n"
+            f"stdout: {proc.stdout}\n"
+            f"stderr: {proc.stderr}"
+        )
+    return feature_path
+
+
 def create_app(config_path: str | Path) -> FastAPI:
     cfg = load_full_config(config_path)
     service_cfg = cfg.get("feature_service", {})
@@ -94,7 +176,14 @@ def create_app(config_path: str | Path) -> FastAPI:
         job.updated_at = time.time()
         try:
             kwargs = resolve_extract_kwargs(request, cfg)
-            feature_path = extract_features(**kwargs)
+            # Isolate each job in its own Python subprocess: a CUDA error in one
+            # job (illegal memory access, OOM, etc.) cannot poison the service's
+            # main process state because the subprocess owns its own CUDA context.
+            feature_path = run_feature_extraction_subprocess(
+                kwargs,
+                config_path=config_path,
+                gpu_id=gpu_id,
+            )
             job.feature_path = str(feature_path)
             job.status = "succeeded"
             job.updated_at = time.time()

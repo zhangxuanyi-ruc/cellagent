@@ -355,26 +355,48 @@ class CellAnnotationEngine:
         report = EvaluatorReport()
 
         # 1. marker 匹配 (0 - max_marker)
+        # 新打分机制：先检查 top10，如果分数低再用 top30 rescue
         marker_genes = {
             g for g in (self.mapper.normalize_gene(getattr(m, "gene", "")) for m in markers)
             if g
         }
-        de_set = {g for g in (self.mapper.normalize_gene(gene) for gene in de_genes) if g}
-        matched = de_set & marker_genes
-        if len(de_set) == 0:
+        de_normalized = [self.mapper.normalize_gene(gene) for gene in de_genes if self.mapper.normalize_gene(gene)]
+        de_set_top10 = set(de_normalized[:10])
+        de_set_top30 = set(de_normalized[:30])
+        matched_top10 = de_set_top10 & marker_genes
+        matched_top30 = de_set_top30 & marker_genes
+
+        if not de_normalized:
             report.marker_match_score = 0
             report.veto_triggered = True
             report.veto_reason = "无 DE 基因"
-        elif len(matched) == len(de_set):
-            report.marker_match_score = max_marker
-        elif len(matched) >= 3:
-            report.marker_match_score = int(max_marker * 0.75)
-        elif len(matched) >= min_matched:
-            report.marker_match_score = int(max_marker * 0.25)
         else:
-            report.marker_match_score = 0
-            report.veto_triggered = True
-            report.veto_reason = "无 marker 匹配"
+            # top10 打分
+            n_top10 = len(matched_top10)
+            if n_top10 >= 5:
+                top10_score = 40
+            elif n_top10 >= 3:
+                top10_score = 30
+            elif n_top10 >= 1:
+                top10_score = 10
+            else:
+                top10_score = 0
+
+            # top30 rescue 打分
+            n_top30 = len(matched_top30)
+            if n_top30 >= 5:
+                top30_rescue_score = 30
+            elif n_top30 >= 3:
+                top30_rescue_score = 15
+            else:
+                top30_rescue_score = 0
+
+            report.marker_match_score = max(top10_score, top30_rescue_score)
+
+            # veto 条件：top10 和 top30 都完全没有匹配
+            if n_top10 == 0 and n_top30 == 0:
+                report.veto_triggered = True
+                report.veto_reason = "无 marker 匹配"
 
         # 2. 反向 marker 冲突 (0 - max_conflict)
         if conflicts:

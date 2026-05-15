@@ -1,0 +1,344 @@
+neuron:
+  add_core:
+    - RBFOX3
+    - RBFOX1
+    - MAP2
+    - SNAP25
+    - SYT1
+    - TUBB3
+
+t cell:
+  add_core:
+    - CD3D
+    - CD3E
+    - CD3G
+    - TRAC
+    - CD2
+    - CD247
+    - IL7R
+
+b cell:
+  add_core:
+    - MS4A1
+    - CD79A
+    - CD79B
+    - CD19
+    - CD74
+    - BANK1
+
+natural killer cell:
+  add_core:
+    - NKG7
+    - GNLY
+    - KLRD1
+    - KLRF1
+    - CTSW
+    - PRF1
+    - GZMB
+    - GZMA
+
+myeloid cell:
+  add_core:
+    - LYZ
+    - AIF1
+    - LST1
+    - TYROBP
+    - FCER1G
+    - S100A8
+    - S100A9
+
+dendritic cell:
+  add_core:
+    - CD1C
+    - FCER1A
+    - CLEC10A
+    - ITGAX
+    - HLA-DRA
+    - HLA-DPA1
+    - LAMP3
+
+oligodendrocyte:
+  add_core:
+    - PLP1
+    - MBP
+    - MAG
+    - MOG
+    - MOBP
+    - CNP
+    - CLDN11
+
+astrocyte:
+  add_core:
+    - GFAP
+    - AQP4
+    - ALDH1L1
+    - SLC1A3
+    - SOX9
+
+endothelial cell:
+  add_core:
+    - PECAM1
+    - VWF
+    - CDH5
+    - KDR
+    - FLT1
+    - CLDN5
+    - ESAM
+    - AQP1
+
+fibroblast:
+  add_core:
+    - COL1A1
+    - COL1A2
+    - DCN
+    - LUM
+    - COL3A1
+
+oligodendrocyte precursor cell:
+  add_core:
+    - PDGFRA
+    - CSPG4
+    - VCAN
+    - OLIG1
+    - OLIG2
+
+committed oligodendrocyte precursor:
+  add_core:
+    - PDGFRA
+    - CSPG4
+    - VCAN
+    - OLIG1
+    - OLIG2
+    - SOX10
+
+keratinocyte:
+  add_core:
+    - KRT5
+    - KRT14
+    - KRT1
+    - KRT10
+    - KRT6A
+    - KRT16
+    - KRT17
+    - SBSN
+    - DMKN
+    - DSG1
+    - DSP
+    - SFN
+
+spinous cell of epidermis:
+  add_core:
+    - KRT1
+    - KRT10
+    - SFN
+    - DMKN
+    - LGALS7
+    - KRTDAP
+    - S100A14
+
+suprabasal keratinocyte:
+  add_core:
+    - KRT1
+    - KRT10
+    - KRT6A
+    - KRT16
+    - KRT17
+    - DMKN
+    - SBSN
+    - SFN
+
+basal cell of epidermis:
+  add_core:
+    - KRT5
+    - KRT14
+    - KRT15
+    - TP63
+    - ITGA6
+    - COL17A1
+
+granular cell of epidermis:
+  add_core:
+    - KRT1
+    - KRT10
+    - FLG
+    - LOR
+    - IVL
+    - DMKN
+    - CALML5
+
+hair follicular keratinocyte:
+  add_core:
+    - KRT15
+    - KRT17
+    - KRT19
+    - SOX9
+    - LHX2
+    - KRT5
+    - KRT14
+
+melanocyte of skin:
+  add_core:
+    - MLANA
+    - PMEL
+    - TYR
+    - DCT
+    - MITF
+    - SOX10
+
+cerebellar granule cell:
+  add_core:
+    - GABRA6
+    - GRIK2
+    - GRM4
+    - RELN
+    - PAX6
+    - ZIC1
+    - ZIC2
+    - NEUROD1
+
+purkinje cell:
+  add_core:
+    - PCP4
+    - CALB1
+    - PVALB
+    - ITPR1
+    - RORA
+    - ALDOC
+
+macroglial cell:
+  add_core:
+    - SOX9
+    - S100B
+    - AQP4
+    - GFAP
+    - OLIG1
+    - OLIG2
+    - MBP
+    - PLP1
+
+unipolar brush cell:
+  add_core:
+    - EOMES
+    - GRM1
+    - CALB2
+    - PLCB4
+
+gabaergic neuron:
+  add_core:
+    - GAD1
+    - GAD2
+    - SLC6A1
+    - DLX1
+    - DLX2
+
+glutamatergic neuron:
+  add_core:
+    - SLC17A6
+    - SLC17A7
+    - SLC17A8
+    - NEUROD1
+    - TBR1
+
+interneuron:
+  add_core:
+    - GAD1
+    - GAD2
+    - DLX1
+    - DLX2
+    - LHX6
+
+neuroblast:
+  add_core:
+    - DCX
+    - STMN2
+    - SOX4
+    - SOX11
+    - TUBB3
+    - NEUROD1
+
+bergmann glial cell:
+  add_core:
+    - GFAP
+    - SLC1A3
+    - AQP4
+    - SOX9
+    - FABP7
+
+brain vascular cell:
+  add_core:
+    - PECAM1
+    - VWF
+    - CLDN5
+    - RGS5
+    - PDGFRB
+
+vascular associated smooth muscle cell:
+  add_core:
+    - ACTA2
+    - MYH11
+    - TAGLN
+    - CNN1
+    - RGS5
+
+cytotoxic t cell:
+  add_core:
+    - CD3D
+    - CD3E
+    - CD3G
+    - CD8A
+    - CD8B
+    - GZMA
+    - GZMB
+    - PRF1
+    - NKG7
+    - CTSW
+
+helper t cell:
+  add_core:
+    - CD3D
+    - CD3E
+    - CD3G
+    - CD4
+    - IL7R
+    - CCR7
+    - CD40LG
+
+regulatory t cell:
+  add_core:
+    - FOXP3
+    - IL2RA
+    - CTLA4
+    - IKZF2
+    - TIGIT
+
+microglial cell:
+  add_core:
+    - P2RY12
+    - CX3CR1
+    - TMEM119
+    - AIF1
+    - C1QA
+
+macrophage:
+  add_core:
+    - CD68
+    - CD163
+    - LYZ
+    - CSF1R
+    - C1QA
+
+monocyte:
+  add_core:
+    - LYZ
+    - S100A8
+    - S100A9
+    - FCN1
+    - VCAN
+
+pericyte:
+  add_core:
+    - PDGFRB
+    - RGS5
+    - CSPG4
+    - MCAM
+    - ACTA2

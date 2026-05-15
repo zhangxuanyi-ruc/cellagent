@@ -46,11 +46,18 @@ class AgentPipeline:
             marker_top_k=None if marker_top_k is None else int(marker_top_k),
             min_markers=int(marker_cfg.get("min_markers", 5)),
         )
+        cluster_key = config.get("de_analysis", {}).get("cluster_key", "leiden")
+        target_cluster_cfg = config.get("target_cluster_consistency", {})
+        expression_h5ad_path = self.manifest.preprocessed_h5ad or self.manifest.input_h5ad
         self.judge = EvidenceJudge(
             mapper=self.rag.mapper,
             rag=self.rag,
             llm=self.llm,
             config=config,
+            expression_h5ad_path=expression_h5ad_path,
+            clusters_csv=self.manifest.clusters_csv,
+            cluster_key=cluster_key,
+            expression_layer=target_cluster_cfg.get("expression_layer", config.get("de_analysis", {}).get("expression_layer")),
         )
         self.finalizer = AnnotationFinalizer()
 
@@ -119,6 +126,8 @@ class AgentPipeline:
                 prediction=prediction,
                 metadata=metadata,
                 de_genes=de_genes,
+                target_cell_id=cell_id,
+                case_id=case_id,
                 provenance={
                     "prior_json": str(self.run_config.prior_json_path),
                     "de_csv": de_genes.de_csv_path,

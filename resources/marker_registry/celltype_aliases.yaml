@@ -1,0 +1,154 @@
+neuron:
+  - neurons
+  - neuronal cell
+  - nerve cell
+  - Neuron1
+  - Neuron2
+  - Neuron3
+  - Neuron4
+  - Neuron5
+
+oligodendrocyte:
+  - oligodendrocytes
+  - oligo
+  - Oligo1
+  - Oligo2
+  - Oligo3
+  - Oligo4
+  - Oligo5
+  - Oligo6
+  - ImOlGs
+
+oligodendrocyte precursor cell:
+  - opc
+  - opcs
+  - oligodendrocyte precursor cells
+
+astrocyte:
+  - astrocytes
+  - Astrocytes
+  - Astrocytes2
+  - astroglia
+
+endothelial cell:
+  - endothelial
+  - endothelial cells
+  - Endothelial_cells1
+  - Endothelial_cells2
+
+fibroblast:
+  - fibroblasts
+  - skin fibroblast
+  - fibroblast of papillary layer of dermis
+
+keratinocyte:
+  - keratinocytes
+  - epidermal cell
+  - epithelial cell of epidermis
+
+spinous cell of epidermis:
+  - spinous cell
+  - spinous keratinocyte
+
+suprabasal keratinocyte:
+  - suprabasal keratinocytes
+
+basal cell of epidermis:
+  - basal epidermal cell
+  - basal keratinocyte
+
+cytotoxic t cell:
+  - cytotoxic T cell
+  - cytotoxic t lymphocyte
+  - cd8-positive t cell
+
+helper t cell:
+  - helper T cell
+  - cd4-positive t cell
+
+regulatory t cell:
+  - treg
+  - t regulatory cell
+
+microglial cell:
+  - microglia
+
+macrophage:
+  - macrophages
+
+monocyte:
+  - monocytes
+  - Monocytes
+
+myeloid cell:
+  - Myeloid
+  - myeloid cells
+
+t cell:
+  - T cell
+  - T cells
+  - T_cells
+
+b cell:
+  - B cell
+  - B cells
+  - B_cells
+  - lymphocyte of B lineage
+
+natural killer cell:
+  - NK cell
+  - NK cells
+  - NK_cells
+  - natural killer cells
+
+dendritic cell:
+  - DC
+  - dendritic cells
+
+cerebellar granule cell:
+  - GC
+  - granule cell
+  - GC_defined
+
+purkinje cell:
+  - Purkinje
+  - Purkinje_defined
+  - Purkinje_diff
+
+macroglial cell:
+  - glia
+  - macroglia
+
+neuroblast:
+  - VZ_neuroblast
+  - NTZ_neuroblast
+  - isthmic_neuroblast
+
+unipolar brush cell:
+  - UBC
+
+gabaergic neuron:
+  - GABA_DN
+  - GABA_MB
+
+glutamatergic neuron:
+  - glut_DN
+  - glutamatergic_uncertain
+
+interneuron:
+  - interneuron_GL
+  - interneuron_ML1
+  - interneuron_ML2
+  - interneuron_PL
+
+bergmann glial cell:
+  - astro_Bergmann
+
+vascular associated smooth muscle cell:
+  - Vasc_smooth_muscle
+
+brain vascular cell:
+  - mural/endoth
+
+pericyte:
+  - pericytes

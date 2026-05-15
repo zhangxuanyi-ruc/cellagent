@@ -25,9 +25,14 @@ class AnnotationFinalizer:
                     "veto_triggered": result.report.veto_triggered,
                     "veto_reason": result.report.veto_reason,
                     "marker_match_score": result.report.marker_match_score,
-                    "conflict_penalty": result.report.conflict_penalty,
+                    "target_cluster_consistency_score": result.report.target_cluster_consistency_score,
                     "function_consistency_score": result.report.function_consistency_score,
                     "tissue_consistency_score": result.report.tissue_consistency_score,
+                    "target_cluster_presence_score": result.target_cluster_report.get("presence_score", 0),
+                    "target_cluster_signature_score": result.target_cluster_report.get("signature_score", 0),
+                    "target_cluster_signature_percentile": result.target_cluster_report.get("signature_percentile", 0.0),
+                    "reverse_marker_n_primary_candidates": result.reverse_marker_monitor.get("n_primary_candidates", 0),
+                    "reverse_marker_n_screen_candidates": result.reverse_marker_monitor.get("n_screen_candidates", 0),
                     "marker_matches": ",".join(result.marker_matches),
                     "marker_misses": ",".join(result.marker_misses),
                 }
@@ -47,7 +52,7 @@ class AnnotationFinalizer:
     @staticmethod
     def _status(result: JudgeResult) -> str:
         if result.report.veto_triggered:
-            return "rejected"
+            return "needs_reflection"
         if result.report.total >= 80:
             return "accepted"
         return "needs_reflection"

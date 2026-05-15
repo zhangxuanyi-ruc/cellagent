@@ -48,6 +48,8 @@ class ReasoningResult(BaseModel):
     不生成新细胞类型假说。
     """
     cluster_id: str
+    target_cell_id: str | None = None
+    case_id: str | None = None
     prediction: Prediction
     standardized: StandardizedReasoningInput
     marker_records: list[dict[str, Any]] = Field(default_factory=list)
@@ -68,6 +70,8 @@ class JudgeResult(BaseModel):
     report: EvaluatorReport
     marker_matches: list[str] = Field(default_factory=list)
     marker_misses: list[str] = Field(default_factory=list)
+    target_cluster_report: dict[str, Any] = Field(default_factory=dict)
+    reverse_marker_monitor: dict[str, Any] = Field(default_factory=dict)
     conflict_candidates: list[dict[str, Any]] = Field(default_factory=list)
     component_reasoning: dict[str, str] = Field(default_factory=dict)
     warnings: list[str] = Field(default_factory=list)
@@ -103,7 +107,8 @@ class TissueEvidence(BaseModel):
 class EvaluatorReport(BaseModel):
     """校验专家输出的评估报告."""
     marker_match_score: int = 0         # 0-40
-    conflict_penalty: int = 0           # 0-30
+    target_cluster_consistency_score: int = 0  # 0-30
+    conflict_penalty: int = 0           # deprecated: reverse marker monitor no longer contributes to total
     function_consistency_score: int = 0 # 0-20
     tissue_consistency_score: int = 0   # 0-10
     total: int = 0

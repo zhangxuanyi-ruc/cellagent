@@ -130,6 +130,15 @@ def load_feature_matrix(feature_path: str | Path, feature_key: str = "features")
         raise ValueError(f"Feature matrix must be 2D, got shape {features.shape}.")
     if len(obs_names) != features.shape[0]:
         raise ValueError(f"obs_names length {len(obs_names)} != n_cells {features.shape[0]}.")
+
+    # Filter out rows with any NaN/Inf values (corrupted encoder outputs).
+    valid_mask = np.isfinite(features).all(axis=1)
+    n_invalid = int((~valid_mask).sum())
+    if n_invalid > 0:
+        features = features[valid_mask]
+        obs_names = obs_names[valid_mask]
+        metadata["n_nan_rows_filtered"] = n_invalid
+
     return features.astype(np.float32, copy=False), obs_names, metadata
 
 

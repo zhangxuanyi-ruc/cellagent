@@ -70,3 +70,10 @@ reference/**/*.pdf
 reference/**/*.png
 reference/*.png
 # Auto-ignore large files (>5MB) added as individual entries
+
+# LLM marker generation artifacts
+resources/marker_registry/offline_llm_marker_prompts/
+resources/marker_registry/offline_llm_marker_raw.jsonl
+resources/marker_registry/offline_llm_curated_markers.json
+resources/marker_registry/offline_llm_marker_audit.csv
+resources/marker_registry/marker_audit_687.csv
